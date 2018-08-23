@@ -2,15 +2,41 @@
 const path = require('path')
 const meow = require('meow')
 
-const cli = meow(``, {})
+const cli = meow(`
+  Usage:
 
-const dev = require('./lib/dev')
+    $ mdx-go hello.mdx
 
-dev()
-  .then(server => {
-    console.log('dev')
-  })
-  .catch(err => {
-    console.log(err)
-    process.exit(1)
-  })
+`, {
+  flags: {
+    port: {
+      type: 'string',
+      alias: 'p',
+      default: '3000'
+    }
+  }
+})
+
+const [ cmd, input ] = cli.input
+
+if (!cmd && !input) {
+  cli.showHelp(0)
+}
+
+const opts = Object.assign({
+  filename: path.resolve(input || cmd)
+}, cli.flags)
+
+switch (cmd) {
+  case 'dev':
+  default:
+    const dev = require('./lib/dev')
+    dev(opts)
+      .then(server => {
+        console.log('dev')
+      })
+      .catch(err => {
+        console.log(err)
+        process.exit(1)
+      })
+}

@@ -4,18 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./cli.js"
+    "start": "./cli.js docs/index.mdx"
   },
   "keywords": [],
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
+    "@mdx-js/loader": "^0.15.0",
+    "@mdx-js/mdx": "^0.15.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "chalk": "^2.4.1",
-    "koa": "^2.5.2",
+    "connect": "^3.6.6",
     "meow": "^5.0.0",
     "progress-bar-webpack-plugin": "^1.11.0",
     "react": "^16.4.2",
