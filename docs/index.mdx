@@ -1,8 +1,26 @@
+import {
+  Root,
+} from '../components'
+
+export default props =>
+  <Root
+    {...props}
+    theme={{
+      colors: {
+        text: 'tomato'
+      }
+    }}
+  />
 
 # hello mdx
 
 This is an mdx file
 
-## Beep boop
+## beep boop
 
-meow meow
+---
+
+## Notes
+
+- StyleProvider (css vars + type system)
+- SCWrapper

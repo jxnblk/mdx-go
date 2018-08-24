@@ -1,18 +1,39 @@
 #!/usr/bin/env node
 const path = require('path')
 const meow = require('meow')
+const chalk = require('chalk')
+const open = require('react-dev-utils/openBrowser')
+
+const log = (...msg) => {
+  console.log(
+    chalk.green('[mdx-go]'),
+    ...msg
+  )
+}
+
+log.error = (...msg) => {
+  console.log(
+    chalk.red('[err]'),
+    ...msg
+  )
+}
 
 const cli = meow(`
   Usage:
 
-    $ mdx-go hello.mdx
+    $ mdx-go docs
 
 `, {
   flags: {
     port: {
       type: 'string',
       alias: 'p',
-      default: '3000'
+      default: '8080'
+    },
+    open: {
+      type: 'boolean',
+      alias: 'o',
+      default: true
     }
   }
 })
@@ -24,7 +45,7 @@ if (!cmd && !input) {
 }
 
 const opts = Object.assign({
-  filename: path.resolve(input || cmd)
+  dirname: path.resolve(input || cmd)
 }, cli.flags)
 
 switch (cmd) {
@@ -33,10 +54,13 @@ switch (cmd) {
     const dev = require('./lib/dev')
     dev(opts)
       .then(server => {
-        console.log('dev')
+        const { port } = server.address()
+        const url = `http://localhost:${port}`
+        log('listening on', chalk.green(url))
+        if (opts.open) open(url)
       })
       .catch(err => {
-        console.log(err)
+        log.error(err)
         process.exit(1)
       })
 }

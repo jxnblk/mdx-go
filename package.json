@@ -2,9 +2,13 @@
   "name": "mdx-go",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "bin": {
+    "mdx-go": "./cli.js"
+  },
   "scripts": {
-    "start": "./cli.js docs/index.mdx"
+    "prepare": "babel components -d dist",
+    "start": "./cli.js docs"
   },
   "keywords": [],
   "author": "Brent Jackson",
@@ -19,14 +23,20 @@
     "babel-preset-stage-0": "^6.24.1",
     "chalk": "^2.4.1",
     "connect": "^3.6.6",
+    "lodash.get": "^4.4.2",
     "meow": "^5.0.0",
     "progress-bar-webpack-plugin": "^1.11.0",
     "react": "^16.4.2",
+    "react-dev-utils": "^5.0.2",
     "react-dom": "^16.4.2",
+    "react-router-dom": "^4.3.1",
     "webpack": "^4.17.1",
     "webpack-dev-middleware": "^3.2.0",
-    "webpack-hot-client": "^4.1.1",
     "webpack-hot-middleware": "^2.22.3",
     "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "styled-components": "^3.4.5"
   }
 }
