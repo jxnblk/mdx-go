@@ -1,13 +1,23 @@
 
-# :zap: mdx-go
+# mdx-go
 
-Lightning fast MDX-based dev server
-
-## Getting Started
+:zap: Lightning fast MDX-based dev server
 
 ```sh
 npm i -D mdx-go
 ```
+
+- :zero: Zero-config dev server
+- :memo: Write in markdown
+- :atom_symbol: Import and use React components
+- :file_folder: File-system based routing
+- :triangular_ruler: Customizable layouts
+- :woman_singer: Support for [styled-components][] & [emotion][]
+- :globe_with_meridians: Export as static HTML
+
+
+## Getting Started
+
 
 ```json
 "scripts": {
