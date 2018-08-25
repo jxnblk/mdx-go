@@ -5,7 +5,7 @@ import ServerStyled from 'server-styled'
   <title>Hello</title>
 </Head>
 
-export const Root = ({ children }) =>
+export const exampleRoot = ({ children }) =>
   <div
     children={children}
     style={{
@@ -20,23 +20,10 @@ export const Root = ({ children }) =>
 # hello mdx
 
 - [Beep](/beep)
-- API
-  - [Components](/api/components)
-
+- [API: Components](/api/components)
 - [GitHub](https://github.com/jxnblk/mdx-go)
 
 ## beep boop
 
 ---
 
-## Notes
-
-- [x] Head component
-- [x] Export multiple routes
-- [x] Link
-- [x] custom Root/Layout
-- [x] Default layout
-- [ ] Detect user package & css-in-js libs
-- [ ] components/dist module
-- [ ] Test as dependency
-- [ ] Custom webpack config
