@@ -1,15 +1,9 @@
-import { Root } from '../components'
+import { Head } from '../lib/client/Head'
 import ServerStyled from 'server-styled'
 
-export default props =>
-  <Root
-    {...props}
-    theme={{
-      colors: {
-        text: 'tomato'
-      }
-    }}
-  />
+<Head>
+  <title>Hello</title>
+</Head>
 
 # hello mdx
 
@@ -21,5 +15,7 @@ This is an mdx file
 
 ## Notes
 
-- StyleProvider (css vars + type system)
-- SCWrapper
+- [x] Head component
+- [ ] Export multiple routes
+- [ ] components module
+- [ ] Test as dependency

@@ -32,6 +32,13 @@ npm run dev
 
 ---
 
+- [ ] HTML export
+- [ ] Multiple page export
+- [x] Head component
+- [ ] Layouts
+- [ ] detect emotion/styled-components in package.json
+- [ ] static CSS export
+
 ## Modes/Options
 
 - Single Page
@@ -42,6 +49,31 @@ npm run dev
   - Dark
   - Roboto
 - styled-components/emotion/unstyled
+
+---
+
+```mdx
+import { Layout } from 'mdx-go'
+export default Layout
+```
+
+```mdx
+import { Root, Content } from 'mdx-go'
+import { Box } from 'grid-styled'
+
+<Root>
+  <Box
+    mx='auto'
+    px={3}
+    py={5}
+    css={{
+      maxWidth: '768px'
+    }}>
+    <Content />
+  </Box>
+</Root>
+```
+
 
 ---
 
