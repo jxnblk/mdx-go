@@ -23,6 +23,8 @@ const cli = meow(`
 
     $ mdx-go docs
 
+    $ mdx-go build docs
+
 `, {
   flags: {
     port: {
@@ -34,6 +36,11 @@ const cli = meow(`
       type: 'boolean',
       alias: 'o',
       default: true
+    },
+    outDir: {
+      type: 'string',
+      alias: 'd',
+      default: 'dist'
     }
   }
 })
@@ -45,12 +52,27 @@ if (!cmd && !input) {
 }
 
 const opts = Object.assign({
-  dirname: path.resolve(input || cmd)
+  dirname: path.resolve(input || cmd),
 }, cli.flags)
 
+opts.outDir = path.resolve(opts.outDir)
+
 switch (cmd) {
+  case 'build':
+    log('building...')
+    const build = require('./lib/build')
+    build(opts)
+      .catch(err => {
+        log.error(err)
+        process.exit(1)
+      })
+      .then(stats => {
+        log('bye bye')
+      })
+    break
   case 'dev':
   default:
+    log('starting dev server...')
     const dev = require('./lib/dev')
     dev(opts)
       .then(server => {
