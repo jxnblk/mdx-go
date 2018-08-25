@@ -49,18 +49,18 @@ npm run dev
 - [x] Head component
 - [x] Layouts
 - [x] Head component
-- [ ] CLI polish
-- [ ] Emoji plugin/etc
-- [ ] Test as dependency
+- [x] CLI polish
 - [x] Test global install
-- [ ] custom webpack config
 - [x] detect emotion/styled-components in package.json
 - [x] static CSS export
+- [x] Emoji plugin/etc
+- [ ] Test as dependency
+- [ ] custom webpack config
 - [ ] components dist
-- [ ] error overlay
-- [ ] Themes
 - [ ] README
 - [ ] Docs
+- [ ] error overlay
+- [ ] Themes
 
 ## Related
 

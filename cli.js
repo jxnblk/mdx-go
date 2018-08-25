@@ -22,14 +22,28 @@ log.error = (...msg) => {
 }
 
 const cli = meow(`
-  Usage:
+  ${chalk.gray('Usage')}
 
-    $ mdx-go docs
+    ${chalk.gray('$')} ${chalk.green('mdx-go docs')}
 
-    $ mdx-go build docs
+    ${chalk.gray('$')} ${chalk.green('mdx-go build docs')}
+
+  ${chalk.gray('Options')}
+
+    -p --port     Port for dev server
+    --no-open     Disable opening in default browser
 
 `, {
+  description: chalk.green('mdx-go') + ' Lightning fast MDX-based dev server',
   flags: {
+    help: {
+      type: 'boolean',
+      alias: 'h'
+    },
+    version: {
+      type: 'boolean',
+      alias: 'v'
+    },
     port: {
       type: 'string',
       alias: 'p',
@@ -79,7 +93,7 @@ switch (cmd) {
         process.exit(1)
       })
       .then(stats => {
-        log('bye bye')
+        log('built', chalk.gray(opts.outDir))
       })
     break
   case 'dev':

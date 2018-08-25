@@ -1,17 +1,26 @@
 {
   "name": "mdx-go",
   "version": "1.0.0-6",
-  "description": "",
+  "description": "Lightning-fase MDX-based dev server",
   "main": "index.js",
   "bin": {
     "mdx-go": "./cli.js"
   },
   "scripts": {
-    "_prepare": "babel lib/client -d dist",
     "start": "./cli.js docs",
-    "build": "./cli.js build docs"
+    "build": "./cli.js build docs",
+    "help": "./cli.js",
+    "test": "nyc ava"
   },
-  "keywords": [],
+  "keywords": [
+    "mdx",
+    "react",
+    "dev-server",
+    "development",
+    "docs",
+    "documentation",
+    "static-site"
+  ],
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
@@ -34,6 +43,11 @@
     "react-dom": "^16.4.2",
     "react-router-dom": "^4.3.1",
     "read-pkg-up": "^4.0.0",
+    "remark-autolink-headings": "^5.0.0",
+    "remark-emoji": "^2.0.1",
+    "remark-images": "^0.8.1",
+    "remark-slug": "^5.1.0",
+    "remark-unwrap-images": "0.0.2-0",
     "update-notifier": "^2.5.0",
     "webpack": "^4.17.1",
     "webpack-dev-middleware": "^3.2.0",
@@ -42,6 +56,8 @@
     "webpack-sources": "^1.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "ava": "^0.25.0",
+    "nyc": "^12.0.2",
+    "supertest": "^3.1.0"
   }
 }
