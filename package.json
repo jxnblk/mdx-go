@@ -7,7 +7,7 @@
     "mdx-go": "./cli.js"
   },
   "scripts": {
-    "prepare": "babel components -d dist",
+    "_prepare": "babel lib/client -d dist",
     "start": "./cli.js docs",
     "build": "./cli.js build docs"
   },
