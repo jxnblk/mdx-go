@@ -34,6 +34,7 @@
     "react-router-dom": "^4.3.1",
     "serve-static": "^1.13.2",
     "server-styled": "^1.0.0-0",
+    "update-notifier": "^2.5.0",
     "webpack": "^4.17.1",
     "webpack-dev-middleware": "^3.2.0",
     "webpack-hot-middleware": "^2.22.3",

@@ -86,3 +86,5 @@ switch (cmd) {
         process.exit(1)
       })
 }
+
+require('udpate-notifier')({ pkg: cli.pkg }).notify()
