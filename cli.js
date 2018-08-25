@@ -87,4 +87,4 @@ switch (cmd) {
       })
 }
 
-require('udpate-notifier')({ pkg: cli.pkg }).notify()
+require('update-notifier')({ pkg: cli.pkg }).notify()
