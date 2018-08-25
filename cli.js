@@ -4,6 +4,9 @@ const meow = require('meow')
 const chalk = require('chalk')
 const open = require('react-dev-utils/openBrowser')
 
+const config = require('pkg-conf').sync('mdx-go')
+const pkg = require('read-pkg-up').sync().pkg
+
 const log = (...msg) => {
   console.log(
     chalk.green('[mdx-go]'),
@@ -52,8 +55,9 @@ if (!cmd && !input) {
 }
 
 const opts = Object.assign({
+  pkg,
   dirname: path.resolve(input || cmd),
-}, cli.flags)
+}, config, cli.flags)
 
 opts.outDir = path.resolve(opts.outDir)
 
