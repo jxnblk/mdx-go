@@ -1,13 +1,29 @@
-import { Head } from '../lib/client/Head'
+import { Head } from '..'
 import ServerStyled from 'server-styled'
 
 <Head>
   <title>Hello</title>
 </Head>
 
+export const Root = ({ children }) =>
+  <div
+    children={children}
+    style={{
+      padding: 48,
+      maxWidth: 512,
+      color: 'tomato',
+      margin: 'auto'
+    }}
+  />
+
+
 # hello mdx
 
-This is an mdx file
+- [Beep](/beep)
+- API
+  - [Components](/api/components)
+
+- [GitHub](https://github.com/jxnblk/mdx-go)
 
 ## beep boop
 
@@ -16,6 +32,11 @@ This is an mdx file
 ## Notes
 
 - [x] Head component
-- [ ] Export multiple routes
-- [ ] components module
+- [x] Export multiple routes
+- [x] Link
+- [x] custom Root/Layout
+- [x] Default layout
+- [ ] Detect user package & css-in-js libs
+- [ ] components/dist module
 - [ ] Test as dependency
+- [ ] Custom webpack config
