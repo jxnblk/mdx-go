@@ -1,7 +1,7 @@
 
 # mdx-go
 
-:zap: Lightning fast MDX-based dev server
+:zap: Lightning fast [MDX][]-based dev server
 
 ```sh
 npm i -D mdx-go
@@ -59,8 +59,17 @@ npm run dev
 - [ ] README
 - [ ] Docs
 
+## Related
+
+- [MDX][]
+- [mdx-deck][]
+- [mdx-docs][]
+- [ok-mdx][]
 
 
 [MDX]: https://github.com/mdx-js/mdx
+[mdx-deck]: https://github.com/jxnblk/mdx-deck
+[mdx-docs]: https://github.com/jxnblk/mdx-docs
+[ok-mdx]: https://github.com/jxnblk/ok-mdx
 [styled-components]: https://github.com/styled-components/styled-components
 [emotion]: https://github.com/emotion-js/emotion
