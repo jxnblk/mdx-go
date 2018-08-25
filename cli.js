@@ -5,7 +5,7 @@ const chalk = require('chalk')
 const open = require('react-dev-utils/openBrowser')
 
 const config = require('pkg-conf').sync('mdx-go')
-const pkg = require('read-pkg-up').sync().pkg
+const { pkg } = require('read-pkg-up').sync()
 
 const log = (...msg) => {
   console.log(
@@ -60,6 +60,14 @@ const opts = Object.assign({
 }, config, cli.flags)
 
 opts.outDir = path.resolve(opts.outDir)
+
+if (pkg && pkg.dependencies) {
+  if (pkg.dependencies['styled-components']) {
+    opts.cssLibrary = 'styled-components'
+  } else if (pkg.dependencies['emotion']) {
+    opts.cssLibrary = 'emotion'
+  }
+}
 
 switch (cmd) {
   case 'build':

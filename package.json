@@ -1,6 +1,6 @@
 {
   "name": "mdx-go",
-  "version": "1.0.0-5",
+  "version": "1.0.0-6",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -34,8 +34,6 @@
     "react-dom": "^16.4.2",
     "react-router-dom": "^4.3.1",
     "read-pkg-up": "^4.0.0",
-    "serve-static": "^1.13.2",
-    "server-styled": "^1.0.0-0",
     "update-notifier": "^2.5.0",
     "webpack": "^4.17.1",
     "webpack-dev-middleware": "^3.2.0",
@@ -44,7 +42,6 @@
     "webpack-sources": "^1.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "styled-components": "^3.4.5"
+    "babel-cli": "^6.26.0"
   }
 }
