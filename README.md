@@ -178,6 +178,11 @@ Ensure the Root component is exported from `index.mdx`
 export { Root } from './Root.js'
 ```
 
+## Theming
+
+Wrap MDX with a [Root components](#layouts) and use the [MDXProvider](#custom-mdx-components) to change the default styles.
+For an out-of-the box solution, see [mdx-themes][].
+
 ## Exporting
 
 To export as a static site with HTML and JS bundles, run:
@@ -218,7 +223,9 @@ All CLI options can also be specified in a `mdx-go` field in your `package.json`
 
 ## Related
 
-[MDX][] | [mdx-deck][] | [mdx-docs][] | [ok-mdx][]
+[MDX][] | [mdx-deck][] | [mdx-docs][] | [ok-mdx][] |
+[x0][]
+
 
 [MIT License](LICENSE.md)
 
@@ -230,8 +237,10 @@ All CLI options can also be specified in a `mdx-go` field in your `package.json`
 
 
 [MDX]: https://github.com/mdx-js/mdx
+[mdx-themes]: https://github.com/jxnblk/mdx-themes
 [mdx-deck]: https://github.com/jxnblk/mdx-deck
 [mdx-docs]: https://github.com/jxnblk/mdx-docs
 [ok-mdx]: https://github.com/jxnblk/ok-mdx
 [styled-components]: https://github.com/styled-components/styled-components
 [emotion]: https://github.com/emotion-js/emotion
+[x0]: https://github.com/c8r/x0
