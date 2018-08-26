@@ -66,10 +66,10 @@ const css = `
 .mdx-pre, .mdx-code {
   font-family: Menlo, monospace;
   font-size: var(--h5);
-  padding: var(--m1);
 }
 
 .mdx-pre {
+  padding: var(--m1);
   color: var(--pre);
   background-color: var(--pre-background);
   border-radius: var(--radius);

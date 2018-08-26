@@ -77,6 +77,7 @@ if (!cmd && !input) {
 const opts = Object.assign({
   pkg,
   dirname: path.resolve(input || cmd),
+  basename: '',
 }, config, cli.flags)
 
 opts.outDir = path.resolve(opts.outDir)

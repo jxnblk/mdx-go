@@ -69,5 +69,8 @@
     "repng": "^3.0.2",
     "rimraf": "^2.6.2",
     "supertest": "^3.1.0"
+  },
+  "mdx-go": {
+    "basename": "/mdx-go"
   }
 }
