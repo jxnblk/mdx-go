@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "react-live-example",
+  "scripts": {
+    "start": "mdx-go docs"
+  },
+  "dependencies": {
+    "@mdx-js/tag": "^0.15.0",
+    "react-live": "^1.11.0"
+  }
+}
