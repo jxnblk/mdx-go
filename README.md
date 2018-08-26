@@ -5,10 +5,6 @@
 
 :zap: Lightning fast [MDX][]-based dev server
 
-<p align='center'>
-  <img src='docs/logo.png' width='128' height='128' />
-</p>
-
 [![MIT License][license]](LICENSE.md)
 [![Build Status][badge]][travis]
 [![Version][version-badge]][npm]
