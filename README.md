@@ -9,6 +9,11 @@
   <img src='docs/logo.png' width='128' height='128' />
 </p>
 
+[![MIT License][license]](LICENSE.md)
+[![Build Status][badge]][travis]
+[![Version][version-badge]][npm]
+[![Downloads][downloads-badge]][npm]
+
 ```sh
 npm i -g mdx-go
 ```
@@ -20,11 +25,6 @@ npm i -g mdx-go
 - :triangular_ruler: Customizable layouts
 - :woman_singer: Support for [styled-components][] & [emotion][]
 - :globe_with_meridians: Export as static HTML
-
-[![MIT License][license]](LICENSE.md)
-[![Build Status][badge]][travis]
-[![Version][version-badge]][npm]
-[![Downloads][downloads-badge]][npm]
 
 [badge]: https://flat.badgen.net/travis/jxnblk/mdx-go
 [travis]: https://travis-ci.org/jxnblk/mdx-go
