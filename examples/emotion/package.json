@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "emotion-example",
+  "scripts": {
+    "start": "mdx-go docs"
+  },
+  "dependencies": {
+    "emotion": "^9.2.6",
+    "emotion-server": "^9.2.6",
+    "react-emotion": "^9.2.6"
+  }
+}
