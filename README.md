@@ -1,6 +1,8 @@
 
 # mdx-go
 
+![](https://s3.amazonaws.com/jxnblk/mdx-go-24.gif)
+
 :zap: Lightning fast [MDX][]-based dev server
 
 <p align='center'>
