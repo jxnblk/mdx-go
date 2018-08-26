@@ -7,6 +7,8 @@
 npm i -g mdx-go
 ```
 
+<img src='docs/logo.png' width='64' height='64' style='margin:auto' />
+
 - :zero: Zero-config dev server
 - :memo: Write in markdown
 - :atom_symbol: Import and use React components

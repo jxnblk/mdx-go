@@ -18,8 +18,8 @@ const backward = [
   'z',
 ].join(' ')
 
-export const Logo = ({
-  size = 64,
+export default ({
+  size = 256,
   color = '#fff',
   bg = '#0d0'
 }) =>
@@ -40,30 +40,5 @@ export const Logo = ({
       <path transform='translate(72 0)' fill={bg} opacity={1/4} d={backward} />
       <path transform='translate(0 0)' d={forward} />
       <path transform='translate(48 0)' d={forward} />
-    </g>
-  </svg>
-
-export default ({
-  width = 1024,
-  color = '#0d0',
-  bg = '#000'
-}) =>
-  <svg
-    viewBox='0 0 256 128'
-    width={width}
-    height={width / 2}
-    style={{
-      maxWidth: '100%'
-    }}>
-    <rect
-      fill={bg}
-      width='256'
-      height='128'
-    />
-    <g transform='translate(80 16)'>
-      <Logo
-        bg={color}
-        size={96}
-      />
     </g>
   </svg>
