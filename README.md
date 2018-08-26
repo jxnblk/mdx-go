@@ -221,6 +221,15 @@ All CLI options can also be specified in a `mdx-go` field in your `package.json`
 }
 ```
 
+## Examples
+
+- [Basic](examples/basic)
+- [Head Content](examples/head-content)
+- [Routing](examples/routing)
+- [React Live](examples/react-live)
+- [Styled Components](examples/styled-components)
+- [Emotion](examples/emotion)
+
 ## Related
 
 [MDX][] | [mdx-deck][] | [mdx-docs][] | [ok-mdx][] |
