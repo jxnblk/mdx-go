@@ -217,6 +217,12 @@ All CLI options can also be specified in a `mdx-go` field in your `package.json`
 - [mdx-docs][]
 - [ok-mdx][]
 
+[MIT License](LICENSE.md)
+
+<p align='center'>
+  <img src='docs/logo.png' width='64' height='64' />
+</p>
+
 
 [MDX]: https://github.com/mdx-js/mdx
 [mdx-deck]: https://github.com/jxnblk/mdx-deck
