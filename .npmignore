@@ -1,6 +1,5 @@
 docs
 dist
-.babelrc
 .nyc_output
 coverage
 test
