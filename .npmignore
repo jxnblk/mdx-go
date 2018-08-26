@@ -5,7 +5,8 @@ dist
 coverage
 test
 site
-themes
+/themes
+!themes.js
 src
 examples
 .travis.yml
