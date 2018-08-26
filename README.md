@@ -222,12 +222,11 @@ All CLI options can also be specified in a `mdx-go` field in your `package.json`
 
 ## Related
 
-- [MDX][]
-- [mdx-deck][]
-- [mdx-docs][]
-- [ok-mdx][]
+[MDX][] | [mdx-deck][] | [mdx-docs][] | [ok-mdx][]
 
 [MIT License](LICENSE.md)
+
+---
 
 <p align='center'>
   <img src='docs/logo.png' width='64' height='64' />

@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "mdx-themes-example",
+  "scripts": {
+    "start": "mdx-go docs"
+  },
+  "dependencies": {
+    "mdx-themes": "^1.0.0-0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "name": "head-content",
+  "scripts": {
+    "start": "mdx-go docs"
+  }
+}
