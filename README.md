@@ -3,13 +3,13 @@
 
 :zap: Lightning fast [MDX][]-based dev server
 
-```sh
-npm i -g mdx-go
-```
-
 <p align='center'>
   <img src='docs/logo.png' width='128' height='128' />
 </p>
+
+```sh
+npm i -g mdx-go
+```
 
 - :zero: Zero-config dev server
 - :memo: Write in markdown
