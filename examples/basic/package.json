@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "name": "basic",
+  "scripts": {
+    "start": "mdx-go docs"
+  }
+}

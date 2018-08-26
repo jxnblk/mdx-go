@@ -27,8 +27,8 @@ const baseTheme = {
 
 const css = `
 .mdx-base-theme {
-  line-height: var(--lineHeight);
-  max-width: var(--maxWidth);
+  line-height: var(--line-height);
+  max-width: var(--max-width);
   margin: auto;
   padding: var(--m2);
   color: var(--color);
@@ -71,7 +71,7 @@ const css = `
 
 .mdx-pre {
   color: var(--pre);
-  background-color: var(--preBackground);
+  background-color: var(--pre-background);
   border-radius: var(--radius);
 }
 
