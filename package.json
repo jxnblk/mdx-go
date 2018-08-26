@@ -7,8 +7,6 @@
     "mdx-go": "./cli.js"
   },
   "scripts": {
-    "prepare": "babel src -d dist",
-    "watch": "babel src -d dist -w",
     "start": "./cli.js docs",
     "build": "./cli.js build docs -d site",
     "help": "./cli.js",

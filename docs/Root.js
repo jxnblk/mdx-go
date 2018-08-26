@@ -1,6 +1,6 @@
 import React from 'react'
 import { Head } from '..'
-import { BaseTheme } from '../themes'
+import { BaseTheme } from 'mdx-themes'
 
 export const Root = props =>
   <BaseTheme>

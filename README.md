@@ -132,6 +132,7 @@ export default Layout
 ```
 
 To wrap all routes with a custom layout, export a `Root` component from your `index.mdx` file.
+This will completely disable the built-in centered layout.
 Note: this only works in the `index` route, not other routes.
 
 ```mdx
