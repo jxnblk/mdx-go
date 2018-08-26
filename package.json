@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "./cli.js docs",
-    "build": "./cli.js build docs",
+    "build": "./cli.js build docs -d site",
     "help": "./cli.js",
     "test": "nyc ava",
     "logo": "repng docs/logo.js -w 256 -h 256 -d docs -f logo.png",
@@ -51,6 +51,7 @@
     "remark-images": "^0.8.1",
     "remark-slug": "^5.1.0",
     "remark-unwrap-images": "0.0.2-0",
+    "serve-static": "^1.13.2",
     "update-notifier": "^2.5.0",
     "webpack": "^4.17.1",
     "webpack-dev-middleware": "^3.2.0",
