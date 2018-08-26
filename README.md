@@ -21,6 +21,20 @@ npm i -g mdx-go
 - :woman_singer: Support for [styled-components][] & [emotion][]
 - :globe_with_meridians: Export as static HTML
 
+[![MIT License][license]](LICENSE.md)
+[![Build Status][badge]][travis]
+[![Version][version-badge]][npm]
+[![Downloads][downloads-badge]][npm]
+
+[badge]: https://flat.badgen.net/travis/jxnblk/mdx-go
+[travis]: https://travis-ci.org/jxnblk/mdx-go
+
+[version-badge]: https://flat.badgen.net/npm/v/mdx-go
+[downloads-badge]: https://flat.badgen.net/npm/dt/mdx-go
+[npm]: https://npmjs.com/package/mdx-go
+
+[license]: https://flat.badgen.net/badge/license/MIT/blue
+[coverage]: https://flat.badgen.net/codecov/c/github/jxnblk/mdx-go
 
 ## Getting Started
 
