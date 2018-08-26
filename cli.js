@@ -33,6 +33,9 @@ const cli = meow(`
     -p --port     Port for dev server
     --no-open     Disable opening in default browser
 
+    -d --out-dir  Output directory for static export
+    --basename    Base path for routing
+
 `, {
   description: chalk.green('mdx-go') + ' Lightning fast MDX-based dev server',
   flags: {
@@ -58,6 +61,9 @@ const cli = meow(`
       type: 'string',
       alias: 'd',
       default: 'dist'
+    },
+    basename: {
+      type: 'string'
     }
   }
 })
