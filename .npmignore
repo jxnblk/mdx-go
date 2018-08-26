@@ -1,5 +1,4 @@
 docs
-dist
 .nyc_output
 coverage
 test
@@ -7,3 +6,4 @@ site
 src
 examples
 .travis.yml
+.babelrc

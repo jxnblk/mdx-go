@@ -2,11 +2,12 @@
   "name": "mdx-go",
   "version": "1.0.1",
   "description": "Lightning-fase MDX-based dev server",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
     "mdx-go": "./cli.js"
   },
   "scripts": {
+    "prepare": "babel src -d dist",
     "start": "./cli.js docs",
     "build": "./cli.js build docs -d site",
     "help": "./cli.js",
@@ -63,6 +64,7 @@
   },
   "devDependencies": {
     "ava": "^0.25.0",
+    "babel-cli": "^6.26.0",
     "mdx-themes": "^1.0.0-0",
     "nyc": "^12.0.2",
     "repng": "^3.0.2",
