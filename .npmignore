@@ -6,3 +6,6 @@ coverage
 test
 site
 themes
+src
+examples
+.travis.yml
