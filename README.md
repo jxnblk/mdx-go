@@ -201,8 +201,8 @@ All CLI options can also be specified in a `mdx-go` field in your `package.json`
 
 ---
 
+- [ ] Video
 - [ ] Docs
-- [ ] Test as dependency
 
 ## Related
 
