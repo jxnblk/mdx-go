@@ -7,7 +7,9 @@
 npm i -g mdx-go
 ```
 
-<img src='docs/logo.png' width='64' height='64' style='margin:auto' />
+<div style='text-align:center'>
+  <img src='docs/logo.png' width='128' height='128' style='margin:auto' />
+</div>
 
 - :zero: Zero-config dev server
 - :memo: Write in markdown
