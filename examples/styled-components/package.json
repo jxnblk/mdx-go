@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "styled-components-example",
+  "scripts": {
+    "start": "mdx-go docs"
+  },
+  "dependencies": {
+    "styled-components": "^3.4.5"
+  }
+}
