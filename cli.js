@@ -35,6 +35,7 @@ const cli = meow(`
 
     -d --out-dir  Output directory for static export
     --basename    Base path for routing
+    --static      Export HTML without JS bundle
 
 `, {
   description: chalk.green('mdx-go') + ' Lightning fast MDX-based dev server',
@@ -64,6 +65,9 @@ const cli = meow(`
     },
     basename: {
       type: 'string'
+    },
+    static: {
+      type: 'boolean'
     }
   }
 })

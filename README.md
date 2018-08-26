@@ -211,6 +211,7 @@ The following flags can be passed to the CLI.
   --no-open     Disable opening in default browser
   -d --out-dir  Output directory for static export
   --basename    Base path for routing
+  --static      Export HTML without JS bundle
 ```
 
 All CLI options can also be specified in a `mdx-go` field in your `package.json`.
