@@ -32,6 +32,7 @@ const cli = meow(`
 
     -p --port     Port for dev server
     --no-open     Disable opening in default browser
+    --fullscreen  Disable default centered layout
 
     -d --out-dir  Output directory for static export
     --basename    Base path for routing
@@ -57,6 +58,9 @@ const cli = meow(`
       type: 'boolean',
       alias: 'o',
       default: true
+    },
+    fullscreen: {
+      type: 'boolean'
     },
     outDir: {
       type: 'string',
