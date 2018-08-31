@@ -3,6 +3,7 @@ const path = require('path')
 const meow = require('meow')
 const chalk = require('chalk')
 const open = require('react-dev-utils/openBrowser')
+const findUp = require('find-up')
 
 const config = require('pkg-conf').sync('mdx-go')
 const { pkg } = require('read-pkg-up').sync()
@@ -37,6 +38,7 @@ const cli = meow(`
     -d --out-dir  Output directory for static export
     --basename    Base path for routing
     --static      Export HTML without JS bundle
+    --webpack     Path to custom webpack config
 
 `, {
   description: chalk.green('mdx-go') + ' Lightning fast MDX-based dev server',
@@ -72,6 +74,9 @@ const cli = meow(`
     },
     static: {
       type: 'boolean'
+    },
+    webpack: {
+      type: 'string'
     }
   }
 })
@@ -86,6 +91,7 @@ const opts = Object.assign({
   pkg,
   dirname: path.resolve(input || cmd),
   basename: '',
+  webpack: findUp.sync('webpack.config.js'),
 }, config, cli.flags)
 
 opts.outDir = path.resolve(opts.outDir)
@@ -96,6 +102,10 @@ if (pkg && pkg.dependencies) {
   } else if (pkg.dependencies['emotion']) {
     opts.cssLibrary = 'emotion'
   }
+}
+
+if (opts.webpack) {
+  opts.webpack = require(path.resolve(opts.webpack))
 }
 
 switch (cmd) {

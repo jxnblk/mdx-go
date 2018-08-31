@@ -212,6 +212,7 @@ The following flags can be passed to the CLI.
   -d --out-dir  Output directory for static export
   --basename    Base path for routing
   --static      Export HTML without JS bundle
+  --webpack     Path to custom webpack config
 ```
 
 All CLI options can also be specified in a `mdx-go` field in your `package.json`.
@@ -221,6 +222,15 @@ All CLI options can also be specified in a `mdx-go` field in your `package.json`
   "outDir": "site"
 }
 ```
+
+## Custom webpack config
+
+mdx-go will automatically pick up a `webpack.config.js` if it exists in the current working directory.
+A custom path can be passed to the CLI using the `--webpack` flag.
+The provided webpack config will be merged with the built-in config using [webpack-merge][].
+
+[webpack-merge]: https://github.com/survivejs/webpack-merge
+
 
 ## Examples
 
