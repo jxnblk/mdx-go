@@ -192,7 +192,8 @@ export { Root } from './Root.js'
 
 ## Theming
 
-Wrap MDX with a [Root components](#layouts) and use the [MDXProvider](#custom-mdx-components) to change the default styles.
+By default mdx-go includes virtually no styling. To customize the styles, use components to
+wrap MDX with a [Root components](#layouts) and use the [MDXProvider](#custom-mdx-components) to change the default styles.
 For an out-of-the box solution, see [mdx-themes][].
 
 ## Exporting
