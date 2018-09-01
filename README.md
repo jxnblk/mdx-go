@@ -70,7 +70,7 @@ npm run dev
 
 ## Motivation
 
-mdx-go is built with the idea of **Progressive Documentation** in mind,
+mdx-go is built with the idea of **[Progressive Documentation][]** in mind,
 intended to be used anywhere as a dev server, prototyping tool, or simple static site generator.
 By embracing the MDX file format, the docs you create with mdx-go can easily be used in other tools.
 Start your docs with mdx-go, and migrated to tools like [Next.js][] and [Gatsby][] when needed.
