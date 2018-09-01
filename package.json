@@ -42,6 +42,7 @@
     "is-absolute-url": "^2.1.0",
     "lodash.get": "^4.4.2",
     "meow": "^5.0.0",
+    "minimatch": "^3.0.4",
     "pkg-conf": "^2.1.0",
     "progress-bar-webpack-plugin": "^1.11.0",
     "react": "^16.4.2",

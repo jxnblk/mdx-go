@@ -92,6 +92,7 @@ const opts = Object.assign({
   dirname: path.resolve(input || cmd),
   basename: '',
   webpack: findUp.sync('webpack.config.js'),
+  pattern: '**/*'
 }, config, cli.flags)
 
 opts.outDir = path.resolve(opts.outDir)
