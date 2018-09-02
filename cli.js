@@ -77,6 +77,9 @@ const cli = meow(`
     },
     webpack: {
       type: 'string'
+    },
+    debug: {
+      type: 'boolean'
     }
   }
 })
