@@ -27,7 +27,6 @@ export const Root = props =>
       <meta name='twitter:image' content='https://jxnblk.com/mdx-go/card.png' />
     </Head>
     <Box
-      {...props}
       css={{
         lineHeight: 1.5
       }}
