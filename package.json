@@ -10,7 +10,6 @@
     "prepare": "babel src -d dist",
     "start": "./cli.js docs",
     "build": "./cli.js build docs -d site --cssLibrary='styled-components' --static",
-
     "help": "./cli.js",
     "test": "nyc ava",
     "logo": "repng docs/logo.js -w 256 -h 256 -d docs -f logo.png",
@@ -40,6 +39,7 @@
     "connect": "^3.6.6",
     "connect-history-api-fallback": "^1.5.0",
     "find-up": "^3.0.0",
+    "get-port": "^4.0.0",
     "is-absolute-url": "^2.1.0",
     "lodash.get": "^4.4.2",
     "meow": "^5.0.0",
