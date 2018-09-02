@@ -29,8 +29,9 @@ export const Root = props =>
     <Box
       css={{
         lineHeight: 1.5
-      }}
-    />
+      }}>
+      {props.children}
+    </Box>
     </React.Fragment>
 
 export const Banner = props =>
