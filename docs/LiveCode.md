@@ -54,7 +54,7 @@ export const Root = props =>
   </ComponentProvider>
 ```
 
-With the setup above, the `Button` component will now be in scope code blocks.
+With the setup above, the `Button` component will now be in scope for code blocks.
 
 ````mdx
 ```.jsx

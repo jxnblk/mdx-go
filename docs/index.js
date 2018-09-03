@@ -116,21 +116,27 @@ export default props =>
         </Col>
       </Flex>
       <Divider />
-      <Flex
-        is='footer'
-        fontSize={1}
-        py={4}
-        mx={-3}
-      >
-        <Link px={3} href={github}>GitHub</Link>
-        <Link px={3} href='https://jxnblk.com'>Made by Jxnblk</Link>
-      </Flex>
-      <Flex py={4}>
-        <Box mx='auto'>
-          <Link href='/getting-started'>
-            <Logo size={64} />
-          </Link>
-        </Box>
-      </Flex>
     </Container>
+    <Box bg='lightgray'>
+      <Container>
+        <Flex
+          is='footer'
+          fontSize={1}
+          py={4}
+          mx={-3}
+        >
+          <Link px={3} href={github}>GitHub</Link>
+          <Link px={3} href='https://jxnblk.com'>Made by Jxnblk</Link>
+        </Flex>
+        <Flex py={4}>
+          <Box mx='auto'>
+            <Link
+              title='Hidden Docs'
+              href='/getting-started'>
+              <Logo size={64} />
+            </Link>
+          </Box>
+        </Flex>
+      </Container>
+    </Box>
   </Box>
