@@ -13,8 +13,13 @@ import {
 import { Box, Flex } from 'grid-styled/emotion'
 import Logo from './logo'
 
-const green = '#0d0'
+const green = '#0d3'
+const darkgreen = '#0a6'
 const black = '#001600'
+// const lightgray = '#f6f9f6'
+const lightgray = '#f6f6ff'
+const blue = '#07c'
+
 
 const gradient = `
 linear-gradient(
@@ -25,9 +30,6 @@ linear-gradient(
   rgba(0, 191, 0, 0.5) 95%
 )
 `
-
-const lightgray = '#f6f9f6'
-const blue = '#07c'
 
 const nav = [
   'Home',
@@ -52,10 +54,28 @@ const nav = [
   'Typography',
 ]
 
+const theme = {
+  colors: {
+    lightgray,
+    black,
+    blue,
+    green,
+    darkgreen,
+  },
+  code: {
+    color: darkgreen
+  },
+  pre: {
+    // color: darkgreen
+  }
+}
+
 const PageLayout = props => props.location.pathname === '/'
   ? props.children
   : (
-    <StyleProvider theme={{ colors: { lightgray } }}>
+    <StyleProvider
+      color='black'
+      theme={theme}>
       <Layout>
         <Layout.MenuToggle m={2} />
         {false && (

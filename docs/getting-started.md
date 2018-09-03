@@ -3,6 +3,10 @@ export const name = 'Getting Started'
 
 # Getting Started
 
+mdx-go is best suited as a globally available dev server for React
+that can be used in any project.
+Install mdx-go globally with the following command:
+
 ```sh
 npm install -g mdx-go
 ```

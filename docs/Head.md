@@ -16,7 +16,7 @@ import { Head } from 'mdx-go'
 
 ## Webfonts
 
-The Head component can also be used to load webfonts.
+The Head component can be used to load webfonts with a `<link>` tag.
 
 ```mdx
 <Head>

@@ -52,13 +52,16 @@ export const h4 = createHeading('h4', { mt: 4, mb: 2, fontSize: [ 2 ] })
 export const h5 = createHeading('h5', { mt: 4, mb: 2, fontSize: [ 1 ] })
 export const h6 = createHeading('h6', { mt: 4, mb: 2, fontSize: [ 0 ] })
 
-export const a = styled(Link)({}, themed('a'))
+export const a = styled(Link)({}, color, themed('a'))
+a.defaultProps = {
+  color: 'blue'
+}
 
 export const p = createComponent('p', {
   lineHeight: 1.625,
 }, {
   mt: 3,
-  mb: 4,
+  mb: 3,
 })
 
 export const img = createComponent('img', {

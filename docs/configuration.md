@@ -10,8 +10,11 @@ You can even write your own components to customize the theme and layout of mdx-
 
 ## Root component
 
+Using a custom Root component is the primary means of customizing an app in mdx-go. It wraps the entire app with a React component that can provide themes and components via context, add page layouts, and intercept routing.
+
 To wrap your entire application with a React component,
 export a custom `Root` component from your main `index.mdx` file.
+Note that a Root component must be exported from the `index.mdx` file and **not** another route.
 
 ```mdx
 export const Root = props =>
@@ -44,6 +47,16 @@ This allows you to override the `name` or add additional metadata to a page.
 
 MDX includes a mechanism to wrap an individual file with a React component,
 using a default export.
+To wrap an individual route with a component, export the component as `default` from the MDX file.
+
+```mdx
+export default props =>
+  <div style={{ padding: 32 }}>
+    {props.children}
+  </div>
+
+# Page Layout
+```
 
 Learn more in the [MDX docs](https://mdxjs.com/syntax#export-default).
 
@@ -60,6 +73,8 @@ import { Head } from 'mdx-go'
 ```
 
 The Head component can be used in individual pages or in a [Root component](#root-component) to add head content across the entire app.
+
+Read more about the [Head component](/Head)
 
 ## MDX Components
 
@@ -88,7 +103,9 @@ The ComponentProvider also adds the [LiveCode](/LiveCode) component to scope for
 
 ## Layout components
 
-mdx-go includes layout components for quickly adding default styles and layouts to your app.
+mdx-go includes optional layout components for quickly adding default styles and layouts to your app.
+
+Read more about the built-in layout components:
 
 - [Layout](/Layout)
 - [DocsLayout](/DocsLayout)
@@ -98,7 +115,7 @@ mdx-go includes layout components for quickly adding default styles and layouts 
 mdx-go contains almost no default styling, making it ideal for use with components that include their own styling.
 To add themes or custom styling, wrap your app with a [Root component](configuration/#root-component).
 
-To use the built-in default styles, see the [StyleProvider](/StyleProvider) component.
+To use optional, built-in styles, see the [StyleProvider](/StyleProvider) component.
 
 ## webpack
 
@@ -121,7 +138,7 @@ The following flags can be passed to the CLI.
   --webpack     Path to custom webpack config
 ```
 
-All CLI options can also be specified in a `mdx-go` field in your `package.json`.
+All CLI options can also be specified in an `mdx-go` field in your `package.json`.
 
 ```json
 "mdx-go": {
