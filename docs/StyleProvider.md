@@ -19,6 +19,14 @@ export const Root = props =>
 
 ## Theming
 
+Custom themes can be passed to the StyleProvider with the `theme` prop.
+
+```jsx
+<StyleProvider
+  theme={theme}
+/>
+```
+
 ## Props
 
 Prop | Type | Description
