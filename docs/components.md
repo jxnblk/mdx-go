@@ -1,4 +1,6 @@
 
+export const name = 'Components'
+
 # Components
 
 mdx-go includes several built-in components for live code previews, layout, and more.
@@ -26,9 +28,20 @@ export const Root = props =>
   </Layout>
 ```
 
+- Layout.Sidebar
+- Layout.Main
+- Layout.MenuToggle
+- Layout.NavBar
+- withLayout
+
 - [ ] Head
 - [ ] Link
-- [ ] Pagination
-- [ ] NavLinks
 - [ ] ComponentProvider
+- [ ] withComponents
+- [ ] NavLinks
 - [ ] LiveCode
+
+- [ ] Pagination
+- [ ] StyleProvider
+
+- [ ] DocsLayout

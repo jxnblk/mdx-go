@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'react-emotion'
 import sortby from 'lodash.sortby'
+import get from 'lodash.get'
 import {
   space,
   fontSize,
@@ -39,15 +40,18 @@ NavLink.defaultProps = {
 export const NavLinks = ({
   routes = [],
   order = [],
+  filter,
   ...props
 }) =>
   <React.Fragment>
-    {sort(routes, order).map(route => (
+    {sort(routes, order)
+      .filter(filter)
+      .map(route => (
       <NavLink
         key={route.key}
         {...props}
         href={route.path}
-        children={route.name}
+        children={get(route, 'module.name', route.name)}
       />
     ))}
   </React.Fragment>
@@ -55,10 +59,12 @@ export const NavLinks = ({
 NavLinks.propTypes = {
   routes: PropTypes.array.isRequired,
   order: PropTypes.array.isRequired,
+  filter: PropTypes.func.isRequired,
 }
 
 NavLinks.defaultProps = {
   order: [ 'index' ],
+  filter: () => true,
 }
 
 export default NavLinks

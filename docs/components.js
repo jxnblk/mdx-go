@@ -25,13 +25,22 @@ const PageLayout = props => props.location.pathname === '/'
   ? props.children
   : (
     <Layout>
-      <Layout.Sidebar>
-        <NavLinks {...props} />
-      </Layout.Sidebar>
-      <Layout.Main>
+      <Layout.NavBar>
         <Layout.MenuToggle>
           Menu
         </Layout.MenuToggle>
+        <Box mx='auto' />
+        mdx-go
+        <Box mx='auto' />
+      </Layout.NavBar>
+      <Layout.Sidebar bg='#f6f6ff'>
+        <Box py={3} />
+        <NavLinks
+          {...props}
+          filter={route => !!route.module.name}
+        />
+      </Layout.Sidebar>
+      <Layout.Main>
         {props.children}
       </Layout.Main>
     </Layout>

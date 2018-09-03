@@ -7,6 +7,7 @@ import {
   color,
   display,
   maxWidth,
+  height,
   style,
 } from 'styled-system'
 
@@ -167,17 +168,72 @@ export const Main = props =>
     <MainContainer {...props} />
   </MainRoot>
 
+const MenuButton = styled('button')({
+  appearance: 'none',
+  fontSize: 'inherit',
+  fontFamily: 'inherit',
+  display: 'inline-block',
+  margin: 0,
+  padding: 0,
+  color: 'inherit',
+  backgroundColor: 'transparent',
+  border: 0,
+  borderRadius: 0,
+})
+
 export const MenuToggle = withLayout(({
   toggleMenu,
+  closeMenu,
+  openMenu,
+  update,
   open,
   children,
+  ...props
 }) => typeof children === 'function'
   ? children({ open, toggleMenu })
   : (
-    <div onClick={toggleMenu}>
+    <MenuButton
+      {...props}
+      onClick={toggleMenu}>
       {children}
-    </div>
+    </MenuButton>
   ))
+
+const NavBarRoot = styled('header')({
+  position: 'fixed',
+  top: 0,
+  right: 0,
+  left: 0,
+  display: 'flex',
+  alignItems: 'center',
+}, space, height, color, props => props.css)
+
+const NavBarSpacer = styled('div')({}, height)
+
+export const NavBar = ({
+  height,
+  ...props
+}) =>
+  <React.Fragment>
+    <NavBarSpacer height={height} />
+    <NavBarRoot
+      {...props}
+      height={height}
+    />
+  </React.Fragment>
+
+NavBar.propTypes = {
+  ...space.propTypes,
+  ...height.propTypes,
+  ...color.propTypes,
+}
+
+NavBar.defaultProps = {
+  height: 48,
+  bg: 'white',
+}
+
+NavBar.isNavBar = true
 
 export const toggle = state => ({ open: !state.open })
 export const close = state => ({ open: false })
@@ -187,6 +243,7 @@ export class Layout extends React.Component {
   static Sidebar = Sidebar
   static Main = Main
   static MenuToggle = MenuToggle
+  static NavBar = NavBar
 
   state = {
     open: false,
@@ -195,7 +252,6 @@ export class Layout extends React.Component {
 
   render () {
     const {
-      children,
       ...props
     } = this.props
 
@@ -206,10 +262,15 @@ export class Layout extends React.Component {
       closeMenu: () => this.state.update(close),
     }
 
+    const children = React.Children.toArray(this.props.children)
+    const columns = children.filter(child => !child.type.isNavBar)
+    const [ navbar ] = children.filter(child => child.type.isNavBar)
+
     return (
       <Provider value={context}>
+        {navbar}
         <Root {...props}>
-          {children}
+          {columns}
         </Root>
       </Provider>
     )

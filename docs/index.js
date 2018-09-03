@@ -14,6 +14,8 @@ import {
 import Logo from './logo'
 export { Root } from './components'
 
+export const name = 'Home'
+
 const github = 'https://github.com/jxnblk/mdx-go'
 const blog = 'https://jxnblk.com/writing/posts/progressive-documentation'
 
