@@ -1,9 +1,24 @@
 import React from 'react'
-import { Head } from 'mdx-go'
-import { Box, Flex } from 'grid-styled'
+import {
+  Head,
+  Layout,
+  NavLinks,
+  NavLink,
+  Pagination,
+  ComponentProvider,
+  StyleProvider,
+  ScrollTop,
+  DocsLayout
+} from 'mdx-go'
+import { Box, Flex } from 'grid-styled/emotion'
+import Logo from './logo'
 
-const green = '#0d0'
+const green = '#0d3'
+const darkgreen = '#0a6'
 const black = '#001600'
+const lightgray = '#f6f6ff'
+const blue = '#07c'
+
 
 const gradient = `
 linear-gradient(
@@ -14,6 +29,93 @@ linear-gradient(
   rgba(0, 191, 0, 0.5) 95%
 )
 `
+
+const nav = [
+  'Home',
+  'Getting Started',
+  'Using MDX',
+  'Routing',
+  'Configuration',
+  // 'CSS-in-JS',
+  'Exporting',
+  // Components
+  'Head',
+  'Link',
+  'ComponentProvider',
+  'LiveCode',
+  'Layout',
+  'NavLinks',
+  'Pagination',
+  'ScrollTop',
+  'StyleProvider',
+  'DocsLayout',
+  // Examples
+  'Typography',
+  'Examples',
+]
+
+const theme = {
+  colors: {
+    lightgray,
+    black,
+    blue,
+    green,
+    darkgreen,
+  },
+  code: {
+    color: darkgreen
+  },
+  pre: {
+    // color: darkgreen
+  }
+}
+
+const PageLayout = props => props.location.pathname === '/'
+  ? props.children
+  : (
+    <Layout>
+      <Layout.MenuToggle m={2} />
+      {false && (
+        <Layout.NavBar bg='lightgray'>
+          <Layout.MenuToggle px={2} />
+          <Box mx='auto' />
+          <b>mdx-go</b>
+          <Box mx='auto' pr={40} />
+        </Layout.NavBar>
+      )}
+      <Layout.Sidebar
+        bg='lightgray'>
+        <Box px={3} py={3}>
+          <Logo size={48} />
+        </Box>
+        <NavLinks
+          {...props}
+          filter={route => nav.includes(route.name)}
+          order={nav}
+          py={2}
+          css={{
+            '&.active': {
+              color: blue
+            }
+          }}
+        />
+        <Box py={2} />
+        <NavLink
+          href='https://github.com/jxnblk/mdx-go'
+          children='GitHub'
+        />
+        <Box py={4} />
+      </Layout.Sidebar>
+      <Layout.Main>
+        {props.children}
+        <Pagination
+          {...props}
+          filter={route => nav.includes(route.name)}
+          order={nav}
+        />
+      </Layout.Main>
+    </Layout>
+  )
 
 export const Root = props =>
   <React.Fragment>
@@ -26,13 +128,14 @@ export const Root = props =>
       <meta name='twitter:description' content='Lightning-fast MDX-based dev server for progressive documentation' />
       <meta name='twitter:image' content='https://jxnblk.com/mdx-go/card.png' />
     </Head>
-    <Box
-      css={{
-        lineHeight: 1.5
-      }}>
-      {props.children}
-    </Box>
-    </React.Fragment>
+    <StyleProvider
+      color='black'
+      theme={theme}>
+      <PageLayout {...props} />
+    </StyleProvider>
+    <ScrollTop />
+  </React.Fragment>
+
 
 export const Banner = props =>
   <Box
