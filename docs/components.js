@@ -5,6 +5,7 @@ import {
   NavLinks,
   ComponentProvider,
   StyleProvider,
+  DocsLayout
 } from 'mdx-go'
 import { Box, Flex } from 'grid-styled/emotion'
 
@@ -22,29 +23,40 @@ linear-gradient(
 )
 `
 
+const lightgray = '#f6f6ff'
+const blue = '#07c'
+
 const PageLayout = props => props.location.pathname === '/'
   ? props.children
   : (
-    <Layout>
-      <Layout.NavBar>
-        <Layout.MenuToggle>
-          Menu
-        </Layout.MenuToggle>
-        <Box mx='auto' />
-        mdx-go
-        <Box mx='auto' />
-      </Layout.NavBar>
-      <Layout.Sidebar bg='#f6f6ff'>
-        <Box py={3} />
-        <NavLinks
-          {...props}
-          filter={route => !!route.module.name}
-        />
-      </Layout.Sidebar>
-      <Layout.Main>
-        {props.children}
-      </Layout.Main>
-    </Layout>
+    <StyleProvider theme={{ colors: { lightgray } }}>
+      <Layout>
+        {false && (
+          <Layout.NavBar bg='lightgray'>
+            <Layout.MenuToggle px={2} />
+            <Box mx='auto' />
+            <b>mdx-go</b>
+            <Box mx='auto' pr={40} />
+          </Layout.NavBar>
+        )}
+        <Layout.Sidebar bg='lightgray'>
+          <Box py={3} />
+          <NavLinks
+            {...props}
+            filter={route => !!route.module.name}
+            css={{
+              '&.active': {
+                color: blue
+              }
+            }}
+          />
+        </Layout.Sidebar>
+        <Layout.Main>
+          {true && <Layout.MenuToggle my={2} />}
+          {props.children}
+        </Layout.Main>
+      </Layout>
+    </StyleProvider>
   )
 
 export const Root = props =>
@@ -58,10 +70,9 @@ export const Root = props =>
       <meta name='twitter:description' content='Lightning-fast MDX-based dev server for progressive documentation' />
       <meta name='twitter:image' content='https://jxnblk.com/mdx-go/card.png' />
     </Head>
-    <StyleProvider>
-      <PageLayout {...props} />
-    </StyleProvider>
+    <PageLayout {...props} />
   </React.Fragment>
+
 
 export const Banner = props =>
   <Box

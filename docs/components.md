@@ -34,14 +34,14 @@ export const Root = props =>
 - Layout.NavBar
 - withLayout
 
+
 - [ ] Head
 - [ ] Link
 - [ ] ComponentProvider
 - [ ] withComponents
 - [ ] NavLinks
 - [ ] LiveCode
-
 - [ ] Pagination
 - [ ] StyleProvider
-
 - [ ] DocsLayout
+- [ ] ScrollTop

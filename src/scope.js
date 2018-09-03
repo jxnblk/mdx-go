@@ -4,7 +4,7 @@ import Link from './Link'
 import LiveCode from './LiveCode'
 
 // Changes .jsx fenced code blocks to LiveCode
-export const code = ({
+export const withLiveCode = Component => ({
   children,
   className = '',
   ...props
@@ -12,7 +12,7 @@ export const code = ({
   const isLive = className === 'language-.jsx'
   if (!isLive) {
     return (
-      <pre
+      <Component
         {...props}
         className={className}
         children={children}
@@ -26,6 +26,8 @@ export const code = ({
     <LiveCode code={code} />
   )
 }
+
+const code = withLiveCode('pre')
 
 export const scope = {
   a: Link,

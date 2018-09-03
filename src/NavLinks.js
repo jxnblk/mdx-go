@@ -51,6 +51,7 @@ export const NavLinks = ({
         key={route.key}
         {...props}
         href={route.path}
+        exact={route.exact}
         children={get(route, 'module.name', route.name)}
       />
     ))}

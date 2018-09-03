@@ -6,6 +6,7 @@ import {
   color,
 } from 'styled-system'
 import Link from './Link'
+import { withLiveCode } from './scope'
 
 const css = props => props.css
 const themed = key => props => props.theme[key]
@@ -123,14 +124,20 @@ export const table = createComponent('table', {
   mb: 4,
 })
 
-// todo: merge pre in ComponentProvider/defaultScope
 export const pre = createComponent('pre', {
-  fontFamily: 'Menlo, monospace'
+  fontFamily: 'Menlo, monospace',
+  borderRadius: '2px'
 }, {
   fontSize: 1,
   p: 3,
+  mt: 4,
+  mb: 4,
   bg: 'lightgray',
 })
+
+export const code = createComponent('code', {
+  fontFamily: 'Menlo, monospace'
+}, {})
 
 // todo: for checklists
 export const Checkbox = styled('input')({})
@@ -143,6 +150,12 @@ export const input = props => {
     return <Checkbox {...props} />
   }
   return <input {...props} />
+}
+
+export const theme = {
+  colors: {
+    lightgray: '#f6f6f6'
+  }
 }
 
 export const styledScope = {
@@ -161,8 +174,8 @@ export const styledScope = {
   hr,
   table,
   // todo
-  // code: pre,
-  // code,
+  code: withLiveCode(pre),
+  inlineCode: code,
   // input,
 }
 

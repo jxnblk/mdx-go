@@ -10,6 +10,7 @@ import {
   height,
   style,
 } from 'styled-system'
+import MenuIcon from './MenuIcon'
 
 const css = props => props.css
 
@@ -116,6 +117,7 @@ export const Sidebar = withLayout(({
     {open && <Overlay onClick={closeMenu} />}
     <SidebarSpacer width={width} />
     <SidebarRoot
+      onClick={closeMenu}
       {...props}
       width={width}
       style={{
@@ -168,13 +170,16 @@ const MenuButton = styled('button')({
   fontSize: 'inherit',
   fontFamily: 'inherit',
   display: 'inline-block',
-  margin: 0,
-  padding: 0,
-  color: 'inherit',
-  backgroundColor: 'transparent',
   border: 0,
   borderRadius: 0,
-})
+}, space, color)
+
+MenuButton.defaultProps = {
+  color: 'inherit',
+  bg: 'transparent',
+  p: 0,
+  m: 0,
+}
 
 export const MenuToggle = withLayout(({
   toggleMenu,
@@ -193,6 +198,11 @@ export const MenuToggle = withLayout(({
       {children}
     </MenuButton>
   ))
+
+MenuToggle.defaultProps = {
+  title: 'Toggle Menu',
+  children: <MenuIcon />
+}
 
 const NavBarRoot = styled('header')({
   position: 'fixed',
@@ -271,3 +281,5 @@ export class Layout extends React.Component {
     )
   }
 }
+
+export default Layout

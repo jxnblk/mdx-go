@@ -6,21 +6,61 @@ import {
   LiveEditor,
   LiveError,
 } from 'react-live'
+import {
+  space,
+  fontSize,
+  color,
+  borderColor
+} from 'styled-system'
 import withComponents from './withComponents'
 
 const themed = key => props => props.theme[key]
 const transformCode = src => `<React.Fragment>${src}</React.Fragment>`
 
-const Root = styled('div')([], themed('LiveCode'))
-const Preview = styled(LivePreview)([], themed('LivePreview'))
-const Editor = styled(LiveEditor)([], {
+const Root = styled('div')({
+  border: '1px solid',
+  borderRadius: '2px',
+}, space, borderColor, themed('LiveCode'))
+
+Root.defaultProps = {
+  mt: 4,
+  mb: 4,
+  borderColor: 'lightgray'
+}
+
+const Preview = styled(LivePreview)({
+}, space, themed('LivePreview'))
+
+Preview.defaultProps = {
+  p: 3
+}
+
+const Editor = styled(LiveEditor)({
   margin: 0,
   fontFamily: 'Menlo, monospace',
-  fontSize: '13px'
+  outline: 'none',
 },
+  fontSize,
+  space,
+  color,
   themed('LiveEditor')
 )
-const Err = styled(LiveError)([], themed('LiveError'))
+
+Editor.defaultProps = {
+  fontSize: 1,
+  p: 3,
+  bg: 'lightgray'
+}
+
+const Err = styled(LiveError)({
+  fontFamily: 'Menlo, monospace',
+}, space, fontSize, color, themed('LiveError'))
+
+Err.defaultProps = {
+  fontSize: 1,
+  p: 3,
+  bg: 'red'
+}
 
 export const LiveCode = withComponents(({
   components,
