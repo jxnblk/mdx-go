@@ -12,7 +12,7 @@
     "watch": "babel src -d dist --watch",
     "styled-components": "NODE_ENV=styled-components babel src -d dist/styled-components",
     "start": "./cli.js docs",
-    "build": "./cli.js build docs -d site --static",
+    "build": "./cli.js build docs -d site",
     "help": "./cli.js",
     "test": "nyc ava",
     "logo": "repng docs/logo.js -w 256 -h 256 -d docs -f logo.png",
@@ -78,6 +78,7 @@
     "ava": "^0.25.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-rename-import": "^2.3.0",
+    "emotion-server": "^9.2.8",
     "grid-styled": "^5.0.2",
     "mdx-themes": "^1.0.0-0",
     "nyc": "^12.0.2",
@@ -87,6 +88,7 @@
     "supertest": "^3.1.0"
   },
   "mdx-go": {
+    "cssLibrary": "emotion",
     "basename": "/mdx-go"
   }
 }
