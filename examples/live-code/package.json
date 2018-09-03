@@ -3,5 +3,10 @@
   "name": "live-code",
   "scripts": {
     "start": "mdx-go docs"
+  },
+  "devDependencies": {
+    "emotion": "^9.2.8",
+    "emotion-theming": "^9.2.6",
+    "react-emotion": "^9.2.8"
   }
 }

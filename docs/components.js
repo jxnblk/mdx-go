@@ -73,53 +73,48 @@ const theme = {
 const PageLayout = props => props.location.pathname === '/'
   ? props.children
   : (
-    <StyleProvider
-      color='black'
-      theme={theme}>
-      <Layout>
-        <Layout.MenuToggle m={2} />
-        {false && (
-          <Layout.NavBar bg='lightgray'>
-            <Layout.MenuToggle px={2} />
-            <Box mx='auto' />
-            <b>mdx-go</b>
-            <Box mx='auto' pr={40} />
-          </Layout.NavBar>
-        )}
-        <Layout.Sidebar
-          bg='lightgray'>
-          <Box px={3} py={3}>
-            <Logo size={48} />
-          </Box>
-          <NavLinks
-            {...props}
-            filter={route => nav.includes(route.name)}
-            order={nav}
-            py={2}
-            css={{
-              '&.active': {
-                color: green
-              }
-            }}
-          />
-          <Box py={2} />
-          <NavLink
-            href='https://github.com/jxnblk/mdx-go'
-            children='GitHub'
-          />
-          <Box py={4} />
-        </Layout.Sidebar>
-        <Layout.Main>
-          {props.children}
-          <Pagination
-            {...props}
-            filter={route => nav.includes(route.name)}
-            order={nav}
-          />
-        </Layout.Main>
-      </Layout>
-      <ScrollTop />
-    </StyleProvider>
+    <Layout>
+      <Layout.MenuToggle m={2} />
+      {false && (
+        <Layout.NavBar bg='lightgray'>
+          <Layout.MenuToggle px={2} />
+          <Box mx='auto' />
+          <b>mdx-go</b>
+          <Box mx='auto' pr={40} />
+        </Layout.NavBar>
+      )}
+      <Layout.Sidebar
+        bg='lightgray'>
+        <Box px={3} py={3}>
+          <Logo size={48} />
+        </Box>
+        <NavLinks
+          {...props}
+          filter={route => nav.includes(route.name)}
+          order={nav}
+          py={2}
+          css={{
+            '&.active': {
+              color: green
+            }
+          }}
+        />
+        <Box py={2} />
+        <NavLink
+          href='https://github.com/jxnblk/mdx-go'
+          children='GitHub'
+        />
+        <Box py={4} />
+      </Layout.Sidebar>
+      <Layout.Main>
+        {props.children}
+        <Pagination
+          {...props}
+          filter={route => nav.includes(route.name)}
+          order={nav}
+        />
+      </Layout.Main>
+    </Layout>
   )
 
 export const Root = props =>
@@ -133,7 +128,12 @@ export const Root = props =>
       <meta name='twitter:description' content='Lightning-fast MDX-based dev server for progressive documentation' />
       <meta name='twitter:image' content='https://jxnblk.com/mdx-go/card.png' />
     </Head>
-    <PageLayout {...props} />
+    <StyleProvider
+      color='black'
+      theme={theme}>
+      <PageLayout {...props} />
+    </StyleProvider>
+    <ScrollTop />
   </React.Fragment>
 
 

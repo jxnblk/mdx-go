@@ -4,6 +4,7 @@ import { ThemeProvider } from 'emotion-theming'
 import {
   fontSize,
   fontFamily,
+  lineHeight,
   color,
 } from 'styled-system'
 import { ComponentProvider } from './ComponentProvider'
@@ -12,11 +13,14 @@ import styledScope, { theme } from './styledScope'
 const Root = styled('div')({},
   fontSize,
   fontFamily,
+  lineHeight,
   color,
   props => props.css
 )
 
-Root.defaultProps = {}
+Root.defaultProps = {
+  lineHeight: 1.5
+}
 
 export const StyleProvider = ({
   components = {},
