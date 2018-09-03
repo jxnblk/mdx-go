@@ -2,7 +2,7 @@ import React from 'react'
 import { MDXProvider } from '@mdx-js/tag'
 import defaultScope from './scope'
 
-export default ({
+export const ComponentProvider = ({
   components,
   ...props
 }) =>
@@ -15,3 +15,5 @@ export default ({
       {props.children}
     </React.Fragment>
   </MDXProvider>
+
+export default ComponentProvider

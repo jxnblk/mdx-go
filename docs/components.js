@@ -2,6 +2,8 @@ import React from 'react'
 import {
   Head,
   Layout,
+  NavLinks,
+  ComponentProvider,
 } from 'mdx-go'
 import { Box, Flex } from 'grid-styled/emotion'
 
@@ -19,6 +21,22 @@ linear-gradient(
 )
 `
 
+const PageLayout = props => props.location.pathname === '/'
+  ? props.children
+  : (
+    <Layout>
+      <Layout.Sidebar>
+        <NavLinks {...props} />
+      </Layout.Sidebar>
+      <Layout.Main>
+        <Layout.MenuToggle>
+          Menu
+        </Layout.MenuToggle>
+        {props.children}
+      </Layout.Main>
+    </Layout>
+  )
+
 export const Root = props =>
   <React.Fragment>
     <Head>
@@ -30,13 +48,10 @@ export const Root = props =>
       <meta name='twitter:description' content='Lightning-fast MDX-based dev server for progressive documentation' />
       <meta name='twitter:image' content='https://jxnblk.com/mdx-go/card.png' />
     </Head>
-    <Box
-      css={{
-        lineHeight: 1.5
-      }}>
-      {props.children}
-    </Box>
-    </React.Fragment>
+    <ComponentProvider>
+      <PageLayout {...props} />
+    </ComponentProvider>
+  </React.Fragment>
 
 export const Banner = props =>
   <Box
