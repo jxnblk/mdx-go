@@ -11,10 +11,14 @@ export {
   Sidebar,
   Main,
   MenuToggle,
+  MenuIcon,
   withLayout,
 } from './Layout'
-export { MenuIcon } from './MenuIcon'
-export { NavLinks } from './NavLinks'
+export {
+  NavLinks,
+  NavLink
+} from './NavLinks'
+export { Pagination } from './Pagination'
 export { LiveCode } from './LiveCode'
 
 // styles for MDX elements

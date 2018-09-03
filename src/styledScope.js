@@ -45,8 +45,8 @@ const createComponent = (tag, styles, defaultProps = {}) => {
   return Component
 }
 
-export const h1 = createHeading('h1', { mt: 4, mb: 2, fontSize: [ 5, 6 ] })
-export const h2 = createHeading('h2', { mt: 4, mb: 2, fontSize: [ 4, 5 ] })
+export const h1 = createHeading('h1', { mt: 4, mb: 2, fontSize: [ 5, null, 6 ] })
+export const h2 = createHeading('h2', { mt: 4, mb: 2, fontSize: [ 4, null, 5 ] })
 export const h3 = createHeading('h3', { mt: 4, mb: 2, fontSize: [ 3 ] })
 export const h4 = createHeading('h4', { mt: 4, mb: 2, fontSize: [ 2 ] })
 export const h5 = createHeading('h5', { mt: 4, mb: 2, fontSize: [ 1 ] })

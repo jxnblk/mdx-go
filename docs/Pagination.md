@@ -1,16 +1,17 @@
 
-export const name = 'NavLinks'
+export const name = 'Pagination'
 
-# NavLinks
+# Pagination
 
-The NavLinks component can be used to render a list of routes in the sidebar.
+The Pagination component can be used to render links to the previous and next routes, typically at the bottom of the main content.
 
 ```jsx
 // example Root component
 import React from 'react'
 import {
   Layout,
-  NavLinks
+  NavLinks,
+  Pagination
 } from 'mdx-go'
 
 export const Root = props =>
@@ -20,6 +21,7 @@ export const Root = props =>
     </Layout.Sidebar>
     <Layout.Main>
       {props.children}
+      <Pagination {...props} />
     </Layout.Main>
   </Layout>
 ```
@@ -39,4 +41,3 @@ space | number, string, or array | All [styled-system][] [space props][] are pas
 
 [styled-system]: https://github.com/jxnblk/styled-system
 [space props]: https://jxnblk.com/styled-system/api#space
-

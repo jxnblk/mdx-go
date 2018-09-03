@@ -12,7 +12,8 @@ import styledScope, { theme } from './styledScope'
 const Root = styled('div')({},
   fontSize,
   fontFamily,
-  color
+  color,
+  props => props.css
 )
 
 Root.defaultProps = {}

@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'react-emotion'
 import sortby from 'lodash.sortby'
-import get from 'lodash.get'
 import {
   space,
   fontSize,
@@ -17,7 +16,7 @@ const sort = (routes, order) => sortby(routes, route => {
 
 const css = props => props.css
 
-const NavLink = styled(Link)({
+export const NavLink = styled(Link)({
   display: 'block',
   width: '100%',
   fontWeight: 'bold',
@@ -41,6 +40,7 @@ export const NavLinks = ({
   routes = [],
   order = [],
   filter,
+  staticContext,
   ...props
 }) =>
   <React.Fragment>
@@ -52,7 +52,7 @@ export const NavLinks = ({
         {...props}
         href={route.path}
         exact={route.exact}
-        children={get(route, 'module.name', route.name)}
+        children={route.name}
       />
     ))}
   </React.Fragment>

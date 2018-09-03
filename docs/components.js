@@ -3,12 +3,15 @@ import {
   Head,
   Layout,
   NavLinks,
+  NavLink,
+  Pagination,
   ComponentProvider,
   StyleProvider,
+  ScrollTop,
   DocsLayout
 } from 'mdx-go'
 import { Box, Flex } from 'grid-styled/emotion'
-
+import Logo from './logo'
 
 const green = '#0d0'
 const black = '#001600'
@@ -23,14 +26,38 @@ linear-gradient(
 )
 `
 
-const lightgray = '#f6f6ff'
+const lightgray = '#f6f9f6'
 const blue = '#07c'
+
+const nav = [
+  'Home',
+  'Getting Started',
+  'Using MDX',
+  'Routing',
+  'Configuration',
+  // 'CSS-in-JS',
+  'Exporting',
+  'Head',
+  'Link',
+  'ComponentProvider',
+
+  'LiveCode',
+  'Layout',
+  'NavLinks',
+  'Pagination',
+  'ScrollTop',
+  'StyleProvider',
+  'DocsLayout',
+
+  'Typography',
+]
 
 const PageLayout = props => props.location.pathname === '/'
   ? props.children
   : (
     <StyleProvider theme={{ colors: { lightgray } }}>
       <Layout>
+        <Layout.MenuToggle m={2} />
         {false && (
           <Layout.NavBar bg='lightgray'>
             <Layout.MenuToggle px={2} />
@@ -39,23 +66,39 @@ const PageLayout = props => props.location.pathname === '/'
             <Box mx='auto' pr={40} />
           </Layout.NavBar>
         )}
-        <Layout.Sidebar bg='lightgray'>
-          <Box py={3} />
+        <Layout.Sidebar
+          bg='lightgray'>
+          <Box px={3} py={3}>
+            <Logo size={48} />
+          </Box>
           <NavLinks
             {...props}
-            filter={route => !!route.module.name}
+            filter={route => nav.includes(route.name)}
+            order={nav}
+            py={2}
             css={{
               '&.active': {
-                color: blue
+                color: green
               }
             }}
           />
+          <Box py={2} />
+          <NavLink
+            href='https://github.com/jxnblk/mdx-go'
+            children='GitHub'
+          />
+          <Box py={4} />
         </Layout.Sidebar>
         <Layout.Main>
-          {true && <Layout.MenuToggle my={2} />}
           {props.children}
+          <Pagination
+            {...props}
+            filter={route => nav.includes(route.name)}
+            order={nav}
+          />
         </Layout.Main>
       </Layout>
+      <ScrollTop />
     </StyleProvider>
   )
 

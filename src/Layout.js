@@ -10,7 +10,6 @@ import {
   height,
   style,
 } from 'styled-system'
-import MenuIcon from './MenuIcon'
 
 const css = props => props.css
 
@@ -157,7 +156,7 @@ MainContainer.defaultProps = {
   maxWidth: '768px',
   mx: 'auto',
   px: 4,
-  py: 5,
+  py: 4,
 }
 
 export const Main = props =>
@@ -165,14 +164,30 @@ export const Main = props =>
     <MainContainer {...props} />
   </MainRoot>
 
-const MenuButton = styled('button')({
+export const MenuIcon = styled(({
+  size = 24,
+  ...props
+}) =>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 24 24'
+    width={size}
+    height={size}
+    {...props}>
+    <path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z' />
+  </svg>
+)({
+  display: 'block'
+})
+
+export const MenuButton = styled('button')({
   appearance: 'none',
   fontSize: 'inherit',
   fontFamily: 'inherit',
   display: 'inline-block',
   border: 0,
   borderRadius: 0,
-}, space, color)
+}, space, color, css)
 
 MenuButton.defaultProps = {
   color: 'inherit',
@@ -204,6 +219,8 @@ MenuToggle.defaultProps = {
   children: <MenuIcon />
 }
 
+MenuToggle.isMenuToggle = true
+
 const NavBarRoot = styled('header')({
   position: 'fixed',
   top: 0,
@@ -211,7 +228,7 @@ const NavBarRoot = styled('header')({
   left: 0,
   display: 'flex',
   alignItems: 'center',
-}, space, height, color, props => props.css)
+}, space, height, color, css)
 
 const NavBarSpacer = styled('div')({}, height)
 
@@ -268,11 +285,13 @@ export class Layout extends React.Component {
     }
 
     const children = React.Children.toArray(this.props.children)
-    const columns = children.filter(child => !child.type.isNavBar)
+    const columns = children.filter(child => !child.type.isNavBar && !child.type.isMenuToggle)
     const [ navbar ] = children.filter(child => child.type.isNavBar)
+    const [ menuToggle ] = children.filter(child => child.type.isMenuToggle)
 
     return (
       <Provider value={context}>
+        {menuToggle}
         {navbar}
         <Root {...props}>
           {columns}

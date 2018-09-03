@@ -127,7 +127,9 @@ export default props =>
       </Flex>
       <Flex py={4}>
         <Box mx='auto'>
-          <Logo size={64} />
+          <Link href='/getting-started'>
+            <Logo size={64} />
+          </Link>
         </Box>
       </Flex>
     </Container>
