@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Box } from 'grid-styled'
+import { Flex, Box } from 'grid-styled/emotion'
 import {
   Banner,
   Title,

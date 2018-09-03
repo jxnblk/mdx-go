@@ -1,6 +1,10 @@
 import React from 'react'
-import { Head } from 'mdx-go'
-import { Box, Flex } from 'grid-styled'
+import {
+  Head,
+  Layout,
+} from 'mdx-go'
+import { Box, Flex } from 'grid-styled/emotion'
+
 
 const green = '#0d0'
 const black = '#001600'

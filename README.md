@@ -254,10 +254,6 @@ The provided webpack config will be merged with the built-in config using [webpa
 - [Styled Components](examples/styled-components)
 - [Emotion](examples/emotion)
 
-## Roadmap
-
-- [ ] generator
-- [ ] publish
 
 ## Related
 
