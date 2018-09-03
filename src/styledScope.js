@@ -129,6 +129,7 @@ export const table = createComponent('table', {
 
 export const pre = createComponent('pre', {
   fontFamily: 'Menlo, monospace',
+  overflow: 'auto',
   borderRadius: '2px'
 }, {
   fontSize: 1,
