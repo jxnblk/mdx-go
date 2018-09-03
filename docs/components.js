@@ -4,6 +4,7 @@ import {
   Layout,
   NavLinks,
   ComponentProvider,
+  StyleProvider,
 } from 'mdx-go'
 import { Box, Flex } from 'grid-styled/emotion'
 
@@ -57,9 +58,9 @@ export const Root = props =>
       <meta name='twitter:description' content='Lightning-fast MDX-based dev server for progressive documentation' />
       <meta name='twitter:image' content='https://jxnblk.com/mdx-go/card.png' />
     </Head>
-    <ComponentProvider>
+    <StyleProvider>
       <PageLayout {...props} />
-    </ComponentProvider>
+    </StyleProvider>
   </React.Fragment>
 
 export const Banner = props =>

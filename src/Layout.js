@@ -40,7 +40,6 @@ Root.propTypes = {
 }
 
 Root.defaultProps = {
-  theme: {},
   width: 1,
 }
 
@@ -71,7 +70,6 @@ SidebarRoot.propTypes = {
 }
 
 SidebarRoot.defaultProps = {
-  theme: {},
   width: 256,
   bg: 'white',
   transform: [ false, 'none !important' ]
@@ -87,7 +85,6 @@ SidebarSpacer.propTypes = {
 }
 
 SidebarSpacer.defaultProps = {
-  theme: {},
   width: 256,
   display: [ 'none', 'block' ],
 }
@@ -105,7 +102,6 @@ Overlay.propTypes = {
 }
 
 Overlay.defaultProps = {
-  theme: {},
   display: [ false, 'none' ],
 }
 
@@ -156,11 +152,10 @@ MainContainer.propTypes = {
 }
 
 MainContainer.defaultProps = {
-  theme: {},
   maxWidth: '768px',
   mx: 'auto',
   px: 4,
-  py: 4,
+  py: 5,
 }
 
 export const Main = props =>
