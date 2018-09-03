@@ -71,4 +71,15 @@ export const Pagination = withRouter(({
   )
 })
 
+Pagination.propTypes = {
+  routes: PropTypes.array.isRequired,
+  order: PropTypes.array.isRequired,
+  filter: PropTypes.func.isRequired,
+}
+
+Pagination.defaultProps = {
+  order: [ 'index' ],
+  filter: () => true,
+}
+
 export default Pagination
