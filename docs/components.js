@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   Head,
+  Link as GoLink,
   Layout,
   NavLinks,
   NavLink,
@@ -172,7 +173,7 @@ export const Text = props =>
 export const Button = props =>
   <Box
     {...props}
-    is='a'
+    is={GoLink}
     px={4}
     py={2}
     fontSize={1}
@@ -207,7 +208,7 @@ export const Col = props =>
 export const Link = props =>
   <Box
     {...props}
-    is='a'
+    is={GoLink}
     css={{
       display: 'inline-block',
       color: 'inherit',
