@@ -16,7 +16,6 @@ import Logo from './logo'
 const green = '#0d3'
 const darkgreen = '#0a6'
 const black = '#001600'
-// const lightgray = '#f6f9f6'
 const lightgray = '#f6f6ff'
 const blue = '#07c'
 
@@ -39,10 +38,10 @@ const nav = [
   'Configuration',
   // 'CSS-in-JS',
   'Exporting',
+  // Components
   'Head',
   'Link',
   'ComponentProvider',
-
   'LiveCode',
   'Layout',
   'NavLinks',
@@ -50,8 +49,9 @@ const nav = [
   'ScrollTop',
   'StyleProvider',
   'DocsLayout',
-
+  // Examples
   'Typography',
+  'Examples',
 ]
 
 const theme = {
@@ -95,7 +95,7 @@ const PageLayout = props => props.location.pathname === '/'
           py={2}
           css={{
             '&.active': {
-              color: green
+              color: blue
             }
           }}
         />

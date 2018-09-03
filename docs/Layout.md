@@ -3,7 +3,8 @@ export const name = 'Layout'
 
 # Layout
 
-The built-in Layout component provides a component-based API for creating a page layout with sidebar navigation.
+The built-in Layout component provides a component-based API for creating a responsive page layout with sidebar navigation.
+This page uses the Layout component.
 
 ```jsx
 import React from 'react'
@@ -11,6 +12,7 @@ import { Layout } from 'mdx-go'
 
 export const Root = props =>
   <Layout>
+    <Layout.MenuToggle />
     <Layout.Sidebar>
       Sidebar content
     </Layout.Sidebar>

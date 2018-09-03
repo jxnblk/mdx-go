@@ -81,8 +81,7 @@ You can even keep mdx-go around to use as a dev tool outside of other React appl
 
 ## Using MDX
 
-MDX combines the simplicity of markdown with the expressiveness of JSX.
-MDX lets you import and use React components inline with markdown docs.
+MDX combines the simplicity of markdown with the ability to import and use React components inline.
 
 Write markdown like you normally would.
 
@@ -167,21 +166,21 @@ To set head contents for all routes, use the Head component within a [`Root` com
 
 ## Custom MDX Components
 
-To customize the HTML components rendered from MDX, use the [MDXProvider](https://mdxjs.com/getting-started/#components) in a [`Root` component](#layouts).
+To customize the HTML components rendered from MDX, use the `ComponentProvider` in a [`Root` component](#layouts).
 
 ```js
 // example Root component
 import React from 'react'
-import { MDXProvider } from '@mdx-js/tag'
+import { ComponentProvider } from 'mdx-go'
 
 const components = {
   h1: props => <h1 {...props} style={{ fontSize: 48 }} />,
 }
 
 export const Root = props =>
-  <MDXProvider components={components}>
+  <ComponentProvider components={components}>
     {props.children}
-  </MDXProvider>
+  </ComponentProvider>
 ```
 
 Ensure the Root component is exported from `index.mdx`
