@@ -1,6 +1,6 @@
 {
   "name": "mdx-go",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Lightning-fase MDX-based dev server",
   "main": "dist/index.js",
   "bin": {
