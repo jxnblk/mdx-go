@@ -26,3 +26,4 @@ export { StyleProvider } from './StyleProvider'
 
 // zero-config layout
 export { DocsLayout } from './DocsLayout'
+export { DevLayout } from './DevLayout'

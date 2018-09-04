@@ -71,6 +71,7 @@ SidebarRoot.propTypes = {
 
 SidebarRoot.defaultProps = {
   width: 256,
+  py: 3,
   bg: 'white',
   transform: [ false, 'none !important' ]
 }
