@@ -16,7 +16,7 @@ import Logo from './logo'
 
 const green = '#0d3'
 const darkgreen = '#0a6'
-const black = '#001600'
+const black = '#000619'
 const lightgray = '#f6f6ff'
 const blue = '#07c'
 
@@ -171,15 +171,15 @@ export const Button = props =>
     {...props}
     is={GoLink}
     px={4}
-    py={2}
-    fontSize={1}
+    py={3}
+    fontSize={2}
     color={black}
     bg={green}
     css={{
       display: 'inline-block',
       fontWeight: 600,
       textDecoration: 'none',
-      borderRadius: '8px'
+      borderRadius: '2px'
     }}
   />
 

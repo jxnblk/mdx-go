@@ -32,6 +32,7 @@ export default props =>
           href={github}
           fontSize={1}
           px={3}
+          py={2}
           color='#0d0'>
           GitHub
         </Link>
@@ -49,7 +50,7 @@ export default props =>
         <Box
           px={3}
           width={[ 1, null, 1/3, 1/3 ]}>
-          <Logo size={128} />
+          <Logo size={96} />
           <Title mb={2}>mdx-go</Title>
           <Text mb={3}>
             Lightning-fast MDX-based dev server for progressive documentation
@@ -133,7 +134,7 @@ export default props =>
             <Link
               title='Hidden Docs'
               href='/getting-started'>
-              <Logo size={64} />
+              <Logo size={48} />
             </Link>
           </Box>
         </Flex>
