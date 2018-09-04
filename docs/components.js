@@ -50,6 +50,7 @@ const nav = [
   'ScrollTop',
   'StyleProvider',
   'DocsLayout',
+  'DevLayout',
   // Examples
   'Typography',
   'Examples',
