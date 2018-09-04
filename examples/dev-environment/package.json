@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "dev-environment",
+  "scripts": {
+    "start": "mdx-go docs"
+  },
+  "dependencies": {
+    "emotion": "^9.2.8",
+    "react-emotion": "^9.2.8",
+    "styled-system": "^3.0.2"
+  }
+}

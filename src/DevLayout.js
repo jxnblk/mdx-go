@@ -8,7 +8,7 @@ export const DevLayout = props =>
   <StyleProvider>
     <Layout>
       <Layout.MenuToggle m={2} />
-      <Layout.Sidebar>
+      <Layout.Sidebar bg='lightgray'>
         <NavLinks {...props} />
       </Layout.Sidebar>
       <Layout.Main>

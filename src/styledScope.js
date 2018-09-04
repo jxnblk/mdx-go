@@ -158,7 +158,8 @@ export const input = props => {
 
 export const theme = {
   colors: {
-    lightgray: '#f6f6f6'
+    lightgray: '#f6f6f6',
+    blue: '#0077cc'
   }
 }
 

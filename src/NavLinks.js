@@ -6,6 +6,7 @@ import {
   space,
   fontSize,
   color,
+  themeGet,
 } from 'styled-system'
 import Link from './Link'
 
@@ -21,7 +22,13 @@ export const NavLink = styled(Link)({
   width: '100%',
   fontWeight: 'bold',
   textDecoration: 'none',
-}, space, fontSize, color, css)
+},
+  props => ({
+    '&.active': {
+      color: themeGet('colors.blue', 'blue')(props)
+    }
+  })
+, space, fontSize, color, css)
 
 NavLink.propTypes = {
   ...space.propTypes,

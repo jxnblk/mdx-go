@@ -94,11 +94,6 @@ const PageLayout = props => props.location.pathname === '/'
           filter={route => nav.includes(route.name)}
           order={nav}
           py={2}
-          css={{
-            '&.active': {
-              color: blue
-            }
-          }}
         />
         <Box py={2} />
         <NavLink
