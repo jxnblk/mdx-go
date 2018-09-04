@@ -77,18 +77,12 @@ const PageLayout = props => props.location.pathname === '/'
   : (
     <Layout>
       <Layout.MenuToggle m={2} />
-      {false && (
-        <Layout.NavBar bg='lightgray'>
-          <Layout.MenuToggle px={2} />
-          <Box mx='auto' />
-          <b>mdx-go</b>
-          <Box mx='auto' pr={40} />
-        </Layout.NavBar>
-      )}
       <Layout.Sidebar
         bg='lightgray'>
         <Box px={3} py={3}>
-          <Logo size={48} />
+          <GoLink href='/'>
+            <Logo size={48} />
+          </GoLink>
         </Box>
         <NavLinks
           {...props}
@@ -168,18 +162,29 @@ export const Text = props =>
 
 export const Button = props =>
   <Box
-    {...props}
     is={GoLink}
     px={4}
     py={3}
     fontSize={2}
     color={black}
     bg={green}
+    {...props}
     css={{
       display: 'inline-block',
       fontWeight: 600,
       textDecoration: 'none',
-      borderRadius: '2px'
+      borderRadius: '2px',
+      ...props.css
+    }}
+  />
+
+export const ButtonOutline = props =>
+  <Button
+    {...props}
+    color={green}
+    bg='transparent'
+    css={{
+      boxShadow: 'inset 0 0 0 2px'
     }}
   />
 

@@ -45,9 +45,7 @@ This allows you to override the `name` or add additional metadata to a page.
 
 ## MDX Layouts
 
-MDX includes a mechanism to wrap an individual file with a React component,
-using a default export.
-To wrap an individual route with a component, export the component as `default` from the MDX file.
+Use a default export to wrap an individual route with a component.
 
 ```mdx
 export default props =>
@@ -58,6 +56,7 @@ export default props =>
 # Page Layout
 ```
 
+This is a built-in feature of MDX.
 Learn more in the [MDX docs](https://mdxjs.com/syntax#export-default).
 
 ## Head
@@ -109,6 +108,7 @@ Read more about the built-in layout components:
 
 - [Layout](/Layout)
 - [DocsLayout](/DocsLayout)
+- [DevLayout](/DevLayout)
 
 ## Theming
 

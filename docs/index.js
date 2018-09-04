@@ -5,6 +5,7 @@ import {
   Title,
   Text,
   Button,
+  ButtonOutline,
   Container,
   Col,
   Link,
@@ -28,6 +29,14 @@ export default props =>
     <Banner>
       <Flex px={3} py={2}>
         <Box mx='auto' />
+        <Link
+          href='/getting-started'
+          fontSize={1}
+          px={3}
+          py={2}
+          color='#0d0'>
+          Docs
+        </Link>
         <Link
           href={github}
           fontSize={1}
@@ -55,9 +64,12 @@ export default props =>
           <Text mb={3}>
             Lightning-fast MDX-based dev server for progressive documentation
           </Text>
-          <Button href={github}>
+          <Button mr={3} href='/getting-started'>
             Docs
           </Button>
+          <ButtonOutline href={github}>
+            GitHub
+          </ButtonOutline>
           <Pre>npm i -g mdx-go</Pre>
         </Box>
         <Box
@@ -126,6 +138,7 @@ export default props =>
           py={4}
           mx={-3}
         >
+          <Link px={3} href='/getting-started'>Docs</Link>
           <Link px={3} href={github}>GitHub</Link>
           <Link px={3} href='https://jxnblk.com'>Made by Jxnblk</Link>
         </Flex>

@@ -13,7 +13,8 @@ This will create a `dist/` directory with an HTML file for each route and includ
 
 ## CSS-in-JS
 
-To ensure [emotion][] or [styled-components][] styles are rendered during build, be sure one of these libraries is included as a dependency in your `package.json`.
+To ensure [emotion][] or [styled-components][] styles are rendered during build,
+include one of these libraries as a dependency in your `package.json`.
 
 For [emotion][], be sure to install `emotion-server` for static export.
 
@@ -27,6 +28,14 @@ To export a site as static HTML without JS, use the `--static` flag.
 
 ```sh
 mdx-go build docs --static
+```
+
+## Basename
+
+When exporting for use on a domain with a base path, such as gh-pages, use the `--basename` CLI flag to specify the path.
+
+```sh
+mdx-go build docs --basename /mdx-go
 ```
 
 ## Options

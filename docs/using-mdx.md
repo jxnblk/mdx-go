@@ -45,7 +45,7 @@ export const Root = props =>
 ## Live Code Examples
 
 Fenced code blocks can be automatically converted to live code examples using [react-live][].
-To enable this feature, use the either the [ComponentProvider](/ComponentProvider) or the [StyleProvider](/StyleProvider) component in a custom Root component.
+To enable this feature, use either the [ComponentProvider](/ComponentProvider) or the [StyleProvider](/StyleProvider) component in a custom Root component.
 
 When [LiveCode](/LiveCode) is enabled, the following code block with the `.jsx` language attribute, will be converted into a live example, as seen below.
 
