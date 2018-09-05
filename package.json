@@ -8,9 +8,8 @@
   },
   "sideEffects": false,
   "scripts": {
-    "prepare": "babel src -d dist && npm run styled-components",
+    "prepare": "babel src -d dist",
     "watch": "babel src -d dist --watch",
-    "styled-components": "NODE_ENV=styled-components babel src -d dist/styled-components",
     "start": "./cli.js docs",
     "build": "./cli.js build docs -d site",
     "help": "./cli.js",
