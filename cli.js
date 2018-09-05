@@ -99,10 +99,11 @@ const opts = Object.assign({
 
 opts.outDir = path.resolve(opts.outDir)
 
-if (pkg && pkg.dependencies) {
-  if (pkg.dependencies['styled-components']) {
+if (!opts.cssLibrary && pkg && pkg.dependencies) {
+  const deps = Object.assign({}, pkg.devDependencies, pkg.dependencies)
+  if (deps['styled-components']) {
     opts.cssLibrary = 'styled-components'
-  } else if (pkg.dependencies['emotion']) {
+  } else if (deps['emotion']) {
     opts.cssLibrary = 'emotion'
   }
 }

@@ -3,5 +3,18 @@
     'env',
     'stage-0',
     'react'
-  ]
+  ],
+  env: {
+    'styled-components': {
+      plugins: [
+        [ 'transform-rename-import', {
+          replacements: [
+            { original: 'react-emotion', replacement: 'styled-components' },
+            { original: 'emotion', replacement: 'styled-components' },
+            { original: 'emotion-theming', replacement: 'styled-components' },
+          ]
+        } ]
+      ]
+    }
+  }
 }
