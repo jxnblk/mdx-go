@@ -11,8 +11,23 @@ import {
   ScrollTop,
   DocsLayout
 } from 'mdx-go'
-import { Box, Flex } from 'grid-styled/emotion'
 import Logo from './logo'
+
+// debugging
+import styled from 'react-emotion'
+import tag from 'clean-tag'
+import {
+  space,
+  width,
+  fontSize,
+  color,
+  alignItems,
+  justifyContent,
+  flexWrap
+} from 'styled-system'
+
+export const Box = styled(tag)(space, width, fontSize, color, props => props.css)
+export const Flex = styled(Box)({ display: 'flex' }, alignItems, justifyContent, flexWrap, props => props.css)
 
 const green = '#0d3'
 const darkgreen = '#0a6'
@@ -109,6 +124,11 @@ const PageLayout = props => props.location.pathname === '/'
   )
 
 export const Root = props =>
+  <StyleProvider>
+    <PageLayout {...props} />
+  </StyleProvider>
+
+export const xRoot = props =>
   <React.Fragment>
     <Head>
       <title>mdx-go</title>

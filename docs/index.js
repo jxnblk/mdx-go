@@ -1,6 +1,7 @@
 import React from 'react'
-import { Flex, Box } from 'grid-styled/emotion'
 import {
+  Flex,
+  Box,
   Banner,
   Title,
   Text,

@@ -14,7 +14,7 @@ Write markdown like you normally would.
 Import and use React components inline.
 
 ```mdx
-import { Box } from 'grid-styled'
+// import { Box } from 'grid-styled'
 
 # Hello
 
