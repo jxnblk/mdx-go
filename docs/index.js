@@ -1,10 +1,11 @@
 import React from 'react'
-import { Flex, Box } from 'grid-styled'
+import { Flex, Box } from 'grid-styled/emotion'
 import {
   Banner,
   Title,
   Text,
   Button,
+  ButtonOutline,
   Container,
   Col,
   Link,
@@ -13,6 +14,8 @@ import {
 } from './components'
 import Logo from './logo'
 export { Root } from './components'
+
+export const name = 'Home'
 
 const github = 'https://github.com/jxnblk/mdx-go'
 const blog = 'https://jxnblk.com/writing/posts/progressive-documentation'
@@ -27,9 +30,18 @@ export default props =>
       <Flex px={3} py={2}>
         <Box mx='auto' />
         <Link
+          href='/getting-started'
+          fontSize={1}
+          px={3}
+          py={2}
+          color='#0d0'>
+          Docs
+        </Link>
+        <Link
           href={github}
           fontSize={1}
           px={3}
+          py={2}
           color='#0d0'>
           GitHub
         </Link>
@@ -47,14 +59,17 @@ export default props =>
         <Box
           px={3}
           width={[ 1, null, 1/3, 1/3 ]}>
-          <Logo size={128} />
+          <Logo size={96} />
           <Title mb={2}>mdx-go</Title>
           <Text mb={3}>
             Lightning-fast MDX-based dev server for progressive documentation
           </Text>
-          <Button href={github}>
+          <Button mr={3} href='/getting-started'>
             Docs
           </Button>
+          <ButtonOutline href={github}>
+            GitHub
+          </ButtonOutline>
           <Pre>npm i -g mdx-go</Pre>
         </Box>
         <Box
@@ -114,19 +129,28 @@ export default props =>
         </Col>
       </Flex>
       <Divider />
-      <Flex
-        is='footer'
-        fontSize={1}
-        py={4}
-        mx={-3}
-      >
-        <Link px={3} href={github}>GitHub</Link>
-        <Link px={3} href='https://jxnblk.com'>Made by Jxnblk</Link>
-      </Flex>
-      <Flex py={4}>
-        <Box mx='auto'>
-          <Logo size={64} />
-        </Box>
-      </Flex>
     </Container>
+    <Box bg='lightgray'>
+      <Container>
+        <Flex
+          is='footer'
+          fontSize={1}
+          py={4}
+          mx={-3}
+        >
+          <Link px={3} href='/getting-started'>Docs</Link>
+          <Link px={3} href={github}>GitHub</Link>
+          <Link px={3} href='https://jxnblk.com'>Made by Jxnblk</Link>
+        </Flex>
+        <Flex py={4}>
+          <Box mx='auto'>
+            <Link
+              title='Hidden Docs'
+              href='/getting-started'>
+              <Logo size={48} />
+            </Link>
+          </Box>
+        </Flex>
+      </Container>
+    </Box>
   </Box>
