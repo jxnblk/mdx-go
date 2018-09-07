@@ -14,7 +14,7 @@
     "start": "./cli.js docs",
     "build": "./cli.js build docs -d site",
     "help": "./cli.js",
-    "test": "nyc ava",
+    "test": "CI=1 nyc ava",
     "logo": "repng docs/logo.js -w 256 -h 256 -d docs -f logo.png",
     "card": "repng docs/card.js -w 1024 -h 512 -d docs -f card.png"
   },
@@ -84,7 +84,9 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
-    "ava": "^0.25.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "ava": "^1.0.0-beta.8",
     "babel-plugin-transform-rename-import": "^2.3.0",
     "emotion-server": "^9.2.8",
     "grid-styled": "^5.0.2",
@@ -98,5 +100,14 @@
   "mdx-go": {
     "cssLibrary": "emotion",
     "basename": "/mdx-go"
+  },
+  "ava": {
+    "babel": {
+      "testOptions": {
+        "plugins": [
+          "@babel/transform-runtime"
+        ]
+      }
+    }
   }
 }
