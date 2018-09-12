@@ -8,7 +8,7 @@ Wrap your application with the ComponentProvider to use custom MDX components an
 ```jsx
 // example Root component
 import React from 'react'
-import { ComponentProvider } from 'mdx-go'
+import { ComponentProvider } from 'mdx-go/emotion'
 
 export const Root = props =>
   <ComponentProvider>

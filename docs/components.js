@@ -2,15 +2,17 @@ import React from 'react'
 import {
   Head,
   Link as GoLink,
+  ScrollTop,
+} from 'mdx-go'
+import {
   Layout,
   NavLinks,
   NavLink,
   Pagination,
   ComponentProvider,
   StyleProvider,
-  ScrollTop,
   DocsLayout
-} from 'mdx-go'
+} from 'mdx-go/emotion'
 import { Box, Flex } from 'grid-styled/emotion'
 import Logo from './logo'
 

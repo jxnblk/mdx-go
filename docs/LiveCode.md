@@ -12,7 +12,7 @@ To enable LiveCode in fenced code blocks, use either the [ComponentProvider](/Co
 ```jsx
 // example Root component
 import React from 'react'
-import { ComponentProvider } from 'mdx-go'
+import { ComponentProvider } from 'mdx-go/emotion'
 
 export const Root = props =>
   <ComponentProvider>
@@ -41,7 +41,7 @@ To add components to scope for use within the LiveCode component's code blocks, 
 ```jsx
 // example Root component
 import React from 'react'
-import { ComponentProvider } from 'mdx-go'
+import { ComponentProvider } from 'mdx-go/emotion'
 import Button from '../src/Button'
 
 const components = {
@@ -69,7 +69,7 @@ Use a ThemeProvider or the [StyleProvider](/StyleProvider) to pass a theme to th
 ```jsx
 // example Root component
 import React from 'react'
-import { StyleProvider } from 'mdx-go'
+import { StyleProvider } from 'mdx-go/emotion'
 
 const theme = {
   LiveCode: {

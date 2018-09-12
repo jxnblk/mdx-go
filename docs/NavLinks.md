@@ -11,7 +11,7 @@ import React from 'react'
 import {
   Layout,
   NavLinks
-} from 'mdx-go'
+} from 'mdx-go/emotion'
 
 export const Root = props =>
   <Layout>
