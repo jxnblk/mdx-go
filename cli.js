@@ -84,6 +84,8 @@ const cli = meow(`
   }
 })
 
+require('update-notifier')({ pkg: cli.pkg }).notify()
+
 const [ cmd, input ] = cli.input
 
 if (!cmd && !input) {
@@ -142,4 +144,3 @@ switch (cmd) {
       })
 }
 
-require('update-notifier')({ pkg: cli.pkg }).notify()
