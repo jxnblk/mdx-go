@@ -1,8 +1,11 @@
-{
+module.exports = {
   presets: [
-    'env',
-    'stage-0',
-    'react'
+    '@babel/env',
+    // 'stage-0',
+    '@babel/react'
+  ],
+  plugins: [
+    '@babel/plugin-proposal-class-properties',
   ],
   env: {
     emotion: {
