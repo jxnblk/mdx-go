@@ -75,6 +75,7 @@
     "react-live": "^1.11.0",
     "react-router-dom": "^4.3.1",
     "read-pkg-up": "^4.0.0",
+    "rebass": "^3.0.0-4",
     "remark-autolink-headings": "^5.0.0",
     "remark-emoji": "^2.0.1",
     "remark-images": "^0.8.1",

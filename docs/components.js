@@ -13,7 +13,7 @@ import {
   StyleProvider,
   DocsLayout
 } from 'mdx-go/styled-components'
-import { Box, Flex } from '@rebass/grid'
+import { Box, Flex } from 'rebass'
 import Logo from './logo'
 
 const green = '#0d3'
