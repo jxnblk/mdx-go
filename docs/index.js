@@ -1,6 +1,5 @@
 import React from 'react'
 import { Flex, Box } from 'rebass'
-import styled from 'styled-components'
 import {
   Banner,
   Title,
@@ -14,11 +13,11 @@ import {
   Divider,
 } from './components'
 import Logo from './logo'
+
 export { Root } from './components'
+// export const Root = props => props.children
 
 export const name = 'Home'
-
-const Fex = styled(Box)`display:flex;`
 
 const github = 'https://github.com/jxnblk/mdx-go'
 const blog = 'https://jxnblk.com/writing/posts/progressive-documentation'
@@ -49,7 +48,7 @@ export default props =>
           GitHub
         </Link>
       </Flex>
-      <Fex
+      <Flex
         mx='auto'
         px={3}
         py={5}
@@ -92,7 +91,7 @@ export default props =>
             }}
           />
         </Box>
-      </Fex>
+      </Flex>
     </Banner>
     <Container>
       <Divider />

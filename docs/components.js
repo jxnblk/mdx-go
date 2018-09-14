@@ -3,8 +3,6 @@ import {
   Head,
   Link as GoLink,
   ScrollTop,
-} from 'mdx-go'
-import {
   Layout,
   NavLinks,
   NavLink,
