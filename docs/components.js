@@ -3,8 +3,6 @@ import {
   Head,
   Link as GoLink,
   ScrollTop,
-} from 'mdx-go'
-import {
   Layout,
   NavLinks,
   NavLink,
@@ -12,8 +10,8 @@ import {
   ComponentProvider,
   StyleProvider,
   DocsLayout
-} from 'mdx-go/emotion'
-import { Box, Flex } from 'grid-styled/emotion'
+} from 'mdx-go/styled-components'
+import { Box, Flex } from 'rebass'
 import Logo from './logo'
 
 const green = '#0d3'
@@ -144,7 +142,7 @@ export const Banner = props =>
 export const Title = props =>
   <Box
     {...props}
-    is='h1'
+    as='h1'
     m={0}
     fontSize={[ 6, 7 ]}
     css={{
@@ -154,7 +152,7 @@ export const Title = props =>
 
 export const Text = props =>
   <Box
-    is='p'
+    as='p'
     m={0}
     {...props}
     css={{
@@ -164,7 +162,7 @@ export const Text = props =>
 
 export const Button = props =>
   <Box
-    is={GoLink}
+    as={GoLink}
     px={4}
     py={3}
     fontSize={2}
@@ -211,7 +209,7 @@ export const Col = props =>
 export const Link = props =>
   <Box
     {...props}
-    is={GoLink}
+    as={GoLink}
     css={{
       display: 'inline-block',
       color: 'inherit',
@@ -226,7 +224,7 @@ export const Link = props =>
 export const Pre = props =>
   <Box
     {...props}
-    is='pre'
+    as='pre'
     color={green}
     fontSize={2}
     css={{
@@ -237,7 +235,7 @@ export const Pre = props =>
 export const Divider = props =>
   <Box
     {...props}
-    is='hr'
+    as='hr'
     my={5}
     width={128}
     ml={0}

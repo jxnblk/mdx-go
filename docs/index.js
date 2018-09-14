@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Box } from 'grid-styled/emotion'
+import { Flex, Box } from 'rebass'
 import {
   Banner,
   Title,
@@ -13,7 +13,9 @@ import {
   Divider,
 } from './components'
 import Logo from './logo'
+
 export { Root } from './components'
+// export const Root = props => props.children
 
 export const name = 'Home'
 
