@@ -1,4 +1,4 @@
 dist
 .nyc_output
 coverage
-site
+temp

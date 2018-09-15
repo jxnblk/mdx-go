@@ -2,7 +2,7 @@ docs
 .nyc_output
 coverage
 test
-site
+temp
 src
 examples
 .travis.yml

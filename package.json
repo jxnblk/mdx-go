@@ -11,7 +11,7 @@
     "prepare": "babel src -d dist",
     "watch": "babel src -d dist --watch",
     "start": "./cli.js examples/dev",
-    "build": "./cli.js build examples/dev -d examples/dev/dist",
+    "build": "./cli.js build examples/dev -d temp",
     "help": "./cli.js",
     "test": "nyc ava"
   },
