@@ -27,6 +27,7 @@ const defaultComponents = tags.reduce((obj, tag) => ({
 }), {})
 
 const css = ({
+  css
 }) => `
 .mdx-StyleProvider {
   --h0: 4.5rem;
@@ -90,24 +91,6 @@ const css = ({
   background-color: var(--mdx-border, #ddd);
 }
 
-.mdx-StyleProvider pre {
-  font-family: Menlo, monospace;
-  font-size: 14px;
-  padding: var(--m3);
-  color: var(--mdx-pre-color);
-  background-color: var(--mdx-pre-background);
-}
-.mdx-StyleProvider code {
-  font-family: Menlo, monospace;
-  font-size: 0.875em;
-  color: var(--mdx-code-color);
-  background-color: var(--mdx-code-background);
-}
-
-.mdx-StyleProvider a {
-  color: var(--mdx-link-color);
-}
-
 .mdx-table {
   width: 100%;
   margin-top: var(--m3);
@@ -138,6 +121,7 @@ const css = ({
   .mdx-h1 { font-size: var(--h1) }
   .mdx-h2 { font-size: var(--h2) }
 }
+${css}
 `.replace(/\n/g, '')
 
 const CSS = props =>
