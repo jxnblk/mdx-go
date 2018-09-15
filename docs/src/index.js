@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Box } from 'grid-styled/emotion'
+import { Flex, Box } from 'rebass'
 import {
   Banner,
   Title,
@@ -133,7 +133,7 @@ export default props =>
     <Box bg='lightgray'>
       <Container>
         <Flex
-          is='footer'
+          as='footer'
           fontSize={1}
           py={4}
           mx={-3}
