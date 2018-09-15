@@ -4,13 +4,12 @@ import NavLinks from './NavLinks'
 
 export const DevLayout = props =>
   <Layout>
-    <Layout.MenuToggle m={2} />
-    <Layout.Sidebar
-      bg='#f9f9f9'
+    <Layout.MenuToggle
       style={{
-        paddingTop: 32,
-        paddingBottom: 32,
-      }}>
+        position: 'fixed'
+      }}
+    />
+    <Layout.Sidebar>
       <NavLinks {...props} />
     </Layout.Sidebar>
     <Layout.Main>

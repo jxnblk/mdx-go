@@ -16,7 +16,7 @@ const Root = props =>
     style={{
       marginTop: 'var(--live-margin-top, 32px)',
       marginBottom: 'var(--live-margin-bottom, 32px)',
-      border: '1px solid var(--live-border, lightgray)',
+      border: '1px solid var(--live-border, #f3f3f3)',
       borderRadius: 'var(--live-radius, 2px)',
     }}
   />
@@ -35,9 +35,9 @@ const Editor = props =>
     style={{
       margin: 0,
       fontFamily: 'var(--live-editor-font, Menlo, monospace)',
-      fontSize: 'var(--live-editor-font-size, 12px)',
+      fontSize: 'var(--live-editor-font-size, 14px)',
       padding: 'var(--live-padding, 16px)',
-      backgroundColor: 'var(--live-editor-background, lightgray)',
+      backgroundColor: 'var(--live-editor-background, #f9f9f9)',
       outline: 'none',
     }}
   />
@@ -47,7 +47,7 @@ const Err = props =>
     {...props}
     style={{
       fontFamily: 'var(--live-error-font, Menlo, monospace)',
-      fontSize: 'var(--live-error-font-size, 12px)',
+      fontSize: 'var(--live-error-font-size, 14px)',
       padding: 'var(--live-padding, 16px)',
       color: 'var(--live-error-color, white)',
       backgroundColor: 'var(--live-error-background, red)'

@@ -22,6 +22,7 @@ export {
   NavLink
 } from './NavLinks'
 export { Pagination } from './Pagination'
+export { StyleProvider } from './StyleProvider'
 
 // zero-config layouts
 export { DocsLayout } from './DocsLayout'

@@ -46,6 +46,8 @@ const SidebarRoot = withMedia(({
       bottom: 0,
       left: 0,
       overflowY: 'auto',
+      paddingTop: 32,
+      paddingBottom: 32,
       color,
       backgroundColor: bg,
       WebkitOverflowScrolling: 'touch',
@@ -59,7 +61,7 @@ const SidebarRoot = withMedia(({
 
 SidebarRoot.defaultProps = {
   width: 256,
-  bg: 'white'
+  bg: '#f9f9f9'
 }
 
 const SidebarSpacer = withMedia(({
