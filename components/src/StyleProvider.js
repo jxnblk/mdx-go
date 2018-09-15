@@ -47,7 +47,7 @@ scope.h4 = heading(scope.h4)
 scope.h5 = heading(scope.h5)
 scope.h6 = heading(scope.h6)
 
-scope.code = withLiveCode(scope.code)
+scope.code = withLiveCode(cx('pre'))
 
 const css = ({
   css
