@@ -9,7 +9,7 @@
   "module": "dist/index.js",
   "sideEffects": false,
   "scripts": {
-    "prepare": "babel src -d dist",
+    "prepare": "rm -rf dist && babel src -d dist",
     "watch": "babel src -d dist --watch",
     "start": "./cli.js examples/dev",
     "build": "./cli.js build examples/dev -d temp",
