@@ -11,12 +11,10 @@
     "prepare": "babel src -d dist && npm run styled-components",
     "watch": "babel src -d dist --watch",
     "styled-components": "NODE_ENV=styled-components babel src -d dist/styled-components",
-    "start": "./cli.js docs",
-    "build": "./cli.js build docs -d site",
+    "start": "./cli.js examples/dev",
+    "build": "./cli.js build examples/dev -d examples/dev/dist",
     "help": "./cli.js",
-    "test": "nyc ava",
-    "logo": "repng docs/logo.js -w 256 -h 256 -d docs -f logo.png",
-    "card": "repng docs/card.js -w 1024 -h 512 -d docs -f card.png"
+    "test": "nyc ava"
   },
   "keywords": [
     "mdx",
