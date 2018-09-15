@@ -1,6 +1,6 @@
 {
   "name": "mdx-go",
-  "version": "1.1.10",
+  "version": "1.2.0-2",
   "description": "Lightning-fast MDX-based dev server",
   "main": "dist/index.js",
   "bin": {
@@ -8,9 +8,12 @@
   },
   "sideEffects": false,
   "scripts": {
-    "prepare": "babel src -d dist && npm run styled-components",
+    "prepare": "npm urn clean && npm run babel && npm run emotion && npm run styled-components",
+    "clean": "rm -rf dist",
+    "babel": "babel src -d dist --ignore styled",
     "watch": "babel src -d dist --watch",
-    "styled-components": "NODE_ENV=styled-components babel src -d dist/styled-components",
+    "emotion": "NODE_ENV=emotion babel src/styled -d dist/emotion",
+    "styled-components": "NODE_ENV=styled-components babel src/styled -d dist/styled-components",
     "start": "./cli.js docs",
     "build": "./cli.js build docs -d site",
     "help": "./cli.js",
@@ -30,8 +33,8 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "@mdx-js/loader": "^0.15.0",
-    "@mdx-js/mdx": "^0.15.0",
+    "@mdx-js/loader": "^0.15.2",
+    "@mdx-js/mdx": "^0.15.2",
     "@mdx-js/tag": "^0.15.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
@@ -51,9 +54,9 @@
     "pkg-conf": "^2.1.0",
     "progress-bar-webpack-plugin": "^1.11.0",
     "prop-types": "^15.6.2",
-    "react": "^16.4.2",
+    "react": "^16.5.1",
     "react-dev-utils": "^5.0.2",
-    "react-dom": "^16.4.2",
+    "react-dom": "^16.5.1",
     "react-emotion": "^9.2.8",
     "react-live": "^1.11.0",
     "react-router-dom": "^4.3.1",
@@ -68,12 +71,12 @@
     "serve-static": "^1.13.2",
     "styled-system": "^3.1.3",
     "update-notifier": "^2.5.0",
-    "webpack": "^4.17.1",
-    "webpack-dev-middleware": "^3.2.0",
-    "webpack-hot-middleware": "^2.22.3",
+    "webpack": "^4.19.0",
+    "webpack-dev-middleware": "^3.3.0",
+    "webpack-hot-middleware": "^2.24.0",
     "webpack-merge": "^4.1.4",
     "webpack-node-externals": "^1.7.2",
-    "webpack-sources": "^1.1.0"
+    "webpack-sources": "^1.2.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",

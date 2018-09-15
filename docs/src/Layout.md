@@ -8,7 +8,7 @@ This page uses the Layout component.
 
 ```jsx
 import React from 'react'
-import { Layout } from 'mdx-go'
+import { Layout } from 'mdx-go/emotion'
 
 export const Root = props =>
   <Layout>

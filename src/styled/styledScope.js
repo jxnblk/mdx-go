@@ -5,7 +5,7 @@ import {
   fontSize,
   color,
 } from 'styled-system'
-import Link from './Link'
+import { Link } from 'mdx-go'
 import { withLiveCode } from './scope'
 
 const css = props => props.css

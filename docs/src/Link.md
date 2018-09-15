@@ -11,7 +11,7 @@ When providing custom MDX components with the [ComponentProvider](/ComponentProv
 ```jsx
 // example Root component
 import React from 'react'
-import { ComponentProvider, Link } from 'mdx-go'
+import { ComponentProvider, Link } from 'mdx-go/emotion'
 import styled from 'react-emotion'
 
 const components = {

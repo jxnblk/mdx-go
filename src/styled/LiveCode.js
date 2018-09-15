@@ -12,7 +12,7 @@ import {
   color,
   borderColor
 } from 'styled-system'
-import withComponents from './withComponents'
+import { withComponents } from 'mdx-go'
 
 const themed = key => props => props.theme[key]
 const transformCode = src => `<React.Fragment>${src}</React.Fragment>`

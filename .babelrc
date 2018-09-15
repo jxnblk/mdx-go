@@ -5,6 +5,9 @@
     'react'
   ],
   env: {
+    emotion: {
+      plugins: []
+    },
     'styled-components': {
       plugins: [
         [ 'transform-rename-import', {

@@ -1,29 +1,6 @@
 export { Head, HeadProvider } from './Head'
 export { default as Link } from './Link'
+// enable this by default?
 export { ScrollTop } from './ScrollTop'
+export { default as withComponents } from './withComponents'
 
-// unstyled MDXProvider with LiveCode and Link
-export { ComponentProvider } from './ComponentProvider'
-export { withComponents } from './withComponents'
-
-export {
-  Layout,
-  Sidebar,
-  Main,
-  MenuToggle,
-  MenuIcon,
-  withLayout,
-} from './Layout'
-export {
-  NavLinks,
-  NavLink
-} from './NavLinks'
-export { Pagination } from './Pagination'
-export { LiveCode } from './LiveCode'
-
-// styles for MDX elements
-export { StyleProvider } from './StyleProvider'
-
-// zero-config layout
-export { DocsLayout } from './DocsLayout'
-export { DevLayout } from './DevLayout'

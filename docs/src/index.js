@@ -13,7 +13,9 @@ import {
   Divider,
 } from './components'
 import Logo from './logo'
+
 export { Root } from './components'
+// export const Root = props => props.children
 
 export const name = 'Home'
 

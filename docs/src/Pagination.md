@@ -12,7 +12,7 @@ import {
   Layout,
   NavLinks,
   Pagination
-} from 'mdx-go'
+} from 'mdx-go/emotion'
 
 export const Root = props =>
   <Layout>

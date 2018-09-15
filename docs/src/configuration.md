@@ -84,7 +84,7 @@ Use the `ComponentProvider` in a Root component to add custom components for MDX
 // example Root component
 import React from 'react'
 import styled from 'react-emotion'
-import { ComponentProvider } from 'mdx-go'
+import { ComponentProvider } from 'mdx-go/emotion'
 
 const components = {
   h1: styled('h1')({

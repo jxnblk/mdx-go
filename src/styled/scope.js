@@ -1,6 +1,6 @@
 // default MDX scope
 import React from 'react'
-import Link from './Link'
+import { Link } from 'mdx-go'
 import LiveCode from './LiveCode'
 
 // Changes .jsx fenced code blocks to LiveCode

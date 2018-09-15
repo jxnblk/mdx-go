@@ -8,7 +8,7 @@ import {
   color,
   themeGet,
 } from 'styled-system'
-import Link from './Link'
+import { Link } from 'mdx-go'
 
 const sort = (routes, order) => sortby(routes, route => {
   const index = order.indexOf(route.name)

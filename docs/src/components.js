@@ -2,13 +2,13 @@ import React from 'react'
 import { Head } from 'mdx-go'
 import {
   Link as GoLink,
+  ScrollTop,
   Layout,
   NavLinks,
   NavLink,
   Pagination,
   ComponentProvider,
   StyleProvider,
-  ScrollTop,
   DocsLayout
 } from 'mdx-go/styled-components'
 import { Box, Flex } from 'rebass'

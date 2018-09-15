@@ -1,0 +1,4 @@
+{
+  "name": "mdx-go/emotion",
+  "main": "../dist/emotion"
+}
