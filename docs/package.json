@@ -6,9 +6,6 @@
     "logo": "repng src/logo.js -w 256 -h 256 -d src -f logo.png",
     "card": "repng src/card.js -w 1024 -h 512 -d src -f card.png"
   },
-  "keywords": [],
-  "author": "Brent Jackson",
-  "license": "MIT",
   "dependencies": {
     "mdx-go": "^1.1.9",
     "rebass": "^3.0.0-8",
