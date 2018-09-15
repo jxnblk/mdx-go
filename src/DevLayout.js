@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from './Layout'
 import StyleProvider from './StyleProvider'
 import NavLinks from './NavLinks'
-import ScrollTop from './ScrollTop'
 
 export const DevLayout = props =>
   <StyleProvider>
@@ -15,5 +14,4 @@ export const DevLayout = props =>
         {props.children}
       </Layout.Main>
     </Layout>
-    <ScrollTop />
   </StyleProvider>

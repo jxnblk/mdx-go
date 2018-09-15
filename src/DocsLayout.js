@@ -4,7 +4,6 @@ import Layout from './Layout'
 import StyleProvider from './StyleProvider'
 import NavLinks from './NavLinks'
 import Pagination from './Pagination'
-import ScrollTop from './ScrollTop'
 
 export const DocsLayout = props =>
   <StyleProvider>
@@ -20,7 +19,6 @@ export const DocsLayout = props =>
         <Pagination {...props} />
       </Layout.Main>
     </Layout>
-    <ScrollTop />
   </StyleProvider>
 
 export default DocsLayout

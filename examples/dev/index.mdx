@@ -1,0 +1,26 @@
+import { Layout, ComponentProvider } from 'mdx-go'
+
+export const Root = props =>
+  <div
+    style={{
+      '--live-border': '#f0f0f6',
+      '--live-editor-background': '#f6f6ff'
+    }}>
+    <Layout>
+      <Layout.MenuToggle />
+      <Layout.Sidebar>
+        Sidebar
+      </Layout.Sidebar>
+      <Layout.Main>
+        {props.children}
+      </Layout.Main>
+    </Layout>
+  </div>
+
+# Dev Example
+
+This example can be run from the root directory as a development environment for the core library.
+
+```.jsx
+<h1>Hello</h1>
+```

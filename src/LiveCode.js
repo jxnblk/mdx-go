@@ -1,66 +1,58 @@
 import React from 'react'
-import styled from 'react-emotion'
 import {
   LiveProvider,
   LivePreview,
   LiveEditor,
   LiveError,
 } from 'react-live'
-import {
-  space,
-  fontSize,
-  color,
-  borderColor
-} from 'styled-system'
 import withComponents from './withComponents'
 
 const themed = key => props => props.theme[key]
 const transformCode = src => `<React.Fragment>${src}</React.Fragment>`
 
-const Root = styled('div')({
-  border: '1px solid',
-  borderRadius: '2px',
-}, space, borderColor, themed('LiveCode'))
+const Root = props =>
+  <div
+    {...props}
+    style={{
+      marginTop: 'var(--live-margin-top, 32px)',
+      marginBottom: 'var(--live-margin-bottom, 32px)',
+      border: '1px solid var(--live-border, lightgray)',
+      borderRadius: 'var(--live-radius, 2px)',
+    }}
+  />
 
-Root.defaultProps = {
-  mt: 4,
-  mb: 4,
-  borderColor: 'lightgray'
-}
+const Preview = props =>
+  <LivePreview
+    {...props}
+    style={{
+      padding: 'var(--live-padding, 16px)'
+    }}
+  />
 
-const Preview = styled(LivePreview)({
-}, space, themed('LivePreview'))
+const Editor = props =>
+  <LiveEditor
+    {...props}
+    style={{
+      margin: 0,
+      fontFamily: 'var(--live-editor-font, Menlo, monospace)',
+      fontSize: 'var(--live-editor-font-size, 12px)',
+      padding: 'var(--live-padding, 16px)',
+      backgroundColor: 'var(--live-editor-background, lightgray)',
+      outline: 'none',
+    }}
+  />
 
-Preview.defaultProps = {
-  p: 3
-}
-
-const Editor = styled(LiveEditor)({
-  margin: 0,
-  fontFamily: 'Menlo, monospace',
-  outline: 'none',
-},
-  fontSize,
-  space,
-  color,
-  themed('LiveEditor')
-)
-
-Editor.defaultProps = {
-  fontSize: 1,
-  p: 3,
-  bg: 'lightgray'
-}
-
-const Err = styled(LiveError)({
-  fontFamily: 'Menlo, monospace',
-}, space, fontSize, color, themed('LiveError'))
-
-Err.defaultProps = {
-  fontSize: 1,
-  p: 3,
-  bg: 'red'
-}
+const Err = props =>
+  <LiveError
+    {...props}
+    style={{
+      fontFamily: 'var(--live-error-font, Menlo, monospace)',
+      fontSize: 'var(--live-error-font-size, 12px)',
+      padding: 'var(--live-padding, 16px)',
+      color: 'var(--live-error-color, white)',
+      backgroundColor: 'var(--live-error-background, red)'
+    }}
+  />
 
 export const LiveCode = withComponents(({
   components,
