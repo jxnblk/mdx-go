@@ -1,13 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
-import styled from 'react-emotion'
 import sortby from 'lodash.sortby'
-import {
-  space,
-  fontSize,
-  color
-} from 'styled-system'
 import Link from './Link'
 
 const sort = (routes, order) => sortby(routes, route => {
@@ -15,29 +9,31 @@ const sort = (routes, order) => sortby(routes, route => {
   return index < 0 ? Infinity : index
 })
 
-const Flex = styled('div')({
-  display: 'flex'
-}, space)
+const Flex = props =>
+  <div
+    {...props}
+    style={{
+      display: 'flex',
+      paddingTop: 32,
+      paddingBottom: 32,
+      ...props.style
+    }}
+  />
 
-const Spacer = styled('div')({ margin: 'auto' })
+const Spacer = props =>
+  <div style={{ margin: 'auto' }} />
 
-const NavLink = styled(Link)({
-  display: 'block',
-  fontWeight: 'bold',
-  textDecoration: 'none',
-}, space, fontSize, color, props => props.css)
-
-NavLink.propTypes = {
-  ...space.propTypes,
-  ...fontSize.propTypes,
-  ...color.propTypes,
-}
-
-NavLink.defaultProps = {
-  py: 1,
-  fontSize: 3,
-  color: 'inherit',
-}
+const NavLink = props =>
+  <Link
+    {...props}
+    style={{
+      display: 'block',
+      fontWeight: 'bold',
+      textDecoration: 'none',
+      color: 'inherit',
+      ...props.style
+    }}
+  />
 
 export const Pagination = withRouter(({
   routes = [],
@@ -46,6 +42,7 @@ export const Pagination = withRouter(({
   history,
   location,
   match,
+  staticContext,
   ...props
 }) => {
   const { pathname } = location

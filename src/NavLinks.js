@@ -11,7 +11,7 @@ const sort = (routes, order) => sortby(routes, route => {
 export const NavLink = props =>
   <Link
     {...props}
-    classname='NavLink'
+    className='NavLink'
     style={{
       display: 'block',
       paddingLeft: 16,
@@ -31,6 +31,9 @@ export const NavLinks = ({
   order = [],
   filter,
   staticContext,
+  history,
+  location,
+  match,
   ...props
 }) =>
   <React.Fragment>

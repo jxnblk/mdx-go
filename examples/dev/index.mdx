@@ -1,7 +1,10 @@
 import {
   Layout,
   NavLinks,
-  ComponentProvider
+  Pagination,
+  ComponentProvider,
+  DocsLayout,
+  DevLayout,
 } from 'mdx-go'
 
 export const Root = props =>
@@ -12,11 +15,13 @@ export const Root = props =>
     }}>
     <Layout>
       <Layout.MenuToggle />
-      <Layout.Sidebar bg='tomato'>
+      <Layout.Sidebar bg='#f6f6ff'>
+        <h2>Hello</h2>
         <NavLinks {...props} />
       </Layout.Sidebar>
       <Layout.Main>
         {props.children}
+        <Pagination {...props} />
       </Layout.Main>
     </Layout>
   </div>

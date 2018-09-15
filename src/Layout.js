@@ -100,7 +100,10 @@ const Overlay = withMedia(({
 
 export const Sidebar = withLayout(({
   open,
+  openMenu,
   closeMenu,
+  toggleMenu,
+  update,
   width,
   ...props
 }) =>

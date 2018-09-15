@@ -22,10 +22,8 @@ export {
   NavLinks,
   NavLink
 } from './NavLinks'
-/*
 export { Pagination } from './Pagination'
 
 // zero-config layout
 export { DocsLayout } from './DocsLayout'
 export { DevLayout } from './DevLayout'
-*/
