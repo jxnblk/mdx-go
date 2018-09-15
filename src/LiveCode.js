@@ -16,7 +16,7 @@ const Root = props =>
     style={{
       marginTop: 'var(--live-margin-top, 32px)',
       marginBottom: 'var(--live-margin-bottom, 32px)',
-      border: '1px solid var(--live-border, #f3f3f3)',
+      border: '1px solid var(--live-border, #f6f6ff)',
       borderRadius: 'var(--live-radius, 2px)',
     }}
   />
@@ -37,7 +37,7 @@ const Editor = props =>
       fontFamily: 'var(--live-editor-font, Menlo, monospace)',
       fontSize: 'var(--live-editor-font-size, 14px)',
       padding: 'var(--live-padding, 16px)',
-      backgroundColor: 'var(--live-editor-background, #f9f9f9)',
+      backgroundColor: 'var(--live-editor-background, #f6f6ff)',
       outline: 'none',
     }}
   />

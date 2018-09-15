@@ -18,11 +18,12 @@ export const NavLink = props =>
       paddingRight: 16,
       paddingTop: 4,
       paddingBottom: 4,
-      fontSize: 12,
+      fontSize: 14,
       width: '100%',
       fontWeight: 'bold',
       textDecoration: 'none',
       color: 'inherit',
+      '--active-color': props.activeColor
     }}
   />
 
@@ -37,6 +38,11 @@ export const NavLinks = ({
   ...props
 }) =>
   <React.Fragment>
+    <style
+      dangerouslySetInnerHTML={{
+        __html: '.NavLink.active{color:var(--active-color) !important}'
+      }}
+    />
     {sort(routes, order)
       .filter(filter)
       .map(route => (
@@ -59,6 +65,7 @@ NavLinks.propTypes = {
 NavLinks.defaultProps = {
   order: [ 'index' ],
   filter: () => true,
+  activeColor: '#07c'
 }
 
 export default NavLinks

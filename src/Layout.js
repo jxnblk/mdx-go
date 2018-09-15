@@ -61,7 +61,7 @@ const SidebarRoot = withMedia(({
 
 SidebarRoot.defaultProps = {
   width: 256,
-  bg: '#f9f9f9'
+  bg: '#f6f6ff'
 }
 
 const SidebarSpacer = withMedia(({
@@ -174,6 +174,7 @@ export const MenuButton = ({
   <button
     {...props}
     style={{
+      position: 'fixed',
       appearance: 'none',
       fontSize: 'inherit',
       fontFamily: 'inherit',
