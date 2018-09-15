@@ -1,14 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import sortby from 'lodash.sortby'
-import Link from './Link'
+import { withLink } from 'mdx-go'
 
 const sort = (routes, order) => sortby(routes, route => {
   const index = order.indexOf(route.name)
   return index < 0 ? Infinity : index
 })
 
-export const NavLink = ({
+export const NavLink = withLink(({
+  Link,
   activeColor,
   ...props
 }) =>
@@ -29,6 +30,7 @@ export const NavLink = ({
       '--active-color': activeColor
     }}
   />
+)
 
 export const NavLinks = ({
   routes = [],

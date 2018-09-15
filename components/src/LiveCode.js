@@ -5,7 +5,7 @@ import {
   LiveEditor,
   LiveError,
 } from 'react-live'
-import withComponents from './withComponents'
+import { withComponents } from 'mdx-go'
 
 const themed = key => props => props.theme[key]
 const transformCode = src => `<React.Fragment>${src}</React.Fragment>`
@@ -71,5 +71,28 @@ export const LiveCode = withComponents(({
     </Root>
   </LiveProvider>
 ))
+
+export const withLiveCode = Component => ({
+  children,
+  className = '',
+  ...props
+}) => {
+  const isLive = className === 'language-.jsx'
+  if (!isLive) {
+    return (
+      <Component
+        {...props}
+        className={className}
+        children={children}
+      />
+    )
+  }
+
+  const code = React.Children.toArray(children).join('\n')
+
+  return (
+    <LiveCode code={code} />
+  )
+}
 
 export default LiveCode

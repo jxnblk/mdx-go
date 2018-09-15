@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 import sortby from 'lodash.sortby'
-import Link from './Link'
+import { withLink } from 'mdx-go'
 
 const sort = (routes, order) => sortby(routes, route => {
   const index = order.indexOf(route.name)
@@ -23,7 +23,7 @@ const Flex = props =>
 const Spacer = props =>
   <div style={{ margin: 'auto' }} />
 
-const NavLink = props =>
+const NavLink = withLink(({ Link, ...props }) =>
   <Link
     {...props}
     style={{
@@ -34,6 +34,7 @@ const NavLink = props =>
       ...props.style
     }}
   />
+)
 
 export const Pagination = withRouter(({
   routes = [],

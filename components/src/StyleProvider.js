@@ -1,5 +1,6 @@
 import React from 'react'
-import ComponentProvider from './ComponentProvider'
+import { ComponentProvider } from 'mdx-go'
+import { withLiveCode } from './LiveCode'
 
 const cx = (tag) => props => React.createElement(tag, { ...props, className: 'mdx-' + tag })
 
@@ -30,6 +31,7 @@ const tags = [
   'img',
   'hr',
   'table',
+  'code',
   // todo // 'a', 'pre', 'code',
 ]
 
@@ -44,6 +46,8 @@ scope.h3 = heading(scope.h3)
 scope.h4 = heading(scope.h4)
 scope.h5 = heading(scope.h5)
 scope.h6 = heading(scope.h6)
+
+scope.code = withLiveCode(scope.code)
 
 const css = ({
   css
