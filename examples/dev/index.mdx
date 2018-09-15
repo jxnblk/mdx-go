@@ -1,13 +1,17 @@
 import {
+  Head,
   Layout,
   NavLinks,
   Pagination,
   ComponentProvider,
-  DocsLayout,
-  DevLayout,
 } from 'mdx-go'
 
+<Head>
+  <title>Hello</title>
+</Head>
+
 export const Root = props =>
+<ComponentProvider>
   <div
     style={{
       '--live-border': '#f0f0f6',
@@ -25,6 +29,7 @@ export const Root = props =>
       </Layout.Main>
     </Layout>
   </div>
+</ComponentProvider>
 
 # Dev Example
 

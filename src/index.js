@@ -4,7 +4,6 @@ export { ScrollTop } from './ScrollTop'
 export { ComponentProvider } from './ComponentProvider'
 export { withComponents } from './withComponents'
 export { LiveCode } from './LiveCode'
-export { scope } from './scope'
 export {
   withMedia,
   MediaConsumer,
@@ -24,6 +23,6 @@ export {
 } from './NavLinks'
 export { Pagination } from './Pagination'
 
-// zero-config layout
+// zero-config layouts
 export { DocsLayout } from './DocsLayout'
 export { DevLayout } from './DevLayout'

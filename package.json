@@ -2,10 +2,11 @@
   "name": "mdx-go",
   "version": "1.1.10",
   "description": "Lightning-fast MDX-based dev server",
-  "main": "dist/index.js",
   "bin": {
     "mdx-go": "./cli.js"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "sideEffects": false,
   "scripts": {
     "prepare": "babel src -d dist",
@@ -27,8 +28,8 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "@mdx-js/loader": "^0.15.0",
-    "@mdx-js/mdx": "^0.15.0",
+    "@mdx-js/loader": "^0.15.2",
+    "@mdx-js/mdx": "^0.15.2",
     "@mdx-js/tag": "^0.15.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
@@ -46,9 +47,9 @@
     "pkg-conf": "^2.1.0",
     "progress-bar-webpack-plugin": "^1.11.0",
     "prop-types": "^15.6.2",
-    "react": "^16.4.2",
+    "react": "^16.5.1",
     "react-dev-utils": "^5.0.2",
-    "react-dom": "^16.4.2",
+    "react-dom": "^16.5.1",
     "react-live": "^1.11.0",
     "react-router-dom": "^4.3.1",
     "read-pkg-up": "^4.0.0",
@@ -61,18 +62,18 @@
     "rimraf": "^2.6.2",
     "serve-static": "^1.13.2",
     "update-notifier": "^2.5.0",
-    "webpack": "^4.17.1",
-    "webpack-dev-middleware": "^3.2.0",
-    "webpack-hot-middleware": "^2.22.3",
+    "webpack": "^4.19.0",
+    "webpack-dev-middleware": "^3.3.0",
+    "webpack-hot-middleware": "^2.24.0",
     "webpack-merge": "^4.1.4",
     "webpack-node-externals": "^1.7.2",
-    "webpack-sources": "^1.1.0"
+    "webpack-sources": "^1.2.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-rename-import": "^2.3.0",
     "nyc": "^12.0.2",
-    "supertest": "^3.1.0"
+    "supertest": "^3.3.0"
   }
 }
