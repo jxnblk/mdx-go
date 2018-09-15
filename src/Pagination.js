@@ -46,6 +46,7 @@ export const Pagination = withRouter(({
   history,
   location,
   match,
+  staticContext,
   ...props
 }) => {
   const { pathname } = location
