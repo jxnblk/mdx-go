@@ -8,7 +8,10 @@ const sort = (routes, order) => sortby(routes, route => {
   return index < 0 ? Infinity : index
 })
 
-export const NavLink = props =>
+export const NavLink = ({
+  activeColor,
+  ...props
+}) =>
   <Link
     {...props}
     className='NavLink'
@@ -23,7 +26,7 @@ export const NavLink = props =>
       fontWeight: 'bold',
       textDecoration: 'none',
       color: 'inherit',
-      '--active-color': props.activeColor
+      '--active-color': activeColor
     }}
   />
 

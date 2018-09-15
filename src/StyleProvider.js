@@ -3,6 +3,18 @@ import ComponentProvider from './ComponentProvider'
 
 const cx = (tag) => props => React.createElement(tag, { ...props, className: 'mdx-' + tag })
 
+const heading = Tag => ({ id, ...props }) =>
+  <Tag id={id}>
+    <a
+      {...props}
+      href={'#' + id}
+      style={{
+        textDecoration: 'none',
+        color: 'inherit'
+      }}
+    />
+  </Tag>
+
 const tags = [
   'h1',
   'h2',
@@ -21,30 +33,37 @@ const tags = [
   // todo // 'a', 'pre', 'code',
 ]
 
-const defaultComponents = tags.reduce((obj, tag) => ({
+const scope = tags.reduce((obj, tag) => ({
   ...obj,
   [tag]: cx(tag)
 }), {})
+
+scope.h1 = heading(scope.h1)
+scope.h2 = heading(scope.h2)
+scope.h3 = heading(scope.h3)
+scope.h4 = heading(scope.h4)
+scope.h5 = heading(scope.h5)
+scope.h6 = heading(scope.h6)
 
 const css = ({
   css
 }) => `
 .mdx-StyleProvider {
-  --h0: 4.5rem;
-  --h1: 3rem;
-  --h2: 2.25rem;
-  --h3: 1.5rem;
-  --h4: 1.125rem;
-  --h5: .75rem;
-  --lh: calc(4/3);
-  --m1: calc(2/3 * 1em);
-  --m2: calc(4/3 * 1em);
-  --m3: calc(8/3 * 1em);
-  --m4: calc(16/3 * 1em);
+  --h1: 48px;
+  --h2: 32px;
+  --h3: 24px;
+  --h4: 16px;
+  --h5: 14px;
+  --h6: 12px;
+  --line-height: 1.5;
+  --m1: 4px;
+  --m2: 8px;
+  --m3: 16px;
+  --m4: 32px;
 }
 
 .mdx-StyleProvider {
-  line-height: var(--lh);
+  line-height: var(--line-height);
 }
 
 .mdx-h1,
@@ -159,7 +178,7 @@ export const StyleProvider = ({
   ...props
 }) =>
   <ComponentProvider components={{
-    ...defaultComponents,
+    ...scope,
     ...components
   }}>
     <CSS {...props} />

@@ -13,6 +13,9 @@ import {
 
 export const Root = props =>
   <StyleProvider
+    css={`
+      .mdx-link { color: tomato }
+    `}
     style={{
       // '--live-border': '#f0f0f6',
       // '--live-editor-background': '#f6f6ff'
@@ -32,6 +35,8 @@ export const Root = props =>
 # Dev Example
 
 This example can be run from the root directory as a development environment for the core library.
+
+- [Typography](/typography)
 
 ```.jsx
 <h1>Hello</h1>
