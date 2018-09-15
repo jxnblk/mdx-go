@@ -1,0 +1,15 @@
+import { Layout } from 'mdx-go'
+
+export const Root = props =>
+  <Layout>
+    <Layout.Sidebar>
+      Sidebar
+    </Layout.Sidebar>
+    <Layout.Main>
+      {props.children}
+    </Layout.Main>
+  </Layout>
+
+# Hello mdx-go
+
+This is a test fixture for snapshot testing
