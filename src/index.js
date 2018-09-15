@@ -6,6 +6,11 @@ export { withComponents } from './withComponents'
 export { LiveCode } from './LiveCode'
 export { scope } from './scope'
 export {
+  withMedia,
+  MediaConsumer,
+  MediaProvider
+} from './MediaContext'
+export {
   Layout,
   Sidebar,
   Main,
@@ -13,11 +18,11 @@ export {
   MenuIcon,
   withLayout,
 } from './Layout'
-/*
 export {
   NavLinks,
   NavLink
 } from './NavLinks'
+/*
 export { Pagination } from './Pagination'
 
 // zero-config layout

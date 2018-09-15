@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { MediaProvider, withMedia } from './MediaContext'
 
 export const LayoutContext = React.createContext()
 
@@ -26,23 +27,27 @@ export const Root = props =>
     }}
   />
 
-const SidebarRoot = ({
+const SidebarRoot = withMedia(({
   width,
   open,
   style,
+  media,
+  color,
+  bg,
   ...props
 }) =>
   <div
     {...props}
     style={{
       width,
-      transform: open ? 'none' : 'translateX(-100%)',
+      transform: (open || media.small) ? 'none' : 'translateX(-100%)',
       position: 'fixed',
       top: 0,
       bottom: 0,
       left: 0,
       overflowY: 'auto',
-      backgroundColor: 'white',
+      color,
+      backgroundColor: bg,
       WebkitOverflowScrolling: 'touch',
       transitionProperty: 'transform',
       transitionDuration: '.2s',
@@ -50,28 +55,39 @@ const SidebarRoot = ({
       ...style,
     }}
   />
+)
 
 SidebarRoot.defaultProps = {
-  width: 256
+  width: 256,
+  bg: 'white'
 }
 
-const SidebarSpacer = props =>
+const SidebarSpacer = withMedia(({
+  media,
+  ...props
+}) =>
   <div
     {...props}
     style={{
+      display: media.small ? 'block' : 'none',
       flex: 'none',
       width: props.width,
     }}
   />
+)
 
 SidebarSpacer.defaultProps = {
   width: 256,
 }
 
-const Overlay = props =>
+const Overlay = withMedia(({
+  media,
+  ...props
+}) =>
   <div
     {...props}
     style={{
+      display: media.small ? 'none' : 'block',
       position: 'fixed',
       top: 0,
       right: 0,
@@ -80,12 +96,12 @@ const Overlay = props =>
       WebkitTapHighlightColor: 'rgba(0,0,0,0)',
     }}
   />
+)
 
 export const Sidebar = withLayout(({
   open,
   closeMenu,
   width,
-  style,
   ...props
 }) =>
   <React.Fragment>
@@ -145,7 +161,11 @@ export const MenuIcon = ({
     <path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z' />
   </svg>
 
-export const MenuButton = props =>
+export const MenuButton = ({
+  m,
+  style,
+  ...props
+}) =>
   <button
     {...props}
     style={{
@@ -156,11 +176,16 @@ export const MenuButton = props =>
       border: 0,
       borderRadius: 0,
       padding: 0,
-      margin: 0,
+      margin: m,
       color: 'inherit',
       backgroundColor: 'transparent',
+      ...style
     }}
   />
+
+MenuButton.defaultProps = {
+  m: 8
+}
 
 export const MenuToggle = withLayout(({
   toggleMenu,
@@ -242,6 +267,7 @@ export class Layout extends React.Component {
 
   render () {
     const {
+      breakpoint,
       ...props
     } = this.props
 
@@ -259,11 +285,16 @@ export class Layout extends React.Component {
 
     return (
       <Provider value={context}>
-        {menuToggle}
-        {navbar}
-        <Root {...props}>
-          {columns}
-        </Root>
+        <MediaProvider
+          mediaQueries={{
+            'small': 'screen and (min-width:40em)'
+          }}>
+          {menuToggle}
+          {navbar}
+          <Root {...props}>
+            {columns}
+          </Root>
+        </MediaProvider>
       </Provider>
     )
   }

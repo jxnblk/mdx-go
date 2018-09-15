@@ -1,13 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'react-emotion'
 import sortby from 'lodash.sortby'
-import {
-  space,
-  fontSize,
-  color,
-  themeGet,
-} from 'styled-system'
 import Link from './Link'
 
 const sort = (routes, order) => sortby(routes, route => {
@@ -15,33 +8,23 @@ const sort = (routes, order) => sortby(routes, route => {
   return index < 0 ? Infinity : index
 })
 
-const css = props => props.css
-
-export const NavLink = styled(Link)({
-  display: 'block',
-  width: '100%',
-  fontWeight: 'bold',
-  textDecoration: 'none',
-},
-  props => ({
-    '&.active': {
-      color: themeGet('colors.blue', 'blue')(props)
-    }
-  })
-, space, fontSize, color, css)
-
-NavLink.propTypes = {
-  ...space.propTypes,
-  ...fontSize.propTypes,
-  ...color.propTypes,
-}
-
-NavLink.defaultProps = {
-  px: 3,
-  py: 1,
-  fontSize: 1,
-  color: 'inherit',
-}
+export const NavLink = props =>
+  <Link
+    {...props}
+    classname='NavLink'
+    style={{
+      display: 'block',
+      paddingLeft: 16,
+      paddingRight: 16,
+      paddingTop: 4,
+      paddingBottom: 4,
+      fontSize: 12,
+      width: '100%',
+      fontWeight: 'bold',
+      textDecoration: 'none',
+      color: 'inherit',
+    }}
+  />
 
 export const NavLinks = ({
   routes = [],

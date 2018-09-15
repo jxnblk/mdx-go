@@ -1,4 +1,8 @@
-import { Layout, ComponentProvider } from 'mdx-go'
+import {
+  Layout,
+  NavLinks,
+  ComponentProvider
+} from 'mdx-go'
 
 export const Root = props =>
   <div
@@ -8,8 +12,8 @@ export const Root = props =>
     }}>
     <Layout>
       <Layout.MenuToggle />
-      <Layout.Sidebar>
-        Sidebar
+      <Layout.Sidebar bg='tomato'>
+        <NavLinks {...props} />
       </Layout.Sidebar>
       <Layout.Main>
         {props.children}
