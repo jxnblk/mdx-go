@@ -1,6 +1,6 @@
 import React from 'react'
+import { Head } from 'mdx-go'
 import {
-  Head,
   Link as GoLink,
   Layout,
   NavLinks,
