@@ -93,10 +93,19 @@ const css = ({
 .mdx-StyleProvider pre {
   font-family: Menlo, monospace;
   font-size: 14px;
+  padding: var(--m3);
+  color: var(--mdx-pre-color);
+  background-color: var(--mdx-pre-background);
 }
 .mdx-StyleProvider code {
   font-family: Menlo, monospace;
   font-size: 0.875em;
+  color: var(--mdx-code-color);
+  background-color: var(--mdx-code-background);
+}
+
+.mdx-StyleProvider a {
+  color: var(--mdx-link-color);
 }
 
 .mdx-table {
