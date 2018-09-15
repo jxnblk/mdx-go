@@ -14,8 +14,8 @@ const Flex = props =>
     {...props}
     style={{
       display: 'flex',
-      paddingTop: 32,
-      paddingBottom: 32,
+      paddingTop: 64,
+      paddingBottom: 64,
       ...props.style
     }}
   />

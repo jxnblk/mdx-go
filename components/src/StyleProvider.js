@@ -31,8 +31,6 @@ const tags = [
   'img',
   'hr',
   'table',
-  'code',
-  // todo // 'a', 'pre', 'code',
 ]
 
 const scope = tags.reduce((obj, tag) => ({
@@ -48,6 +46,7 @@ scope.h5 = heading(scope.h5)
 scope.h6 = heading(scope.h6)
 
 scope.code = withLiveCode(cx('pre'))
+scope.inlineCode = cx('code')
 
 const css = ({
   css
@@ -59,7 +58,7 @@ const css = ({
   --h4: 16px;
   --h5: 14px;
   --h6: 12px;
-  --line-height: 1.5;
+  --line-height: 1.625;
   --m1: 4px;
   --m2: 8px;
   --m3: 16px;
@@ -72,22 +71,22 @@ const css = ({
 
 .mdx-h1,
 .mdx-h2,
-.mdx-h3 {
-  margin-top: var(--m1);
-  margin-bottom: 0;
-}
-
+.mdx-h3,
 .mdx-h4,
 .mdx-h5,
-.mdx-h6,
+.mdx-h6 {
+  line-height: 1.25;
+  margin-top: var(--m4);
+  margin-bottom: var(--mb3);
+}
+
 .mdx-p,
 .mdx-dl,
 .mdx-ol,
 .mdx-ul,
-.mdx-table,
-.mdx-blockquote {
-  margin-top: var(--m2);
-  margin-bottom: var(--m2);
+.mdx-table {
+  margin-top: var(--m3);
+  margin-bottom: var(--m3);
 }
 
 .mdx-h1 { font-size: var(--h2) }
@@ -102,15 +101,41 @@ const css = ({
   height: auto;
 }
 
+.mdx-pre {
+  font-family: Menlo, monospace;
+  font-size: 14px;
+  padding: var(--m3);
+  margin-top: var(--m4);
+  margin-bottom: var(--m4);
+  color: var(--mdx-pre-color, inherit);
+  background-color: var(--mdx-pre-background, #f6f6ff);
+  border-radius: var(--mdx-pre-radius, 2px);
+}
+
+.mdx-code {
+  font-family: Menlo, monospace;
+  color: var(--mdx-code-color, inherit);
+  background-color: var(--mdx-code-background, transparent);
+}
+
+.mdx-ol,
+.mdx-ul {
+  padding-left: var(--m3);
+  margin-top: var(--m3);
+  margin-bottom: var(--m4);
+}
+
 .mdx-blockquote {
   font-size: var(--h3);
   margin-left: 0;
   margin-right: 0;
+  margin-top: var(--m4);
+  margin-bottom: var(--m4);
 }
 
 .mdx-hr {
   border: 0;
-  height: 1px;
+  height: 2px;
   background-color: var(--mdx-border, #ddd);
 }
 

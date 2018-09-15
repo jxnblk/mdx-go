@@ -1,19 +1,21 @@
 import {
   Head,
-} from 'mdx-go'
+  StyleProvider,
+  Layout,
+  NavLinks,
+  Pagination,
+} from 'mdx-go/components'
 
 <Head>
   <title>Hello</title>
 </Head>
 
-```jsx
 export const Root = props =>
   <StyleProvider
     css={`
       .mdx-link { color: tomato }
     `}
     style={{
-      // '--live-border': '#f0f0f6',
       // '--live-editor-background': '#f6f6ff'
     }}>
     <Layout>
@@ -27,7 +29,6 @@ export const Root = props =>
       </Layout.Main>
     </Layout>
   </StyleProvider>
-```
 
 # Dev Example
 
