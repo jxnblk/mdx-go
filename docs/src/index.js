@@ -135,7 +135,7 @@ export default props =>
     <Box bg='lightgray'>
       <Container>
         <Flex
-          is='footer'
+          as='footer'
           fontSize={1}
           py={4}
           mx={-3}
