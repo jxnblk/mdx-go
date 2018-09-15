@@ -8,7 +8,7 @@ let server
 test.serial('starts', async t => {
   server = await dev({
     port: 3000,
-    dirname: path.join(__dirname, '../docs')
+    dirname: path.join(__dirname, './fixtures')
   })
   t.is(typeof server, 'object')
   t.is(typeof server.address, 'function')
