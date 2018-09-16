@@ -12,11 +12,8 @@ import {
 
 export const Root = props =>
   <StyleProvider
-    css={`
-      .mdx-link { color: tomato }
-    `}
-    style={{
-      // '--live-editor-background': '#f6f6ff'
+    components={{
+      Box: props => <div {...props} style={{ padding: 48, backgroundColor: 'tomato' }} />
     }}>
     <Layout>
       <Layout.MenuToggle />
