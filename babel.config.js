@@ -1,0 +1,12 @@
+module.exports = {
+  presets: [
+    [ '@babel/env', { modules: false } ],
+    '@babel/react'
+  ],
+  plugins: [
+    '@babel/proposal-class-properties',
+    '@babel/proposal-export-default-from',
+    '@babel/proposal-export-namespace-from',
+    '@babel/syntax-dynamic-import',
+  ],
+}
