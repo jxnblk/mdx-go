@@ -1,5 +1,4 @@
 {
-  "_name": "mdx-go/components",
   "main": "dist/index.js",
   "module": "dist/index.js"
 }
