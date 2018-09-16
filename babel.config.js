@@ -8,5 +8,5 @@ module.exports = {
     '@babel/proposal-export-default-from',
     '@babel/proposal-export-namespace-from',
     '@babel/syntax-dynamic-import',
-  ],
+  ]
 }
