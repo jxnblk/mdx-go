@@ -14,7 +14,8 @@
     "start": "./cli.js examples/dev",
     "build": "./cli.js build examples/dev -d temp",
     "help": "./cli.js",
-    "test": "nyc ava"
+    "jest": "jest",
+    "test": "nyc ava __test/dev.js"
   },
   "keywords": [
     "mdx",
@@ -87,14 +88,20 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/register": "^7.0.0",
     "@babel/runtime": "^7.0.0",
     "ava": "^1.0.0-beta.8",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-plugin-transform-rename-import": "^2.3.0",
+    "jest": "^23.6.0",
     "nyc": "^13.0.1",
     "supertest": "^3.3.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*.js"
+    ]
   },
   "ava": {}
 }
