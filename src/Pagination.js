@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 import sortby from 'lodash.sortby'
-import { withLink } from 'mdx-go'
+import { withLink } from './LinkContext'
 
 const sort = (routes, order) => sortby(routes, route => {
   const index = order.indexOf(route.name)

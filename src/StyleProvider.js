@@ -1,8 +1,7 @@
 import React from 'react'
-import { ComponentProvider } from 'mdx-go'
 import MDXStyle from 'mdx-style'
 import { base as theme } from 'mdx-style/themes'
-import { withLiveCode } from './LiveCode'
+import ComponentProvider from './ComponentProvider'
 
 const heading = Tag => ({ id, children, ...props }) =>
   <Tag id={id} {...props}>
@@ -24,7 +23,7 @@ const scope = {
   h5: heading('h5'),
   h6: heading('h6'),
   pre: props => props.children,
-  code: withLiveCode('pre'),
+  code: ({ metaString, ...props }) => <pre {...props} />,
 }
 
 export const StyleProvider = ({

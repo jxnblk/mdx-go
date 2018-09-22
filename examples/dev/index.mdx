@@ -5,10 +5,9 @@ import { Head } from 'mdx-go'
 </Head>
 
 ```
-import { Layout, NavLinks, Pagination, } from 'mdx-go/components'
-
+import { Layout, NavLinks, Pagination, StyleProvider } from 'mdx-go'
 export const Root = props =>
-  <div>
+  <StyleProvider>
     <Layout>
       <Layout.MenuToggle />
       <Layout.Sidebar>
@@ -19,9 +18,8 @@ export const Root = props =>
         <Pagination {...props} />
       </Layout.Main>
     </Layout>
-  </div>
+  </StyleProvider>
 ```
-
 
 # Dev Example
 
