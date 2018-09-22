@@ -1,19 +1,14 @@
-import {
-  Head,
-} from 'mdx-go'
-import {
-  Layout,
-  NavLinks,
-  Pagination,
-} from 'mdx-go/components'
-import StyleProvider from '../../components/src/StyleProvider'
+import { Head } from 'mdx-go'
 
 <Head>
   <title>Hello</title>
 </Head>
 
+```
+import { Layout, NavLinks, Pagination, } from 'mdx-go/components'
+
 export const Root = props =>
-  <StyleProvider>
+  <div>
     <Layout>
       <Layout.MenuToggle />
       <Layout.Sidebar>
@@ -24,7 +19,8 @@ export const Root = props =>
         <Pagination {...props} />
       </Layout.Main>
     </Layout>
-  </StyleProvider>
+  </div>
+```
 
 
 # Dev Example
