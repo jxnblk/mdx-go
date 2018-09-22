@@ -77,7 +77,7 @@ export const withLiveCode = Component => ({
   className = '',
   ...props
 }) => {
-  const isLive = className === 'language-.jsx'
+  const isLive = className.includes('language-.jsx')
   if (!isLive) {
     return (
       <Component
