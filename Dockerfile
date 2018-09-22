@@ -2,8 +2,8 @@ FROM node:10-alpine
 
 WORKDIR /usr/src
 
-COPY . .
-RUN cd docs
+COPY docs .
+# RUN cd docs
 # COPY package.json .
 # COPY package-lock.json .
 RUN npm i
