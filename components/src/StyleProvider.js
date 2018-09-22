@@ -24,7 +24,7 @@ const scope = {
   h5: heading('h5'),
   h6: heading('h6'),
   pre: props => props.children,
-  code: withLiveCode(cx('pre')),
+  code: withLiveCode('pre'),
 }
 
 export const StyleProvider = ({
