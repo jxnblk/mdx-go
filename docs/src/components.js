@@ -54,6 +54,7 @@ const nav = [
   'Examples',
 ]
 
+// todo: update
 const theme = {
   colors: {
     lightgray,
@@ -74,9 +75,9 @@ const PageLayout = props => props.location.pathname === '/'
   ? props.children
   : (
     <Layout>
-      <Layout.MenuToggle m={2} />
+      <Layout.MenuToggle />
       <Layout.Sidebar
-        bg='lightgray'>
+        bg='#f6f6ff'>
         <Box px={3} py={3}>
           <GoLink href='/'>
             <Logo size={48} />
