@@ -1,6 +1,6 @@
 {
   "name": "mdx-go",
-  "version": "2.0.0-13",
+  "version": "2.0.0-14",
   "description": "Lightning-fast MDX-based dev server",
   "bin": {
     "mdx-go": "./cli.js"
