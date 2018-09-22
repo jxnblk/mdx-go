@@ -9,7 +9,7 @@ export { ComponentProvider } from './ComponentProvider'
 export { withComponents } from './withComponents'
 export { StyleProvider } from './StyleProvider'
 export { Layout } from './Layout'
-export { NavLinks } from './NavLinks'
+export { NavLinks, NavLink } from './NavLinks'
 export { Pagination } from './Pagination'
 export { MediaProvider, withMedia } from './MediaContext'
 

@@ -8,9 +8,8 @@ import {
   Pagination,
   ComponentProvider,
   StyleProvider,
-  ScrollTop,
   DocsLayout
-} from 'mdx-go/styled-components'
+} from 'mdx-go'
 import { Box, Flex } from 'rebass'
 import Logo from './logo'
 
@@ -47,7 +46,6 @@ const nav = [
   'Layout',
   'NavLinks',
   'Pagination',
-  'ScrollTop',
   'StyleProvider',
   'DocsLayout',
   'DevLayout',
@@ -124,7 +122,6 @@ export const Root = props =>
       theme={theme}>
       <PageLayout {...props} />
     </StyleProvider>
-    <ScrollTop />
   </React.Fragment>
 
 
