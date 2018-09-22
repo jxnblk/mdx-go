@@ -9,7 +9,9 @@
   "dependencies": {
     "mdx-go": "^2.0.0-15",
     "rebass": "^3.0.0-9",
-    "repng": "^3.1.0",
     "styled-components": "^4.0.0-beta.8"
+  },
+  "devDependencies": {
+    "repng": "^3.1.0"
   }
 }

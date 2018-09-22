@@ -6,7 +6,7 @@ COPY docs .
 # RUN cd docs
 # COPY package.json .
 # COPY package-lock.json .
-RUN npm i
+RUN npm i --only=production
 
 # COPY . .
 RUN npm run build && mv dist /public
