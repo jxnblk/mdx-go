@@ -1,0 +1,8 @@
+{
+  "name": "mdx-go",
+  "alias": [
+    "mdx-go.now.sh"
+  ],
+  "public": true,
+  "type": "static"
+}
