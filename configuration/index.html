@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif}</style>
+    <title data-head="true">mdx-go</title><meta name="description" content="Lightning-fast MDX-based dev server" data-head="true"/><meta name="twitter:card" content="summary_large_image" data-head="true"/><meta name="twitter:site" content="@jxnblk" data-head="true"/><meta name="twitter:title" content="mdx-go" data-head="true"/><meta name="twitter:description" content="Lightning-fast MDX-based dev server for progressive documentation" data-head="true"/><meta name="twitter:image" content="https://jxnblk.com/mdx-go/card.png" data-head="true"/><style data-styled="iGWOzv gURIfm gVGFam itxXsN kFIAOn bCdqVb igylVe djZyin kKecxV kLSWsy gTLiZB iPyKuE kuJSCV etGNwi eynzfo cqfuHp jAVQaT iyvKur iPBmuX hGDmyS bFqGMI jBawZR iuRFlw jMyMCc hpTLGD dRrVUo" data-styled-version="4.0.0-beta.5">
+/* sc-component-id: sc-ifAKCX */
+.sc-ifAKCX {} .itxXsN{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;}
+/* sc-component-id: sc-EHOje */
+.sc-EHOje {} .bCdqVb{position:fixed;top:0;bottom:0;left:0;overflow-y:auto;-webkit-overflow-scrolling:touch;-webkit-transition-property:-webkit-transform;-webkit-transition-property:transform;transition-property:transform;-webkit-transition-duration:.2s;transition-duration:.2s;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out;padding-top:16px;padding-bottom:16px;width:256px;background-color:#f6f6ff;} @media screen and (min-width:40em){.bCdqVb{-webkit-transform:none !important;-ms-transform:none !important;transform:none !important;}}
+/* sc-component-id: sc-bZQynM */
+.sc-bZQynM {} .kFIAOn{-webkit-flex:none;-ms-flex:none;flex:none;width:256px;display:none;} @media screen and (min-width:40em){.kFIAOn{display:block;}}
+/* sc-component-id: sc-htoDjs */
+.sc-htoDjs {} .iPyKuE{width:100%;min-width:0;min-height:100vh;}
+/* sc-component-id: sc-dnqmqq */
+.sc-dnqmqq {} .kuJSCV{margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;padding-top:32px;padding-bottom:32px;max-width:768px;}
+/* sc-component-id: sc-iwsKbI */
+.sc-iwsKbI {} .gVGFam{display:block;}
+/* sc-component-id: sc-gZMcBi */
+.sc-gZMcBi {} .gURIfm{-webkit-appearance:none;-moz-appearance:none;appearance:none;font-size:inherit;font-family:inherit;display:inline-block;border:0;border-radius:0;margin:8px;padding:0px;color:inherit;background-color:transparent;}
+/* sc-component-id: sc-jTzLTM */
+.sc-jTzLTM {} .kLSWsy{display:block;width:100%;font-weight:bold;-webkit-text-decoration:none;text-decoration:none;padding-left:16px;padding-right:16px;padding-top:8px;padding-bottom:8px;font-size:14px;color:inherit;} .kLSWsy.active{color:#07c;}.gTLiZB{display:block;width:100%;font-weight:bold;-webkit-text-decoration:none;text-decoration:none;padding-left:16px;padding-right:16px;padding-top:4px;padding-bottom:4px;font-size:14px;color:inherit;} .gTLiZB.active{color:#07c;}
+/* sc-component-id: sc-fjdhpX */
+.sc-fjdhpX {} .jMyMCc{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding-top:32px;padding-bottom:32px;}
+/* sc-component-id: sc-jzJRlG */
+.sc-jzJRlG {} .dRrVUo{margin:auto;}
+/* sc-component-id: sc-cSHVUG */
+.sc-cSHVUG {} .hpTLGD{display:block;font-weight:bold;-webkit-text-decoration:none;text-decoration:none;padding-top:4px;padding-bottom:4px;font-size:20px;color:inherit;}
+/* sc-component-id: sc-kAzzGY */
+.sc-kAzzGY {} .eynzfo{display:block;-webkit-text-decoration:none;text-decoration:none;color:inherit;}
+/* sc-component-id: sc-chPdSV */
+.sc-chPdSV {} .etGNwi{margin-bottom:8px;margin-top:32px;font-size:32px;} @media screen and (min-width:52em){.etGNwi{font-size:48px;}}
+/* sc-component-id: sc-kgoBCf */
+.sc-kgoBCf {} .jAVQaT{margin-bottom:8px;margin-top:32px;font-size:24px;} @media screen and (min-width:52em){.jAVQaT{font-size:32px;}}
+/* sc-component-id: sc-kGXeez */
+.sc-kGXeez {} .hGDmyS{margin-bottom:8px;margin-top:32px;font-size:20px;}
+/* sc-component-id: sc-jKJlTe */
+.sc-jKJlTe {} .jBawZR{color:#07c;}
+/* sc-component-id: sc-eNQAEJ */
+.sc-eNQAEJ {} .cqfuHp{line-height:1.625;margin-bottom:16px;margin-top:16px;}
+/* sc-component-id: sc-iAyFgw */
+.sc-iAyFgw {} .iuRFlw{line-height:1.625;margin-bottom:32px;margin-top:16px;padding-left:16px;}
+/* sc-component-id: sc-eHgmQL */
+.sc-eHgmQL {} .bFqGMI{width:100%;border-collapse:separate;border-spacing:0;border-color:lightgray;margin-bottom:32px;margin-top:32px;} .bFqGMI th{text-align:left;vertical-align:bottom;} .bFqGMI td{vertical-align:top;} .bFqGMI td,.bFqGMI th{padding-top:8px;padding-bottom:8px;padding-left:0px;padding-right:16px;border-color:inherit;border-bottom-width:1px;border-bottom-style:solid;}
+/* sc-component-id: sc-cvbbAY */
+.sc-cvbbAY {} .iPBmuX{font-family:Menlo,monospace;overflow:auto;border-radius:2px;margin-bottom:32px;margin-top:32px;padding:16px;font-size:14px;background-color:#f6f6ff;}
+/* sc-component-id: sc-jWBwVP */
+.sc-jWBwVP {} .iyvKur{font-family:Menlo,monospace;color:#0a6;}
+/* sc-component-id: sc-cMljjf */
+.sc-cMljjf {} .iGWOzv{line-height:1.5;color:#000619;}
+/* sc-component-id: sc-jAaTju */
+.sc-jAaTju {} .igylVe{padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;}.djZyin{padding-top:8px;padding-bottom:8px;}.kKecxV{padding-top:32px;padding-bottom:32px;}</style>
+  </head>
+  <body>
+    <div id=root><div color="black" class="sc-cMljjf iGWOzv"><button title="Toggle Menu" color="inherit" class="sc-gZMcBi gURIfm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="sc-iwsKbI gVGFam"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></button><div width="1" class="sc-ifAKCX itxXsN"><div width="256" display="none,block" class="sc-bZQynM kFIAOn"></div><div width="256" style="transform:translateX(-100%)" transform="false,none !important" class="sc-EHOje bCdqVb"><div class="sc-jAaTju igylVe"><a class="active" aria-current="page" href="/mdx-go/"><svg viewBox="0 0 160 160" width="48" height="48"><circle fill="#0d0" cx="80" cy="80" r="80"></circle><g fill="#fff" transform="translate(20 60)"><path transform="translate(24 0)" d="M 0 0 L 32 0 L 48 32 L 16 32 z"></path><path transform="translate(72 0)" d="M 0 0 L 32 0 L 48 32 L 16 32 z"></path><path transform="translate(24 0)" fill="#0d0" opacity="0.25" d="M 0 0 L 32 0 L 48 32 L 16 32 z"></path><path transform="translate(72 0)" fill="#0d0" opacity="0.25" d="M 0 0 L 32 0 L 48 32 L 16 32 z"></path><path transform="translate(0 0)" d="M 16 0 L 48 0 L 32 32 L 0 32 z"></path><path transform="translate(48 0)" d="M 16 0 L 48 0 L 32 32 L 0 32 z"></path></g></svg></a></div><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/">Home</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/getting-started">Getting Started</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/using-mdx">Using MDX</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/routing">Routing</a><a class="sc-jTzLTM kLSWsy active" aria-current="page" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/configuration">Configuration</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/exporting">Exporting</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/Head">Head</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/Link">Link</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/ComponentProvider">ComponentProvider</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/LiveCode">LiveCode</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/Layout">Layout</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/NavLinks">NavLinks</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/Pagination">Pagination</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/ScrollTop">ScrollTop</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/StyleProvider">StyleProvider</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/DocsLayout">DocsLayout</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/DevLayout">DevLayout</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/typography">Typography</a><a class="sc-jTzLTM kLSWsy" match="[object Object]" history="[object Object]" py="2" px="3" font-size="1" color="inherit" href="/mdx-go/examples">Examples</a><div class="sc-jAaTju djZyin"></div><a px="3" py="1" font-size="1" color="inherit" class="sc-jTzLTM gTLiZB" href="https://github.com/jxnblk/mdx-go">GitHub</a><div class="sc-jAaTju kKecxV"></div></div><div class="sc-htoDjs iPyKuE"><div class="sc-dnqmqq kuJSCV"><div><h1 id="configuration" mt="4" mb="2" font-size="5,,6" class="sc-chPdSV etGNwi"><a href="#configuration" class="sc-kAzzGY eynzfo">Configuration</a></h1><p class="sc-eNQAEJ cqfuHp">Virtually all mdx-go configuration is handled with React components.
+mdx-go follows the philosophy of <strong>components over configuration</strong> instead of using custom plugins architectures and configuration objects in an effort to keep a minimal API surface area.</p><p class="sc-eNQAEJ cqfuHp">You can even write your own components to customize the theme and layout of mdx-go.</p><h2 id="root-component" mt="4" mb="2" font-size="4,,5" class="sc-kgoBCf jAVQaT"><a href="#root-component" class="sc-kAzzGY eynzfo">Root component</a></h2><p class="sc-eNQAEJ cqfuHp">Using a custom Root component is the primary means of customizing an app in mdx-go. It wraps the entire app with a React component that can provide themes and components via context, add page layouts, and intercept routing.</p><p class="sc-eNQAEJ cqfuHp">To wrap your entire application with a React component,
+export a custom <code class="sc-jWBwVP iyvKur">Root</code> component from your main <code class="sc-jWBwVP iyvKur">index.mdx</code> file.
+Note that a Root component must be exported from the <code class="sc-jWBwVP iyvKur">index.mdx</code> file and <strong>not</strong> another route.</p><pre class="language-mdx sc-cvbbAY iPBmuX" font-size="1">export const Root = props =&gt;
+  &lt;div&gt;
+    {props.children}
+  &lt;/div&gt;
+</pre><p class="sc-eNQAEJ cqfuHp">Using a custom Root component will override the default centered layout of mdx-go, and can be used to provide custom themes and layouts to every route.</p><h3 id="props" mt="4" mb="2" font-size="3" class="sc-kGXeez hGDmyS"><a href="#props" class="sc-kAzzGY eynzfo">Props</a></h3><p class="sc-eNQAEJ cqfuHp">The Root component will recieve the current page as the <code class="sc-jWBwVP iyvKur">children</code> prop and receive an array of <code class="sc-jWBwVP iyvKur">routes</code> for each page.
+Each route object will include the following:</p><table class="sc-eHgmQL bFqGMI"><thead><tr><th>Key</th><th>Description</th></tr></thead><tbody><tr><td><code class="sc-jWBwVP iyvKur">key</code></td><td>Key from wepback&#x27;s <code class="sc-jWBwVP iyvKur">require.context</code></td></tr><tr><td><code class="sc-jWBwVP iyvKur">extname</code></td><td>The file extension of the route</td></tr><tr><td><code class="sc-jWBwVP iyvKur">name</code></td><td>The file basename</td></tr><tr><td><code class="sc-jWBwVP iyvKur">exact</code></td><td>Boolean for <code class="sc-jWBwVP iyvKur">index</code> routes</td></tr><tr><td><code class="sc-jWBwVP iyvKur">dirname</code></td><td>The directory of the file</td></tr><tr><td><code class="sc-jWBwVP iyvKur">path</code></td><td>Route pathname used for routing</td></tr><tr><td><code class="sc-jWBwVP iyvKur">Component</code></td><td>React component</td></tr></tbody></table><p class="sc-eNQAEJ cqfuHp">Each route object will also include any exports from the file.
+This allows you to override the <code class="sc-jWBwVP iyvKur">name</code> or add additional metadata to a page.</p><h2 id="mdx-layouts" mt="4" mb="2" font-size="4,,5" class="sc-kgoBCf jAVQaT"><a href="#mdx-layouts" class="sc-kAzzGY eynzfo">MDX Layouts</a></h2><p class="sc-eNQAEJ cqfuHp">Use a default export to wrap an individual route with a component.</p><pre class="language-mdx sc-cvbbAY iPBmuX" font-size="1">export default props =&gt;
+  &lt;div style={{ padding: 32 }}&gt;
+    {props.children}
+  &lt;/div&gt;
+
+# Page Layout
+</pre><p class="sc-eNQAEJ cqfuHp">This is a built-in feature of MDX.
+Learn more in the <a color="blue" class="sc-jKJlTe jBawZR" href="https://mdxjs.com/syntax#export-default">MDX docs</a>.</p><h2 id="head" mt="4" mb="2" font-size="4,,5" class="sc-kgoBCf jAVQaT"><a href="#head" class="sc-kAzzGY eynzfo">Head</a></h2><p class="sc-eNQAEJ cqfuHp">To customize the document <code class="sc-jWBwVP iyvKur">&lt;head&gt;</code> contents, use the <code class="sc-jWBwVP iyvKur">Head</code> component.</p><pre class="language-mdx sc-cvbbAY iPBmuX" font-size="1">import { Head } from &#x27;mdx-go&#x27;
+
+&lt;Head&gt;
+  &lt;title&gt;My Page Title&lt;/title&gt;
+&lt;/Head&gt;
+</pre><p class="sc-eNQAEJ cqfuHp">The Head component can be used in individual pages or in a <a class="sc-jKJlTe jBawZR" color="blue" href="/mdx-go/configuration#root-component">Root component</a> to add head content across the entire app.</p><p class="sc-eNQAEJ cqfuHp">Read more about the <a class="sc-jKJlTe jBawZR" color="blue" href="/mdx-go/Head">Head component</a></p><h2 id="mdx-components" mt="4" mb="2" font-size="4,,5" class="sc-kgoBCf jAVQaT"><a href="#mdx-components" class="sc-kAzzGY eynzfo">MDX Components</a></h2><p class="sc-eNQAEJ cqfuHp">MDX includes a mechanism to change the components rendered for each HTML element.
+Use the <code class="sc-jWBwVP iyvKur">ComponentProvider</code> in a Root component to add custom components for MDX.</p><pre class="language-js sc-cvbbAY iPBmuX" font-size="1">// example Root component
+import React from &#x27;react&#x27;
+import styled from &#x27;react-emotion&#x27;
+import { ComponentProvider } from &#x27;mdx-go&#x27;
+
+const components = {
+  h1: styled(&#x27;h1&#x27;)({
+    color: &#x27;tomato&#x27;
+  })
+}
+
+export const Root = props =&gt;
+  &lt;ComponentProvider components={components}&gt;
+    {props.children}
+  &lt;/ComponentProvider&gt;
+</pre><p class="sc-eNQAEJ cqfuHp">The ComponentProvider also adds the <a class="sc-jKJlTe jBawZR" color="blue" href="/mdx-go/LiveCode">LiveCode</a> component to scope for rendering fenced code blocks as live code examples.</p><h2 id="layout-components" mt="4" mb="2" font-size="4,,5" class="sc-kgoBCf jAVQaT"><a href="#layout-components" class="sc-kAzzGY eynzfo">Layout components</a></h2><p class="sc-eNQAEJ cqfuHp">mdx-go includes optional layout components for quickly adding default styles and layouts to your app.</p><p class="sc-eNQAEJ cqfuHp">Read more about the built-in layout components:</p><ul class="sc-iAyFgw iuRFlw"><li><a class="sc-jKJlTe jBawZR" color="blue" href="/mdx-go/Layout">Layout</a></li><li><a class="sc-jKJlTe jBawZR" color="blue" href="/mdx-go/DocsLayout">DocsLayout</a></li><li><a class="sc-jKJlTe jBawZR" color="blue" href="/mdx-go/DevLayout">DevLayout</a></li></ul><h2 id="theming" mt="4" mb="2" font-size="4,,5" class="sc-kgoBCf jAVQaT"><a href="#theming" class="sc-kAzzGY eynzfo">Theming</a></h2><p class="sc-eNQAEJ cqfuHp">mdx-go contains almost no default styling, making it ideal for use with components that include their own styling.
+To add themes or custom styling, wrap your app with a <a class="sc-jKJlTe jBawZR" color="blue" href="/mdx-go/configuration/#root-component">Root component</a>.</p><p class="sc-eNQAEJ cqfuHp">To use optional, built-in styles, see the <a class="sc-jKJlTe jBawZR" color="blue" href="/mdx-go/StyleProvider">StyleProvider</a> component.</p><h2 id="webpack" mt="4" mb="2" font-size="4,,5" class="sc-kgoBCf jAVQaT"><a href="#webpack" class="sc-kAzzGY eynzfo">webpack</a></h2><p class="sc-eNQAEJ cqfuHp">The default webpack configuration includes support for Babel, React, and MDX.
+To customize the webpack config, add a <code class="sc-jWBwVP iyvKur">webpack.config.js</code> file to your project root, or pass a path to a custom webpack config via the <code class="sc-jWBwVP iyvKur">--webpack</code> CLI flag.
+The provided webpack config will be merged with the built-in config using <a color="blue" class="sc-jKJlTe jBawZR" href="https://github.com/survivejs/webpack-merge">webpack-merge</a>.</p><h2 id="cli-options" mt="4" mb="2" font-size="4,,5" class="sc-kgoBCf jAVQaT"><a href="#cli-options" class="sc-kAzzGY eynzfo">CLI Options</a></h2><p class="sc-eNQAEJ cqfuHp">The following flags can be passed to the CLI.</p><pre class="sc-cvbbAY iPBmuX" font-size="1">  -p --port     Port for dev server
+  --no-open     Disable opening in default browser
+  -d --out-dir  Output directory for static export
+  --basename    Base path for routing
+  --static      Export HTML without JS bundle
+  --webpack     Path to custom webpack config
+</pre><p class="sc-eNQAEJ cqfuHp">All CLI options can also be specified in an <code class="sc-jWBwVP iyvKur">mdx-go</code> field in your <code class="sc-jWBwVP iyvKur">package.json</code>.</p><pre class="language-json sc-cvbbAY iPBmuX" font-size="1">&quot;mdx-go&quot;: {
+  &quot;outDir&quot;: &quot;site&quot;
+}
+</pre></div><div class="sc-fjdhpX jMyMCc"><a class="sc-cSHVUG hpTLGD" staticContext="[object Object]" py="1" font-size="3" color="inherit" href="/mdx-go/routing">Routing</a><div class="sc-jzJRlG dRrVUo"></div><a class="sc-cSHVUG hpTLGD" staticContext="[object Object]" py="1" font-size="3" color="inherit" href="/mdx-go/exporting">Exporting</a></div></div></div></div></div></div>
+    <script src='/mdx-go/main.js'></script>
+  </body>
+</html>
