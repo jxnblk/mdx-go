@@ -17,6 +17,7 @@ test.after(clean)
 
 test.serial('builds', async t => {
   const stats = await build({
+    basename: '',
     dirname: path.join(__dirname, './fixtures'),
     outDir: output
   })
