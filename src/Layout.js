@@ -51,9 +51,11 @@ const SidebarRoot = withMedia(({
       color,
       backgroundColor: bg,
       WebkitOverflowScrolling: 'touch',
-      transitionProperty: 'transform',
-      transitionDuration: '.2s',
-      transitionTimingFunction: 'ease-out',
+      ...(!media.small ? {
+        transitionProperty: 'transform',
+        transitionDuration: '.2s',
+        transitionTimingFunction: 'ease-out',
+      } : {}),
       ...style,
     }}
   />
