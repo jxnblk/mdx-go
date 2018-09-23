@@ -13,7 +13,7 @@ import {
   Divider,
 } from './components'
 import Logo from './logo'
-export { Root } from './components'
+// export { Root } from './components'
 
 export const name = 'Home'
 
