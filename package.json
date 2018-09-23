@@ -79,8 +79,10 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
+    "babel-plugin-transform-rename-import": "^2.3.0"
+  },
+  "peerDependencies": {
     "ava": "^1.0.0-beta.8",
-    "babel-plugin-transform-rename-import": "^2.3.0",
     "nyc": "^13.0.1",
     "supertest": "^3.3.0"
   }
