@@ -36,7 +36,6 @@ const nav = [
   'Using MDX',
   'Routing',
   'Configuration',
-  // 'CSS-in-JS',
   'Exporting',
   // Components
   'Head',
