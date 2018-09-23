@@ -15,7 +15,7 @@
     "start": "./cli.js examples/dev",
     "build": "./cli.js build examples/dev -d temp",
     "help": "./cli.js",
-    "test": "ava"
+    "test": "nyc ava"
   },
   "keywords": [
     "mdx",
@@ -81,7 +81,6 @@
   "devDependencies": {
     "@babel/cli": "^7.1.0",
     "ava": "^1.0.0-beta.8",
-    "c8": "^3.2.0",
     "nyc": "^13.0.1",
     "supertest": "^3.3.0"
   }
