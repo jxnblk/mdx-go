@@ -5,10 +5,12 @@
 
 :zap: Lightning fast [MDX][]-based dev server for progressive documentation
 
-[![MIT License][license]](LICENSE.md)
+https://mdx-go.now.sh
+
 [![Build Status][badge]][travis]
-[![Version][version-badge]][npm]
 [![Downloads][downloads-badge]][npm]
+[![Version][version-badge]][npm]
+[![MIT License][license]](LICENSE.md)
 
 ```sh
 npm i -g mdx-go
@@ -250,6 +252,8 @@ The provided webpack config will be merged with the built-in config using [webpa
 - [Routing](examples/routing)
 - [Styled Components](examples/styled-components)
 - [Emotion](examples/emotion)
+- [Dev Environment](examples/dev-environment)
+- [React Live](examples/react-live)
 
 
 ## Related
