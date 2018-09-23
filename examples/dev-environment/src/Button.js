@@ -15,7 +15,7 @@ Button.defaultProps = {
   px: 3,
   py: 2,
   color: 'white',
-  bg: 'magenta'
+  bg: '#c0c'
 }
 
 export default Button
