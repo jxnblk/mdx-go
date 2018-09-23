@@ -10,6 +10,6 @@ RUN npm i
 COPY . .
 RUN npm run prepare
 
-RUN cd docs && npm i --only=production && npm run build
+RUN cd docs && npm i && npm run build
 
 RUN mv docs/dist /public
