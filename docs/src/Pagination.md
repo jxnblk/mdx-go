@@ -1,6 +1,4 @@
 
-export const name = 'Pagination'
-
 # Pagination
 
 The Pagination component can be used to render links to the previous and next routes, typically at the bottom of the main content.

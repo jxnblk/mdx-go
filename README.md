@@ -193,7 +193,6 @@ export { Root } from './Root.js'
 
 By default mdx-go includes virtually no styling. To customize the styles, use components to
 wrap MDX with a [Root component](#layouts) and use the [MDXProvider](#custom-mdx-components) to change the default styles.
-For an out-of-the box solution, see [mdx-themes][].
 
 ## Exporting
 
@@ -249,7 +248,6 @@ The provided webpack config will be merged with the built-in config using [webpa
 - [Basic](examples/basic)
 - [Head Content](examples/head-content)
 - [Routing](examples/routing)
-- [React Live](examples/react-live)
 - [Styled Components](examples/styled-components)
 - [Emotion](examples/emotion)
 
@@ -265,7 +263,7 @@ The provided webpack config will be merged with the built-in config using [webpa
 ---
 
 <p align='center'>
-  <img src='docs/logo.png' width='64' height='64' />
+  <img src='docs/src/logo.png' width='64' height='64' />
 </p>
 
 

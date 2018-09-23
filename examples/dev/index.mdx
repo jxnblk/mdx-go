@@ -1,0 +1,46 @@
+import {
+  Head,
+  Layout,
+  NavLinks,
+  Pagination,
+  StyleProvider,
+  DocsLayout
+} from 'mdx-go'
+
+<Head>
+  <title>Hello</title>
+</Head>
+
+export const Root = props =>
+  <StyleProvider>
+    <Layout>
+      <Layout.MenuToggle />
+      <Layout.Sidebar>
+        <NavLinks {...props} />
+      </Layout.Sidebar>
+      <Layout.Main>
+        {props.children}
+        <Pagination {...props} />
+      </Layout.Main>
+    </Layout>
+  </StyleProvider>
+
+# Dev Example
+
+This example can be run from the root directory as a development environment for the core library.
+
+- [Typography](/typography)
+- [Hello](/hello)
+
+```.jsx
+<h1>Hello</h1>
+```
+
+```jsx
+import React from 'react'
+
+export default () =>
+  <div>
+    <h1>Not Live</h1>
+  </div>
+```

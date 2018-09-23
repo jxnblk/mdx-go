@@ -1,6 +1,4 @@
 
-export const name = 'Exporting'
-
 # Exporting
 
 To export as static HTML with a client-side JS bundle, use the `build` command.

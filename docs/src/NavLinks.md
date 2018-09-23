@@ -1,6 +1,4 @@
 
-export const name = 'NavLinks'
-
 # NavLinks
 
 The NavLinks component can be used to render a list of routes in the sidebar.

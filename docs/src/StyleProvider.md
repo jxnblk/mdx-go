@@ -1,6 +1,4 @@
 
-export const name = 'StyleProvider'
-
 # StyleProvider
 
 The StyleProvider component is an extension of the [ComponentProvider](/ComponentProvider) component that includes default styles for MDX components

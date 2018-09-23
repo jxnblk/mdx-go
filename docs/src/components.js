@@ -6,11 +6,8 @@ import {
   NavLinks,
   NavLink,
   Pagination,
-  ComponentProvider,
   StyleProvider,
-  ScrollTop,
-  DocsLayout
-} from 'mdx-go/styled-components'
+} from 'mdx-go'
 import { Box, Flex } from 'rebass'
 import Logo from './logo'
 
@@ -33,21 +30,18 @@ linear-gradient(
 
 const nav = [
   'Home',
-  'Getting Started',
-  'Using MDX',
+  'Getting-Started',
+  'Using-MDX',
   'Routing',
   'Configuration',
-  // 'CSS-in-JS',
   'Exporting',
   // Components
   'Head',
   'Link',
   'ComponentProvider',
-  'LiveCode',
   'Layout',
   'NavLinks',
   'Pagination',
-  'ScrollTop',
   'StyleProvider',
   'DocsLayout',
   'DevLayout',
@@ -56,6 +50,7 @@ const nav = [
   'Examples',
 ]
 
+// todo: update
 const theme = {
   colors: {
     lightgray,
@@ -76,9 +71,9 @@ const PageLayout = props => props.location.pathname === '/'
   ? props.children
   : (
     <Layout>
-      <Layout.MenuToggle m={2} />
+      <Layout.MenuToggle />
       <Layout.Sidebar
-        bg='lightgray'>
+        bg='#f6f6ff'>
         <Box px={3} py={3}>
           <GoLink href='/'>
             <Logo size={48} />
@@ -124,7 +119,6 @@ export const Root = props =>
       theme={theme}>
       <PageLayout {...props} />
     </StyleProvider>
-    <ScrollTop />
   </React.Fragment>
 
 

@@ -1,6 +1,4 @@
 
-export const name = 'Configuration'
-
 # Configuration
 
 Virtually all mdx-go configuration is handled with React components.
@@ -97,8 +95,6 @@ export const Root = props =>
     {props.children}
   </ComponentProvider>
 ```
-
-The ComponentProvider also adds the [LiveCode](/LiveCode) component to scope for rendering fenced code blocks as live code examples.
 
 ## Layout components
 

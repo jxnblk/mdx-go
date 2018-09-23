@@ -1,29 +1,17 @@
 export { Head, HeadProvider } from './Head'
 export { default as Link } from './Link'
 export { ScrollTop } from './ScrollTop'
-
-// unstyled MDXProvider with LiveCode and Link
+export {
+  LinkContext,
+  withLink
+} from './LinkContext'
 export { ComponentProvider } from './ComponentProvider'
 export { withComponents } from './withComponents'
-
-export {
-  Layout,
-  Sidebar,
-  Main,
-  MenuToggle,
-  MenuIcon,
-  withLayout,
-} from './Layout'
-export {
-  NavLinks,
-  NavLink
-} from './NavLinks'
-export { Pagination } from './Pagination'
-export { LiveCode } from './LiveCode'
-
-// styles for MDX elements
 export { StyleProvider } from './StyleProvider'
+export { Layout } from './Layout'
+export { NavLinks, NavLink } from './NavLinks'
+export { Pagination } from './Pagination'
+export { MediaProvider, withMedia } from './MediaContext'
 
-// zero-config layout
-export { DocsLayout } from './DocsLayout'
 export { DevLayout } from './DevLayout'
+export { DocsLayout } from './DocsLayout'

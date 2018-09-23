@@ -1,6 +1,4 @@
 
-export const name = 'Using MDX'
-
 # Using MDX
 
 MDX combines the simplicity of markdown with the ability to import and use React components inline.
@@ -42,24 +40,6 @@ export const Root = props =>
 # Tomato
 ```
 
-## Live Code Examples
-
-Fenced code blocks can be automatically converted to live code examples using [react-live][].
-To enable this feature, use either the [ComponentProvider](/ComponentProvider) or the [StyleProvider](/StyleProvider) component in a custom Root component.
-
-When [LiveCode](/LiveCode) is enabled, the following code block with the `.jsx` language attribute, will be converted into a live example, as seen below.
-
-````mdx
-```.jsx
-<h3>Edit me</h3>
-```
-````
-
-```.jsx
-<h3>Edit me</h3>
-```
-
 To learn more about using MDX, see the [MDX docs][MDX].
 
 [MDX]: https://github.com/mdx-js/mdx
-[react-live]: https://github.com/FormidableLabs/react-live

@@ -1,6 +1,4 @@
 
-export const name = 'Link'
-
 # Link
 
 The Link component is provided as an MDX component by default.

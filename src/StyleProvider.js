@@ -1,44 +1,43 @@
 import React from 'react'
-import styled from 'react-emotion'
-import { ThemeProvider } from 'emotion-theming'
-import {
-  fontSize,
-  fontFamily,
-  lineHeight,
-  color,
-} from 'styled-system'
-import { ComponentProvider } from './ComponentProvider'
-import styledScope, { theme } from './styledScope'
+import MDXStyle from 'mdx-style'
+import { base as theme } from 'mdx-style/themes'
+import defaultScope from './scope'
 
-const Root = styled('div')({},
-  fontSize,
-  fontFamily,
-  lineHeight,
-  color,
-  props => props.css
-)
+const heading = Tag => ({ id, children, ...props }) =>
+  <Tag id={id} {...props}>
+    <a
+      href={'#' + id}
+      style={{
+        textDecoration: 'none',
+        color: 'inherit'
+      }}
+      children={children}
+    />
+  </Tag>
 
-Root.defaultProps = {
-  lineHeight: 1.5
+const scope = {
+  ...defaultScope,
+  h1: heading('h1'),
+  h2: heading('h2'),
+  h3: heading('h3'),
+  h4: heading('h4'),
+  h5: heading('h5'),
+  h6: heading('h6'),
+  pre: props => props.children,
+  code: ({ metaString, ...props }) => <pre {...props} />,
 }
 
 export const StyleProvider = ({
   components = {},
-  theme = {},
   ...props
 }) =>
-  <ThemeProvider theme={theme}>
-    <ComponentProvider
-      components={{
-        ...styledScope,
-        ...components
-      }}>
-      <Root {...props} />
-    </ComponentProvider>
-  </ThemeProvider>
-
-StyleProvider.defaultProps = {
-  theme
-}
+  <MDXStyle
+    components={{
+      ...scope,
+      ...components
+    }}
+    css={theme}
+    {...props}
+  />
 
 export default StyleProvider

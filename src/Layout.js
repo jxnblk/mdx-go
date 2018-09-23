@@ -1,17 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'react-emotion'
-import {
-  width,
-  space,
-  color,
-  display,
-  maxWidth,
-  height,
-  style,
-} from 'styled-system'
-
-const css = props => props.css
+import { MediaProvider, withMedia } from './MediaContext'
 
 export const LayoutContext = React.createContext()
 
@@ -29,89 +18,97 @@ export const withLayout = Component => React.forwardRef((props, ref) =>
   />
 )
 
-export const Root = styled('div')({
-  display: 'flex'
-}, space, width, color, css)
+export const Root = props =>
+  <div
+    {...props}
+    style={{
+      display: 'flex',
+      width: '100%'
+    }}
+  />
 
-Root.propTypes = {
-  ...space.propTypes,
-  ...width.propTypes,
-  ...color.propTypes,
-}
-
-Root.defaultProps = {
-  width: 1,
-}
-
-const transform = style({
-  prop: 'transform',
-  cssProperty: 'transform',
-})
-
-const SidebarRoot = styled('div')({
-  position: 'fixed',
-  top: 0,
-  bottom: 0,
-  left: 0,
-  overflowY: 'auto',
-  WebkitOverflowScrolling: 'touch',
-  transitionProperty: 'transform',
-  transitionDuration: '.2s',
-  transitionTimingFunction: 'ease-out',
-}, space, width, color,
-  transform,
-  css)
-
-SidebarRoot.propTypes = {
-  ...space.propTypes,
-  ...width.propTypes,
-  ...color.propTypes,
-  ...transform.propTypes,
-}
+const SidebarRoot = withMedia(({
+  width,
+  open,
+  style,
+  media,
+  color,
+  bg,
+  ...props
+}) =>
+  <div
+    {...props}
+    style={{
+      width,
+      transform: (open || media.small) ? 'none' : 'translateX(-100%)',
+      position: 'fixed',
+      top: 0,
+      bottom: 0,
+      left: 0,
+      overflowY: 'auto',
+      paddingTop: 32,
+      paddingBottom: 32,
+      color,
+      backgroundColor: bg,
+      WebkitOverflowScrolling: 'touch',
+      ...(!media.small ? {
+        transitionProperty: 'transform',
+        transitionDuration: '.2s',
+        transitionTimingFunction: 'ease-out',
+      } : {}),
+      ...style,
+    }}
+  />
+)
 
 SidebarRoot.defaultProps = {
   width: 256,
-  py: 3,
-  bg: 'white',
-  transform: [ false, 'none !important' ]
+  bg: '#f6f6ff'
 }
 
-const SidebarSpacer = styled('div')({
-  flex: 'none',
-}, width, display)
-
-SidebarSpacer.propTypes = {
-  ...width.propTypes,
-  ...display.propTypes,
-}
+const SidebarSpacer = withMedia(({
+  media,
+  ...props
+}) =>
+  <div
+    {...props}
+    style={{
+      display: media.small ? 'block' : 'none',
+      flex: 'none',
+      width: props.width,
+    }}
+  />
+)
 
 SidebarSpacer.defaultProps = {
   width: 256,
-  display: [ 'none', 'block' ],
 }
 
-const Overlay = styled('div')({
-  position: 'fixed',
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
-  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
-}, display)
-
-Overlay.propTypes = {
-  ...display.propTypes,
-}
-
-Overlay.defaultProps = {
-  display: [ false, 'none' ],
-}
+const Overlay = withMedia(({
+  media,
+  ...props
+}) =>
+  <div
+    {...props}
+    style={{
+      display: media.small ? 'none' : 'block',
+      position: 'fixed',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+      WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+    }}
+  />
+)
 
 export const Sidebar = withLayout(({
   open,
+  openMenu,
   closeMenu,
+  toggleMenu,
+  update,
   width,
-  style,
   ...props
 }) =>
   <React.Fragment>
@@ -121,52 +118,42 @@ export const Sidebar = withLayout(({
       onClick={closeMenu}
       {...props}
       width={width}
-      style={{
-        ...style,
-        transform: open ? undefined : 'translateX(-100%)'
-      }}
+      open={open}
     />
   </React.Fragment>
 )
-
-Sidebar.propTypes = {
-  ...width.propTypes,
-}
 
 Sidebar.defaultProps = {
   width: 256,
 }
 
-const MainRoot = styled('div')({
-  width: '100%',
-  minWidth: 0,
-  minHeight: '100vh'
-})
+const MainRoot = props =>
+  <div
+    {...props}
+    style={{
+      width: '100%',
+      minWidth: 0,
+      minHeight: '100vh'
+    }}
+  />
 
-const MainContainer = styled('div')({},
-  space,
-  maxWidth,
-  css
-)
-
-MainContainer.propTypes = {
-  ...space.propTypes,
-  ...maxWidth.propTypes,
-}
-
-MainContainer.defaultProps = {
-  maxWidth: '768px',
-  mx: 'auto',
-  px: 4,
-  py: 4,
-}
+const MainContainer = props =>
+  <div
+    {...props}
+    style={{
+      maxWidth: 768,
+      padding: 32,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    }}
+  />
 
 export const Main = props =>
   <MainRoot>
     <MainContainer {...props} />
   </MainRoot>
 
-export const MenuIcon = styled(({
+export const MenuIcon = ({
   size = 24,
   ...props
 }) =>
@@ -175,27 +162,37 @@ export const MenuIcon = styled(({
     viewBox='0 0 24 24'
     width={size}
     height={size}
-    {...props}>
+    style={{
+      display: 'block'
+    }}>
     <path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z' />
   </svg>
-)({
-  display: 'block'
-})
 
-export const MenuButton = styled('button')({
-  appearance: 'none',
-  fontSize: 'inherit',
-  fontFamily: 'inherit',
-  display: 'inline-block',
-  border: 0,
-  borderRadius: 0,
-}, space, color, css)
+export const MenuButton = ({
+  m,
+  style,
+  ...props
+}) =>
+  <button
+    {...props}
+    style={{
+      position: 'fixed',
+      appearance: 'none',
+      fontSize: 'inherit',
+      fontFamily: 'inherit',
+      display: 'inline-block',
+      border: 0,
+      borderRadius: 0,
+      padding: 0,
+      margin: m,
+      color: 'inherit',
+      backgroundColor: 'transparent',
+      ...style
+    }}
+  />
 
 MenuButton.defaultProps = {
-  color: 'inherit',
-  bg: 'transparent',
-  p: 0,
-  m: 0,
+  m: 8
 }
 
 export const MenuToggle = withLayout(({
@@ -223,16 +220,25 @@ MenuToggle.defaultProps = {
 
 MenuToggle.isMenuToggle = true
 
-const NavBarRoot = styled('header')({
-  position: 'fixed',
-  top: 0,
-  right: 0,
-  left: 0,
-  display: 'flex',
-  alignItems: 'center',
-}, space, height, color, css)
+const NavBarRoot = ({
+  height,
+  ...props
+}) =>
+  <header
+    {...props}
+    style={{
+      height,
+      position: 'fixed',
+      top: 0,
+      right: 0,
+      left: 0,
+      display: 'flex',
+      alignItems: 'center',
+    }}
+  />
 
-const NavBarSpacer = styled('div')({}, height)
+const NavBarSpacer = ({ height }) =>
+  <div style={{ height }} />
 
 export const NavBar = ({
   height,
@@ -246,15 +252,8 @@ export const NavBar = ({
     />
   </React.Fragment>
 
-NavBar.propTypes = {
-  ...space.propTypes,
-  ...height.propTypes,
-  ...color.propTypes,
-}
-
 NavBar.defaultProps = {
   height: 48,
-  bg: 'white',
 }
 
 NavBar.isNavBar = true
@@ -276,6 +275,7 @@ export class Layout extends React.Component {
 
   render () {
     const {
+      breakpoint,
       ...props
     } = this.props
 
@@ -293,11 +293,16 @@ export class Layout extends React.Component {
 
     return (
       <Provider value={context}>
-        {menuToggle}
-        {navbar}
-        <Root {...props}>
-          {columns}
-        </Root>
+        <MediaProvider
+          mediaQueries={{
+            'small': 'screen and (min-width:40em)'
+          }}>
+          {menuToggle}
+          {navbar}
+          <Root {...props}>
+            {columns}
+          </Root>
+        </MediaProvider>
       </Provider>
     )
   }

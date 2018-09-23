@@ -1,18 +1,18 @@
 import React from 'react'
-import styled from 'react-emotion'
 import Layout from './Layout'
-import StyleProvider from './StyleProvider'
 import NavLinks from './NavLinks'
 import Pagination from './Pagination'
-import ScrollTop from './ScrollTop'
+import StyleProvider from './StyleProvider'
 
 export const DocsLayout = props =>
   <StyleProvider>
     <Layout>
-      <Layout.MenuToggle m={2} />
-      <Layout.Sidebar
-        py={3}
-        bg='lightgray'>
+      <Layout.MenuToggle
+        style={{
+          position: 'fixed'
+        }}
+      />
+      <Layout.Sidebar>
         <NavLinks {...props} />
       </Layout.Sidebar>
       <Layout.Main>
@@ -20,7 +20,6 @@ export const DocsLayout = props =>
         <Pagination {...props} />
       </Layout.Main>
     </Layout>
-    <ScrollTop />
   </StyleProvider>
 
 export default DocsLayout
