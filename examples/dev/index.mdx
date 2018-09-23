@@ -1,10 +1,16 @@
-import { Head } from 'mdx-go'
+import {
+  Head,
+  Layout,
+  NavLinks,
+  Pagination,
+  StyleProvider,
+  DocsLayout
+} from 'mdx-go'
 
 <Head>
   <title>Hello</title>
 </Head>
 
-import { Layout, NavLinks, Pagination, StyleProvider } from 'mdx-go'
 export const Root = props =>
   <StyleProvider>
     <Layout>
@@ -24,6 +30,7 @@ export const Root = props =>
 This example can be run from the root directory as a development environment for the core library.
 
 - [Typography](/typography)
+- [Hello](/hello)
 
 ```.jsx
 <h1>Hello</h1>

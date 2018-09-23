@@ -1,7 +1,7 @@
 import React from 'react'
 import MDXStyle from 'mdx-style'
 import { base as theme } from 'mdx-style/themes'
-import ComponentProvider from './ComponentProvider'
+import defaultScope from './scope'
 
 const heading = Tag => ({ id, children, ...props }) =>
   <Tag id={id} {...props}>
@@ -16,6 +16,7 @@ const heading = Tag => ({ id, children, ...props }) =>
   </Tag>
 
 const scope = {
+  ...defaultScope,
   h1: heading('h1'),
   h2: heading('h2'),
   h3: heading('h3'),
