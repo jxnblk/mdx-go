@@ -29,15 +29,9 @@ linear-gradient(
 `
 
 const nav = [
-  'index',
-  'getting-started',
-  'using-mdx',
-  'routing',
-  'configuration',
-  'exporting',
   'Home',
-  'Getting Started',
-  'Using MDX',
+  'Getting-Started',
+  'Using-MDX',
   'Routing',
   'Configuration',
   'Exporting',
@@ -55,8 +49,6 @@ const nav = [
   // Examples
   'Typography',
   'Examples',
-  'typography',
-  'examples',
 ]
 
 // todo: update
