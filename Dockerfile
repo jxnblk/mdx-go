@@ -4,9 +4,7 @@ WORKDIR /usr/src
 
 COPY . .
 RUN npm i
-RUN npm run prepare
 
-RUN cd docs
-RUN npm i --only=production
+RUN cd docs && npm i --only=production && npm run build
 
-RUN npm run build && mv dist /public
+RUN mv docs/dist /public

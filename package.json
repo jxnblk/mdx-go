@@ -12,7 +12,7 @@
     "prepare": "rm -rf dist && babel src -d dist",
     "watch": "babel src -d dist --watch",
     "start": "./cli.js examples/dev",
-    "build": "./cli.js build examples/dev -d temp",
+    "__build": "./cli.js build examples/dev -d temp",
     "help": "./cli.js",
     "test": "ava"
   },
