@@ -79,6 +79,10 @@
     "webpackbar": "^2.6.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.0"
+    "@babel/cli": "^7.1.0",
+    "ava": "^1.0.0-beta.8",
+    "c8": "^3.2.0",
+    "nyc": "^13.0.1",
+    "supertest": "^3.3.0"
   }
 }

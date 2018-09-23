@@ -6,9 +6,7 @@ import {
   NavLinks,
   NavLink,
   Pagination,
-  ComponentProvider,
   StyleProvider,
-  DocsLayout
 } from 'mdx-go'
 import { Box, Flex } from 'rebass'
 import Logo from './logo'
