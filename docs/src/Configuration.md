@@ -96,8 +96,6 @@ export const Root = props =>
   </ComponentProvider>
 ```
 
-The ComponentProvider also adds the [LiveCode](/LiveCode) component to scope for rendering fenced code blocks as live code examples.
-
 ## Layout components
 
 mdx-go includes optional layout components for quickly adding default styles and layouts to your app.

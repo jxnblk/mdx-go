@@ -1,7 +1,7 @@
 
 # ComponentProvider
 
-Wrap your application with the ComponentProvider to use custom MDX components and [LiveCode](/LiveCode) enabled fenced code blocks in MDX.
+Wrap your application with the ComponentProvider to use custom MDX components.
 
 ```jsx
 // example Root component

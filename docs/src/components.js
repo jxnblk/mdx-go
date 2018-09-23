@@ -39,7 +39,6 @@ const nav = [
   'Head',
   'Link',
   'ComponentProvider',
-  'LiveCode',
   'Layout',
   'NavLinks',
   'Pagination',
