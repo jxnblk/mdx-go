@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "mdx-go": "^2.0.0-15",
+    "react": "^16.5.2",
     "rebass": "^3.0.0-9",
     "styled-components": "^4.0.0-beta.8"
   },
