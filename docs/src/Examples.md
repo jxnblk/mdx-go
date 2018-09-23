@@ -1,6 +1,4 @@
 
-export const name = 'Examples'
-
 # Examples
 
 See examples of how to set up mdx-go on GitHub:

@@ -1,6 +1,4 @@
 
-export const name = 'Using MDX'
-
 # Using MDX
 
 MDX combines the simplicity of markdown with the ability to import and use React components inline.

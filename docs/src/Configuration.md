@@ -1,6 +1,4 @@
 
-export const name = 'Configuration'
-
 # Configuration
 
 Virtually all mdx-go configuration is handled with React components.

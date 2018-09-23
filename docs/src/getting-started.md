@@ -1,6 +1,4 @@
 
-export const name = 'Getting Started'
-
 # Getting Started
 
 mdx-go is best suited as a globally available dev server for React

@@ -1,6 +1,4 @@
 
-export const name = 'Routing'
-
 # Routing
 
 Each MDX file in the target directory will become its own route,

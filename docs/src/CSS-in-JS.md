@@ -1,6 +1,4 @@
 
-export const name = 'CSS-in-JS'
-
 # CSS-in-JS
 
 Any CSS-in-JS library will work with mdx-go.

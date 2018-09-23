@@ -1,6 +1,4 @@
 
-export const name = 'Typography'
-
 # Typography
 
 This is a demonstration page for MDX typographic styles provided by the [`StyleProvider`](/StyleProvider) component.

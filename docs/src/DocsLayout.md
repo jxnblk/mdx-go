@@ -1,6 +1,4 @@
 
-export const name = 'DocsLayout'
-
 # DocsLayout
 
 The DocsLayout component is a zero-config layout component for enabling the following:
