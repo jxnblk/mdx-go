@@ -249,7 +249,6 @@ The provided webpack config will be merged with the built-in config using [webpa
 - [Basic](examples/basic)
 - [Head Content](examples/head-content)
 - [Routing](examples/routing)
-- [React Live](examples/react-live)
 - [Styled Components](examples/styled-components)
 - [Emotion](examples/emotion)
 
