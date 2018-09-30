@@ -10,3 +10,6 @@ examples
 Dockerfile
 now.json
 babel.config.js
+
+# packages
+mdx-live
