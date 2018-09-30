@@ -11,6 +11,8 @@ import {
   <title>Hello</title>
 </Head>
 
+export const files = require.context('..', true, /\.example\.mdx?$/, 'lazy')
+
 export const Root = props =>
   <StyleProvider>
     <Layout>
