@@ -13,7 +13,9 @@ import {
 
 export const files = require.context('..', true, /\.example\.mdx?$/, 'lazy')
 
-export const Root = props =>
+// export { DevLayout as Root } from 'mdx-go'
+
+export const xRoot = props =>
   <StyleProvider>
     <Layout>
       <Layout.MenuToggle />
