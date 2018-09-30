@@ -57,7 +57,7 @@ import { LiveCode } from 'mdx-go'
 - `previewProps`
 - `editorProps`
 - `errorProps`
-- `components,
+- `components`
 - `scope`
 
 [react-live]: https://github.com/FormidableLabs/react-live
