@@ -191,6 +191,15 @@ Ensure the Root component is exported from `index.mdx`
 export { Root } from './Root.js'
 ```
 
+## Custom File Match Pattern
+
+To specify a custom file pattern for matching against,
+export a `files` webpack context from the main `index.mdx` file.
+
+```mdx
+export const files = require.context('../src', true, /\.example\.js$/, 'lazy')
+```
+
 ## Theming
 
 By default mdx-go includes virtually no styling. To customize the styles, use components to

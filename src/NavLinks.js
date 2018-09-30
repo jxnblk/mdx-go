@@ -3,14 +3,38 @@ import PropTypes from 'prop-types'
 import sortby from 'lodash.sortby'
 import { withLink } from './LinkContext'
 
-const sort = (routes, order) => sortby(routes, route => {
+const sortOrder = order => route => {
   const index = order.indexOf(route.name)
   return index < 0 ? Infinity : index
-})
+}
+
+const sort = (routes, order) => sortby(
+  sortby(routes, r => r.dirname),
+  sortOrder(order)
+)
+
+const groupRoutes = routes => routes.reduce((a, route) => {
+    let section = a.find(s => s.dirname === route.dirname)
+    if (!section) {
+      const parts = route.dirname.split('/')
+      const name = parts[parts.length - 1]
+      section = {
+        name,
+        dirname: route.dirname,
+        depth: parts.length - 1,
+        routes: []
+      }
+      a.push(section)
+    }
+    section.routes.push(route)
+    return a
+  }, [])
+  .sort((a, b) => a.dirname < b.dirname ? -1 : 1)
 
 export const NavLink = withLink(({
   Link,
   activeColor,
+  depth = 0,
   ...props
 }) =>
   <Link
@@ -18,7 +42,7 @@ export const NavLink = withLink(({
     className='NavLink'
     style={{
       display: 'block',
-      paddingLeft: 16,
+      paddingLeft: 16 + (depth * 16),
       paddingRight: 16,
       paddingTop: 4,
       paddingBottom: 4,
@@ -48,16 +72,26 @@ export const NavLinks = ({
         __html: '.NavLink.active{color:var(--active-color) !important}'
       }}
     />
-    {sort(routes, order)
-      .filter(filter)
-      .map(route => (
-      <NavLink
-        key={route.key}
-        {...props}
-        href={route.path}
-        exact={route.exact}
-        children={route.name}
-      />
+    {groupRoutes(routes).map(section => (
+      <div key={section.dirname}>
+        {section.dirname && (
+          <NavLink
+            href={section.dirname}
+            depth={section.depth - 1}>
+            {section.name}
+          </NavLink>
+        )}
+        {sort(section.routes, order).filter(filter)
+        .map(route => (
+          <NavLink
+            {...props}
+            href={route.path}
+            exact={route.exact}
+            depth={section.depth}>
+            {route.name}
+          </NavLink>
+        ))}
+      </div>
     ))}
   </React.Fragment>
 
