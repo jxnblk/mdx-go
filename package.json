@@ -1,9 +1,9 @@
 {
-  "name": "mdx-go",
+  "name": "blazin",
   "version": "2.0.0-25",
-  "description": "Lightning-fast MDX-based dev server",
+  "description": "Zero-config MDX-based dev server for progressive documentation",
   "bin": {
-    "mdx-go": "./cli.js"
+    "blazin": "./cli.js"
   },
   "main": "dist/index.js",
   "module": "dist/index.js",

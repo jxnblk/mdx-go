@@ -2,7 +2,7 @@
   "private": true,
   "name": "live-code",
   "scripts": {
-    "start": "mdx-go docs"
+    "start": "npx blazin docs"
   },
   "devDependencies": {
     "emotion": "^9.2.8",

@@ -1,13 +1,13 @@
 import React from 'react'
-import { Head } from 'mdx-go'
 import {
+  Head,
   Link as GoLink,
   Layout,
   NavLinks,
   NavLink,
   Pagination,
   StyleProvider,
-} from 'mdx-go'
+} from 'blazin'
 import { Box, Flex } from 'rebass'
 import Logo from './logo'
 
@@ -87,7 +87,7 @@ const PageLayout = props => props.location.pathname === '/'
         />
         <Box py={2} />
         <NavLink
-          href='https://github.com/jxnblk/mdx-go'
+          href='https://github.com/jxnblk/blazin'
           children='GitHub'
         />
         <Box py={4} />
@@ -106,13 +106,13 @@ const PageLayout = props => props.location.pathname === '/'
 export const Root = props =>
   <React.Fragment>
     <Head>
-      <title>mdx-go</title>
-      <meta name='description' content='Lightning-fast MDX-based dev server' />
+      <title>blazin</title>
+      <meta name='description' content='Zero-config MDX-based dev server for progressive documentation' />
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:site' content='@jxnblk' />
-      <meta name='twitter:title' content='mdx-go' />
-      <meta name='twitter:description' content='Lightning-fast MDX-based dev server for progressive documentation' />
-      <meta name='twitter:image' content='https://jxnblk.com/mdx-go/card.png' />
+      <meta name='twitter:title' content='blazin' />
+      <meta name='twitter:description' content='Zero-config MDX-based dev server for progressive documentation' />
+      <meta name='twitter:image' content='https://jxnblk.com/blazin/card.png' />
     </Head>
     <StyleProvider
       color='black'

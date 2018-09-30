@@ -5,12 +5,12 @@ const chalk = require('chalk')
 const open = require('react-dev-utils/openBrowser')
 const findUp = require('find-up')
 
-const config = require('pkg-conf').sync('mdx-go')
+const config = require('pkg-conf').sync('blazin')
 const { pkg } = require('read-pkg-up').sync()
 
 const log = (...msg) => {
   console.log(
-    chalk.green('[mdx-go]'),
+    chalk.green('[blazin]'),
     ...msg
   )
 }
@@ -25,9 +25,9 @@ log.error = (...msg) => {
 const cli = meow(`
   ${chalk.gray('Usage')}
 
-    ${chalk.gray('$')} ${chalk.green('mdx-go docs')}
+    ${chalk.gray('$')} ${chalk.green('blazin docs')}
 
-    ${chalk.gray('$')} ${chalk.green('mdx-go build docs')}
+    ${chalk.gray('$')} ${chalk.green('blazin build docs')}
 
   ${chalk.gray('Options')}
 
@@ -41,7 +41,7 @@ const cli = meow(`
     --webpack     Path to custom webpack config
 
 `, {
-  description: chalk.green('mdx-go') + ' Lightning fast MDX-based dev server',
+  description: chalk.red('🔥 blazin') + ' Zero-config MDX-based dev server for progressive documentation',
   flags: {
     help: {
       type: 'boolean',

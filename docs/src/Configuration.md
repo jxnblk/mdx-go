@@ -1,14 +1,14 @@
 
 # Configuration
 
-Virtually all mdx-go configuration is handled with React components.
-mdx-go follows the philosophy of **components over configuration** instead of using custom plugins architectures and configuration objects in an effort to keep a minimal API surface area.
+Virtually all blazin configuration is handled with React components.
+Blazin follows the philosophy of **components over configuration** instead of using custom plugins architectures and configuration objects in an effort to keep a minimal API surface area.
 
-You can even write your own components to customize the theme and layout of mdx-go.
+You can even write your own components to customize the theme and layout of blazin.
 
 ## Root component
 
-Using a custom Root component is the primary means of customizing an app in mdx-go. It wraps the entire app with a React component that can provide themes and components via context, add page layouts, and intercept routing.
+Using a custom Root component is the primary means of customizing an app in blazin. It wraps the entire app with a React component that can provide themes and components via context, add page layouts, and intercept routing.
 
 To wrap your entire application with a React component,
 export a custom `Root` component from your main `index.mdx` file.
@@ -21,7 +21,7 @@ export const Root = props =>
   </div>
 ```
 
-Using a custom Root component will override the default centered layout of mdx-go, and can be used to provide custom themes and layouts to every route.
+Using a custom Root component will override the default centered layout of blazin, and can be used to provide custom themes and layouts to every route.
 
 ### Props
 
@@ -62,7 +62,7 @@ Learn more in the [MDX docs](https://mdxjs.com/syntax#export-default).
 To customize the document `<head>` contents, use the `Head` component.
 
 ```mdx
-import { Head } from 'mdx-go'
+import { Head } from 'blazin'
 
 <Head>
   <title>My Page Title</title>
@@ -82,7 +82,7 @@ Use the `ComponentProvider` in a Root component to add custom components for MDX
 // example Root component
 import React from 'react'
 import styled from 'react-emotion'
-import { ComponentProvider } from 'mdx-go'
+import { ComponentProvider } from 'blazin'
 
 const components = {
   h1: styled('h1')({
@@ -98,7 +98,7 @@ export const Root = props =>
 
 ## Layout components
 
-mdx-go includes optional layout components for quickly adding default styles and layouts to your app.
+Blazin includes optional layout components for quickly adding default styles and layouts to your app.
 
 Read more about the built-in layout components:
 
@@ -108,7 +108,7 @@ Read more about the built-in layout components:
 
 ## Theming
 
-mdx-go contains almost no default styling, making it ideal for use with components that include their own styling.
+Blazin contains almost no default styling, making it ideal for use with components that include their own styling.
 To add themes or custom styling, wrap your app with a [Root component](configuration/#root-component).
 
 To use optional, built-in styles, see the [StyleProvider](/StyleProvider) component.
@@ -134,10 +134,10 @@ The following flags can be passed to the CLI.
   --webpack     Path to custom webpack config
 ```
 
-All CLI options can also be specified in an `mdx-go` field in your `package.json`.
+All CLI options can also be specified in an `blazin` field in your `package.json`.
 
 ```json
-"mdx-go": {
+"blazin": {
   "outDir": "site"
 }
 ```

@@ -12,7 +12,7 @@ The DocsLayout component is a zero-config layout component for enabling the foll
 This component can be exported directly from the `index.mdx` file.
 
 ```mdx
-export { DocsLayout as Root } from 'mdx-go'
+export { DocsLayout as Root } from 'blazin'
 
 # With Default Layout and Styles
 ```
@@ -22,7 +22,7 @@ Or in a custom Root component.
 ```jsx
 // example Root component
 import React from 'react'
-import { DocsLayout } from 'mdx-go'
+import { DocsLayout } from 'blazin'
 
 export const Root = props =>
   <DocsLayout {...props} />

@@ -10,7 +10,7 @@ import {
   Layout,
   NavLinks,
   Pagination
-} from 'mdx-go'
+} from 'blazin'
 
 export const Root = props =>
   <Layout>
@@ -28,7 +28,7 @@ export const Root = props =>
 
 Prop | Type | Description
 ---|---|---
-`routes` | array (required) | Array of mdx-go route objects passed to the Root component
+`routes` | array (required) | Array of blazin route objects passed to the Root component
 `order` | array | Array of route names to sort the links
 `filter` | function | Optional function to filter routes
 `fontSize` | number, string, or array | Changes the links' font size

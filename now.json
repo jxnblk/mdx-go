@@ -1,7 +1,7 @@
 {
-  "name": "mdx-go",
+  "name": "blazin",
   "alias": [
-    "mdx-go.now.sh"
+    "blazin.now.sh"
   ],
   "public": true,
   "type": "static"

@@ -2,7 +2,7 @@
   "private": true,
   "name": "dev-environment",
   "scripts": {
-    "start": "mdx-go docs"
+    "start": "npx blazin docs"
   },
   "dependencies": {
     "emotion": "^9.2.8",

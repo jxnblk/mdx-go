@@ -6,7 +6,7 @@ Wrap your application with the ComponentProvider to use custom MDX components.
 ```jsx
 // example Root component
 import React from 'react'
-import { ComponentProvider } from 'mdx-go'
+import { ComponentProvider } from 'blazin'
 
 export const Root = props =>
   <ComponentProvider>

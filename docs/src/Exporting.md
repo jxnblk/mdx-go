@@ -4,7 +4,7 @@
 To export as static HTML with a client-side JS bundle, use the `build` command.
 
 ```sh
-mdx-go build docs
+blazin build docs
 ```
 
 This will create a `dist/` directory with an HTML file for each route and include a `main.js` bundle.
@@ -25,7 +25,7 @@ npm i emotion-server
 To export a site as static HTML without JS, use the `--static` flag.
 
 ```sh
-mdx-go build docs --static
+blazin build docs --static
 ```
 
 ## Basename
@@ -33,7 +33,7 @@ mdx-go build docs --static
 When exporting for use on a domain with a base path, such as gh-pages, use the `--basename` CLI flag to specify the path.
 
 ```sh
-mdx-go build docs --basename /mdx-go
+blazin build docs --basename /blazin
 ```
 
 ## Options

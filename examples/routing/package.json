@@ -2,6 +2,6 @@
   "private": true,
   "name": "routing-example",
   "scripts": {
-    "start": "mdx-go docs"
+    "start": "npx blazin docs"
   }
 }

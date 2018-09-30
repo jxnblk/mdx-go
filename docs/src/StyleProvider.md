@@ -7,7 +7,7 @@ with support for theming.
 ```jsx
 // example Root component
 import React from 'react'
-import { StyleProvider } from 'mdx-go'
+import { StyleProvider } from 'blazin'
 
 export const Root = props =>
   <StyleProvider>

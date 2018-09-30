@@ -2,7 +2,7 @@
 # emotion example
 
 ```sh
-npm i -g mdx-go && npm i
+npm i -g blazin && npm i
 ```
 
 ```sh

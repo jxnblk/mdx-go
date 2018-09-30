@@ -2,7 +2,7 @@
 # routing example
 
 ```sh
-npm i -g mdx-go
+npm i -g blazin
 ```
 
 ```sh

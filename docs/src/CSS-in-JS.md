@@ -1,8 +1,8 @@
 
 # CSS-in-JS
 
-Any CSS-in-JS library will work with mdx-go.
-When [exporting as static HTML](/exporting), mdx-go includes server-side rendering support for [emotion][] and [styled-components][].
+Any CSS-in-JS library will work with blazin.
+When [exporting as static HTML](/exporting), blazin includes server-side rendering support for [emotion][] and [styled-components][].
 
 To make use of the built-in layout components, you'll need to install [emotion][] or [styled-components][].
 

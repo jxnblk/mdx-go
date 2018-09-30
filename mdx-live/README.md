@@ -23,7 +23,7 @@ export default props =>
 Higher order component to render `LiveCode` component when the `language-.jsx` class name is present.
 
 ```js
-import { withMDXLive } from 'mdx-go'
+import { withMDXLive } from 'mdx-live'
 
 const components = {
   code: withMDXLive('pre'),
@@ -37,7 +37,7 @@ const components = {
 Styled wrapper around [react-live][]
 
 ```js
-import { LiveCode } from 'mdx-go'
+import { LiveCode } from 'mdx-live'
 ```
 
 ```jsx

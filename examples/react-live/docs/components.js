@@ -1,5 +1,5 @@
 import React from 'react'
-import { ComponentProvider, Layout } from 'mdx-go'
+import { ComponentProvider, Layout } from 'blazin'
 import {
   LiveProvider,
   LivePreview,

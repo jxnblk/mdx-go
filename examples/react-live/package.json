@@ -2,7 +2,7 @@
   "private": true,
   "name": "basic",
   "scripts": {
-    "start": "mdx-go docs"
+    "start": "npx blazin docs"
   },
   "dependencies": {
     "react-live": "^1.11.0"
