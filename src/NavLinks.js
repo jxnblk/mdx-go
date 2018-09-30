@@ -57,7 +57,6 @@ export const NavLink = withLink(({
 )
 
 export const NavLinks = ({
-  header,
   routes = [],
   order = [],
   filter,
@@ -73,9 +72,6 @@ export const NavLinks = ({
         __html: '.NavLink.active{color:var(--active-color) !important}'
       }}
     />
-    <div>
-      {header}
-    </div>
     {groupRoutes(routes).map(section => (
       <div key={section.dirname}>
         {section.dirname && (
