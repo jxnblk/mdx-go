@@ -1,5 +1,9 @@
 
-# mdx-go
+# superdev
+
+- No style/layout components
+- Lazy loaded LiveCode
+- [ ] Directory view
 
 ![](https://s3.amazonaws.com/jxnblk/mdx-go-24.gif)
 

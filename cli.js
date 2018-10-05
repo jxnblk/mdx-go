@@ -5,12 +5,13 @@ const chalk = require('chalk')
 const open = require('react-dev-utils/openBrowser')
 const findUp = require('find-up')
 
-const config = require('pkg-conf').sync('mdx-go')
+const name = 'superdev'
+const config = require('pkg-conf').sync(name)
 const { pkg } = require('read-pkg-up').sync()
 
 const log = (...msg) => {
   console.log(
-    chalk.green('[mdx-go]'),
+    chalk.green(`[${name}]`),
     ...msg
   )
 }
@@ -25,9 +26,9 @@ log.error = (...msg) => {
 const cli = meow(`
   ${chalk.gray('Usage')}
 
-    ${chalk.gray('$')} ${chalk.green('mdx-go docs')}
+    ${chalk.gray('$')} ${chalk.green(name + ' docs')}
 
-    ${chalk.gray('$')} ${chalk.green('mdx-go build docs')}
+    ${chalk.gray('$')} ${chalk.green(name + ' build docs')}
 
   ${chalk.gray('Options')}
 
@@ -41,7 +42,7 @@ const cli = meow(`
     --webpack     Path to custom webpack config
 
 `, {
-  description: chalk.green('mdx-go') + ' Lightning fast MDX-based dev server',
+  description: chalk.green(name) + ' Lightning fast MDX-based dev server',
   flags: {
     help: {
       type: 'boolean',
@@ -95,6 +96,7 @@ if (!cmd && !input) {
 const opts = Object.assign({
   pkg,
   dirname: path.resolve(input || cmd),
+  name: 'superdev',
   basename: '',
   webpack: findUp.sync('webpack.config.js'),
 }, config, cli.flags)

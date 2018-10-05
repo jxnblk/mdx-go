@@ -1,11 +1,6 @@
 import {
   Head,
-  Layout,
-  NavLinks,
-  Pagination,
-  StyleProvider,
-  DocsLayout
-} from 'mdx-go'
+} from 'superdev'
 
 <Head>
   <title>Hello</title>
@@ -13,19 +8,10 @@ import {
 
 export const files = require.context('..', true, /\.example\.mdx?$/, 'lazy')
 
-export const Root = props =>
-  <StyleProvider>
-    <Layout>
-      <Layout.MenuToggle />
-      <Layout.Sidebar>
-        <NavLinks {...props} />
-      </Layout.Sidebar>
-      <Layout.Main>
-        {props.children}
-        <Pagination {...props} />
-      </Layout.Main>
-    </Layout>
-  </StyleProvider>
+export const xRoot = props =>
+  <div>
+    {props.children}
+  </div>
 
 # Dev Example
 
