@@ -1,13 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "start": "mdx-go src",
-    "build": "mdx-go build src",
+    "start": "superdev src",
+    "build": "superdev build src",
     "logo": "repng src/logo.js -w 256 -h 256 -d src -f logo.png",
     "card": "repng src/card.js -w 1024 -h 512 -d src -f card.png"
   },
   "dependencies": {
-    "mdx-go": "^2.0.0-20",
+    "superdev": "..",
     "react": "^16.5.2",
     "rebass": "^3.0.0-9",
     "styled-components": "^4.0.0-beta.8"
