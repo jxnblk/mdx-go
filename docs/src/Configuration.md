@@ -1,14 +1,14 @@
 
 # Configuration
 
-Virtually all mdx-go configuration is handled with React components.
-mdx-go follows the philosophy of **components over configuration** instead of using custom plugins architectures and configuration objects in an effort to keep a minimal API surface area.
+Virtually all Superdev configuration is handled with React components.
+Superdev follows the philosophy of **components over configuration** instead of using custom plugins architectures and configuration objects in an effort to keep a minimal API surface area.
 
-You can even write your own components to customize the theme and layout of mdx-go.
+You can even write your own components to customize the theme and layout of Superdev.
 
 ## Root component
 
-Using a custom Root component is the primary means of customizing an app in mdx-go. It wraps the entire app with a React component that can provide themes and components via context, add page layouts, and intercept routing.
+Using a custom Root component is the primary means of customizing an app in Superdev. It wraps the entire app with a React component that can provide themes and components via context, add page layouts, and intercept routing.
 
 To wrap your entire application with a React component,
 export a custom `Root` component from your main `index.mdx` file.
@@ -21,7 +21,7 @@ export const Root = props =>
   </div>
 ```
 
-Using a custom Root component will override the default centered layout of mdx-go, and can be used to provide custom themes and layouts to every route.
+Using a custom Root component will override the default centered layout of Superdev, and can be used to provide custom themes and layouts to every route.
 
 ### Props
 
@@ -62,7 +62,7 @@ Learn more in the [MDX docs](https://mdxjs.com/syntax#export-default).
 To customize the document `<head>` contents, use the `Head` component.
 
 ```mdx
-import { Head } from 'mdx-go'
+import { Head } from 'superdev'
 
 <Head>
   <title>My Page Title</title>
@@ -82,7 +82,7 @@ Use the `ComponentProvider` in a Root component to add custom components for MDX
 // example Root component
 import React from 'react'
 import styled from 'react-emotion'
-import { ComponentProvider } from 'mdx-go'
+import { ComponentProvider } from 'superdev'
 
 const components = {
   h1: styled('h1')({
@@ -96,19 +96,10 @@ export const Root = props =>
   </ComponentProvider>
 ```
 
-## Layout components
-
-mdx-go includes optional layout components for quickly adding default styles and layouts to your app.
-
-Read more about the built-in layout components:
-
-- [Layout](/Layout)
-- [DocsLayout](/DocsLayout)
-- [DevLayout](/DevLayout)
 
 ## Theming
 
-mdx-go contains almost no default styling, making it ideal for use with components that include their own styling.
+Superdev contains almost no default styling, making it ideal for use with components that include their own styling.
 To add themes or custom styling, wrap your app with a [Root component](configuration/#root-component).
 
 To use optional, built-in styles, see the [StyleProvider](/StyleProvider) component.
@@ -120,6 +111,10 @@ To customize the webpack config, add a `webpack.config.js` file to your project 
 The provided webpack config will be merged with the built-in config using [webpack-merge][].
 
 [webpack-merge]: https://github.com/survivejs/webpack-merge
+
+## Babel
+
+Add a `babel.config.js` file to customize the Babel configuration.
 
 ## CLI Options
 
@@ -134,10 +129,10 @@ The following flags can be passed to the CLI.
   --webpack     Path to custom webpack config
 ```
 
-All CLI options can also be specified in an `mdx-go` field in your `package.json`.
+All CLI options can also be specified in an `superdev` field in your `package.json`.
 
 ```json
-"mdx-go": {
+"superdev": {
   "outDir": "site"
 }
 ```

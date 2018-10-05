@@ -1,5 +1,9 @@
 import React from 'react'
-import { Head } from 'mdx-go'
+import { Head, Link as GoLink } from 'superdev'
+import { Box, Flex } from 'rebass'
+import Logo from './logo'
+
+/*
 import {
   Link as GoLink,
   Layout,
@@ -8,8 +12,7 @@ import {
   Pagination,
   StyleProvider,
 } from 'mdx-go'
-import { Box, Flex } from 'rebass'
-import Logo from './logo'
+*/
 
 const green = '#0d3'
 const darkgreen = '#0a6'
@@ -39,12 +42,12 @@ const nav = [
   'Head',
   'Link',
   'ComponentProvider',
-  'Layout',
-  'NavLinks',
-  'Pagination',
+  // 'Layout',
+  // 'NavLinks',
+  // 'Pagination',
   'StyleProvider',
-  'DocsLayout',
-  'DevLayout',
+  // 'DocsLayout',
+  // 'DevLayout',
   // Examples
   'Typography',
   'Examples',
@@ -67,6 +70,7 @@ const theme = {
   }
 }
 
+/*
 const PageLayout = props => props.location.pathname === '/'
   ? props.children
   : (
@@ -102,15 +106,18 @@ const PageLayout = props => props.location.pathname === '/'
       </Layout.Main>
     </Layout>
   )
+*/
+
+const PageLayout = props => props.children
 
 export const Root = props =>
   <React.Fragment>
     <Head>
-      <title>mdx-go</title>
+      <title>Superdev</title>
       <meta name='description' content='Lightning-fast MDX-based dev server' />
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:site' content='@jxnblk' />
-      <meta name='twitter:title' content='mdx-go' />
+      <meta name='twitter:title' content='Superdev' />
       <meta name='twitter:description' content='Lightning-fast MDX-based dev server for progressive documentation' />
       <meta name='twitter:image' content='https://jxnblk.com/mdx-go/card.png' />
     </Head>

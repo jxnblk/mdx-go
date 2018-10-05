@@ -21,7 +21,7 @@ const github = 'https://github.com/jxnblk/mdx-go'
 const blog = 'https://jxnblk.com/writing/posts/progressive-documentation'
 
 const intro = <span>
-  mdx-go is built with the idea of <Link href={blog} color='#0a0'>Progressive Documentation</Link> in mind, intended to be used anywhere as a dev server, prototyping tool, or simple static site generator. By embracing the MDX file format, the docs you create with mdx-go can easily be used in other tools. Start your docs with mdx-go, and migrated to tools like Next.js and Gatsby when needed. You can even keep mdx-go around to use as a dev tool outside of other React applications.
+  Superdev is built with the idea of <Link href={blog} color='#0a0'>Progressive Documentation</Link> in mind, intended to be used anywhere as a dev server, prototyping tool, or simple static site generator. By embracing the MDX file format, the docs you create with Superdev can easily be used in other tools. Start your docs with Superdev, and migrated to tools like Next.js and Gatsby when needed. You can even keep Superdev around to use as a dev tool outside of other React applications.
 </span>
 
 export default props =>
@@ -60,7 +60,7 @@ export default props =>
           px={3}
           width={[ 1, null, 1/3, 1/3 ]}>
           <Logo size={96} />
-          <Title mb={2}>mdx-go</Title>
+          <Title mb={2}>Superdev</Title>
           <Text mb={3}>
             Lightning-fast MDX-based dev server for progressive documentation
           </Text>
@@ -70,7 +70,7 @@ export default props =>
           <ButtonOutline href={github}>
             GitHub
           </ButtonOutline>
-          <Pre>npm i -g mdx-go</Pre>
+          <Pre>npm i -g superdev</Pre>
         </Box>
         <Box
           px={3}

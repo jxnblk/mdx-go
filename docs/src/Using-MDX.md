@@ -24,7 +24,7 @@ import { Box } from 'grid-styled'
 ## Exports
 
 MDX uses the ES export syntax to communicate with its parent.
-mdx-go makes use of this to customize layouts, routing, and set other configuration options.
+Superdev makes use of this to customize layouts, routing, and set other configuration options.
 
 For example, a custom [Root component](/configuration#root-component) that wraps the entire app can be added by exporting `Root` from your `index.mdx` file.
 
