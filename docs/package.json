@@ -9,6 +9,8 @@
   "dependencies": {
     "react": "^16.5.2",
     "rebass": "^3.0.0-9",
-    "styled-components": "^4.0.0-beta.10"
+    "sidepane": "^1.0.0-4",
+    "styled-components": "^4.0.0-beta.10",
+    "superdev": "0.0.0-3"
   }
 }
