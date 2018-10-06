@@ -1,6 +1,6 @@
 {
   "name": "superdev",
-  "version": "0.0.0-2",
+  "version": "0.0.0-3",
   "description": "Lightning-fast MDX-based dev server",
   "bin": {
     "superdev": "./cli.js"
