@@ -35,6 +35,7 @@ const nav = [
   { path: '/Head', name: 'Head' },
   { path: '/Link', name: 'Link' },
   { path: '/examples', name: 'Examples' },
+  { path: 'https://github.com/jxnblk/mdx-go', name: 'GitHub' },
 
   // 'ComponentProvider',
   // 'Layout',
