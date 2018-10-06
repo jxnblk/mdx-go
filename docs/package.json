@@ -3,16 +3,12 @@
   "scripts": {
     "start": "superdev src",
     "build": "superdev build src",
-    "logo": "repng src/logo.js -w 256 -h 256 -d src -f logo.png",
-    "card": "repng src/card.js -w 1024 -h 512 -d src -f card.png"
+    "logo": "npx repng src/logo.js -w 256 -h 256 -d src -f logo.png",
+    "card": "npx repng src/card.js -w 1024 -h 512 -d src -f card.png"
   },
   "dependencies": {
     "react": "^16.5.2",
     "rebass": "^3.0.0-9",
-    "styled-components": "^4.0.0-beta.8",
-    "superdev": "file:.."
-  },
-  "peerDependencies": {
-    "repng": "^3.1.0"
+    "styled-components": "^4.0.0-beta.10"
   }
 }
