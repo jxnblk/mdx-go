@@ -47,6 +47,7 @@
     "connect-history-api-fallback": "^1.5.0",
     "find-up": "^3.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "is-absolute-url": "^2.1.0",
     "lodash.get": "^4.4.2",
     "lodash.sortby": "^4.7.0",
     "mdx-style": "^1.0.0-3",
