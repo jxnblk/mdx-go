@@ -1,7 +1,7 @@
 
 # Examples
 
-See examples of how to set up Superdev on GitHub:
+See examples of how to set up MDX Go on GitHub:
 
 - [Basic](https://github.com/jxnblk/mdx-go/tree/master/examples/basic)
 - [Routing](https://github.com/jxnblk/mdx-go/tree/master/examples/routing)

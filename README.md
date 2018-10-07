@@ -1,5 +1,5 @@
 
-# superdev
+# mdx-go
 
 - No style/layout components
 - Lazy loaded LiveCode

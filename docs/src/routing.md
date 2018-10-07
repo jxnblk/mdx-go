@@ -13,11 +13,11 @@ docs/
   api.mdx
 ```
 
-Superdev will create routes for `/`, `/getting-started`, and `/api`.
+MDX Go will create routes for `/`, `/getting-started`, and `/api`.
 
 ## React Components
 
-Superdev also supports using React components as routes for files with the `.js` extension.
+MDX Go also supports using React components as routes for files with the `.js` extension.
 Be sure that the `.js` file exports a default component to render as a route.
 
 ```jsx

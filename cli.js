@@ -5,7 +5,7 @@ const chalk = require('chalk')
 const open = require('react-dev-utils/openBrowser')
 const findUp = require('find-up')
 
-const name = 'superdev'
+const name = 'mdx-go'
 const config = require('pkg-conf').sync(name)
 const { pkg } = require('read-pkg-up').sync()
 
@@ -95,8 +95,8 @@ if (!cmd && !input) {
 
 const opts = Object.assign({
   pkg,
+  name,
   dirname: path.resolve(input || cmd),
-  name: 'superdev',
   basename: '',
   webpack: findUp.sync('webpack.config.js'),
 }, config, cli.flags)

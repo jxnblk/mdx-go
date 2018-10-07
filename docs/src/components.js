@@ -3,7 +3,7 @@ import {
   Head,
   Link as GoLink,
   StyleProvider,
-} from 'superdev'
+} from 'mdx-go'
 import { Box, Flex } from 'rebass'
 import Sidepane from 'sidepane'
 import Logo from './logo'
@@ -120,11 +120,11 @@ const PageLayout = props => props.location.pathname === '/'
 export const Root = props =>
   <React.Fragment>
     <Head>
-      <title>Superdev</title>
+      <title>MDX Go</title>
       <meta name='description' content='Lightning-fast MDX-based dev server' />
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:site' content='@jxnblk' />
-      <meta name='twitter:title' content='Superdev' />
+      <meta name='twitter:title' content='MDX Go' />
       <meta name='twitter:description' content='Lightning-fast MDX-based dev server for progressive documentation' />
       <meta name='twitter:image' content='https://jxnblk.com/mdx-go/card.png' />
     </Head>

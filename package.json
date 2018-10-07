@@ -1,9 +1,9 @@
 {
-  "name": "superdev",
-  "version": "0.0.0-3",
+  "name": "mdx-go",
+  "version": "2.0.0-26",
   "description": "Lightning-fast MDX-based dev server",
   "bin": {
-    "superdev": "./cli.js"
+    "mdx-go": "./cli.js"
   },
   "main": "lib/client/components.js",
   "module": "lib/client/components.js",
