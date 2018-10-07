@@ -32,14 +32,15 @@ const cli = meow(`
 
   ${chalk.gray('Options')}
 
-    -p --port     Port for dev server
-    --no-open     Disable opening in default browser
-    --fullscreen  Disable default centered layout
+    -p --port       Port for dev server
+    --no-open       Disable opening in default browser
+    --fullscreen    Disable default centered layout
+    --no-keyboard   Disable keyboard shortcuts
 
-    -d --out-dir  Output directory for static export
-    --basename    Base path for routing
-    --static      Export HTML without JS bundle
-    --webpack     Path to custom webpack config
+    -d --out-dir    Output directory for static export
+    --basename      Base path for routing
+    --static        Export HTML without JS bundle
+    --webpack       Path to custom webpack config
 
 `, {
   description: chalk.green(name) + ' Lightning fast MDX-based dev server',
@@ -64,6 +65,10 @@ const cli = meow(`
     },
     fullscreen: {
       type: 'boolean'
+    },
+    keyboard: {
+      type: 'boolean',
+      default: true
     },
     outDir: {
       type: 'string',
