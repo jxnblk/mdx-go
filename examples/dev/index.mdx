@@ -1,42 +1,23 @@
 import {
   Head,
-  Layout,
-  NavLinks,
-  Pagination,
-  StyleProvider,
-  DocsLayout
 } from 'mdx-go'
 
 <Head>
   <title>Hello</title>
 </Head>
 
-export const files = require.context('..', true, /\.example\.mdx?$/, 'lazy')
 
-export const Root = props =>
-  <StyleProvider>
-    <Layout>
-      <Layout.MenuToggle />
-      <Layout.Sidebar>
-        <NavLinks {...props} />
-      </Layout.Sidebar>
-      <Layout.Main>
-        {props.children}
-        <Pagination {...props} />
-      </Layout.Main>
-    </Layout>
-  </StyleProvider>
+export const files = require.context('..', true, /\.example\.mdx?$/, 'lazy')
 
 # Dev Example
 
 This example can be run from the root directory as a development environment for the core library.
 
+- [Menu](/_)
 - [Typography](/typography)
 - [Hello](/hello)
+- [Button](/components/button)
 
-```.jsx
-<h1>Hello</h1>
-```
 
 ```jsx
 import React from 'react'

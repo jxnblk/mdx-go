@@ -21,8 +21,8 @@ npm i -g mdx-go
 - :atom_symbol: Import and use React components
 - :file_folder: File-system based routing
 - :triangular_ruler: Customizable layouts
-- :woman_singer: Support for [styled-components][] & [emotion][]
 - :globe_with_meridians: Export as static HTML
+- :woman_singer: Support for [styled-components][] & [emotion][]
 - :unlock: Avoid lock-in and easily migrate to other MDX-based tools
 
 [badge]: https://flat.badgen.net/travis/jxnblk/mdx-go

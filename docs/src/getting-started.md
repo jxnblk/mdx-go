@@ -1,9 +1,9 @@
 
 # Getting Started
 
-mdx-go is best suited as a globally available dev server for React
+MDX Go is best suited as a globally available dev server for React
 that can be used in any project.
-Install mdx-go globally with the following command:
+Install MDX Go globally with the following command:
 
 ```sh
 npm install -g mdx-go
@@ -44,11 +44,11 @@ npm run dev
 
 ## Motivation
 
-mdx-go is built with the idea of **[Progressive Documentation][]** in mind,
+MDX Go is built with the idea of **[Progressive Documentation][]** in mind,
 intended to be used anywhere as a dev server, prototyping tool, or simple static site generator.
-By embracing the MDX file format, the docs you create with mdx-go can easily be used in other tools.
-Start your docs with mdx-go and migrate to tools like [Next.js][] and [Gatsby][] when needed.
-You can even keep mdx-go around to use as a dev tool outside of other React applications.
+By embracing the MDX file format, the docs you create with MDX Go can easily be used in other tools.
+Start your docs with MDX Go and migrate to tools like [Next.js][] and [Gatsby][] when needed.
+You can even keep MDX Go around to use as a dev tool outside of other React applications.
 
 [Progressive Documentation]: https://jxnblk.com/writing/posts/progressive-documentation/
 [Next.js]: https://github.com/zeit/next.js/

@@ -5,12 +5,13 @@ const chalk = require('chalk')
 const open = require('react-dev-utils/openBrowser')
 const findUp = require('find-up')
 
-const config = require('pkg-conf').sync('mdx-go')
+const name = 'mdx-go'
+const config = require('pkg-conf').sync(name)
 const { pkg } = require('read-pkg-up').sync()
 
 const log = (...msg) => {
   console.log(
-    chalk.green('[mdx-go]'),
+    chalk.green(`[${name}]`),
     ...msg
   )
 }
@@ -25,23 +26,24 @@ log.error = (...msg) => {
 const cli = meow(`
   ${chalk.gray('Usage')}
 
-    ${chalk.gray('$')} ${chalk.green('mdx-go docs')}
+    ${chalk.gray('$')} ${chalk.green(name + ' docs')}
 
-    ${chalk.gray('$')} ${chalk.green('mdx-go build docs')}
+    ${chalk.gray('$')} ${chalk.green(name + ' build docs')}
 
   ${chalk.gray('Options')}
 
-    -p --port     Port for dev server
-    --no-open     Disable opening in default browser
-    --fullscreen  Disable default centered layout
+    -p --port       Port for dev server
+    --no-open       Disable opening in default browser
+    --fullscreen    Disable default centered layout
+    --no-keyboard   Disable keyboard shortcuts
 
-    -d --out-dir  Output directory for static export
-    --basename    Base path for routing
-    --static      Export HTML without JS bundle
-    --webpack     Path to custom webpack config
+    -d --out-dir    Output directory for static export
+    --basename      Base path for routing
+    --static        Export HTML without JS bundle
+    --webpack       Path to custom webpack config
 
 `, {
-  description: chalk.green('mdx-go') + ' Lightning fast MDX-based dev server',
+  description: chalk.green(name) + ' Lightning fast MDX-based dev server',
   flags: {
     help: {
       type: 'boolean',
@@ -63,6 +65,10 @@ const cli = meow(`
     },
     fullscreen: {
       type: 'boolean'
+    },
+    keyboard: {
+      type: 'boolean',
+      default: true
     },
     outDir: {
       type: 'string',
@@ -94,6 +100,7 @@ if (!cmd && !input) {
 
 const opts = Object.assign({
   pkg,
+  name,
   dirname: path.resolve(input || cmd),
   basename: '',
   webpack: findUp.sync('webpack.config.js'),

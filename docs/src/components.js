@@ -1,14 +1,11 @@
 import React from 'react'
-import { Head } from 'mdx-go'
 import {
+  Head,
   Link as GoLink,
-  Layout,
-  NavLinks,
-  NavLink,
-  Pagination,
   StyleProvider,
 } from 'mdx-go'
 import { Box, Flex } from 'rebass'
+import Sidepane from 'sidepane'
 import Logo from './logo'
 
 const green = '#0d3'
@@ -29,25 +26,26 @@ linear-gradient(
 `
 
 const nav = [
-  'Home',
-  'Getting-Started',
-  'Using-MDX',
-  'Routing',
-  'Configuration',
-  'Exporting',
-  // Components
-  'Head',
-  'Link',
-  'ComponentProvider',
-  'Layout',
-  'NavLinks',
-  'Pagination',
-  'StyleProvider',
-  'DocsLayout',
-  'DevLayout',
+  { path: '/', name: 'Home' },
+  { path: '/getting-started', name: 'Getting-Started' },
+  { path: '/using-mdx', name: 'Using-MDX' },
+  { path: '/routing', name: 'Routing' },
+  { path: '/configuration', name: 'Configuration' },
+  { path: '/exporting', name: 'Exporting' },
+  { path: '/Head', name: 'Head' },
+  { path: '/Link', name: 'Link' },
+  { path: '/examples', name: 'Examples' },
+  { path: 'https://github.com/jxnblk/mdx-go', name: 'GitHub' },
+
+  // 'ComponentProvider',
+  // 'Layout',
+  // 'NavLinks',
+  // 'Pagination',
+  // 'StyleProvider',
+  // 'DocsLayout',
+  // 'DevLayout',
   // Examples
-  'Typography',
-  'Examples',
+  // 'Typography',
 ]
 
 // todo: update
@@ -70,15 +68,33 @@ const theme = {
 const PageLayout = props => props.location.pathname === '/'
   ? props.children
   : (
-    <Layout>
-      <Layout.MenuToggle />
-      <Layout.Sidebar
+    <Flex>
+      <Sidepane
         bg='#f6f6ff'>
         <Box px={3} py={3}>
           <GoLink href='/'>
             <Logo size={48} />
           </GoLink>
         </Box>
+        {nav.map(({ name, path }) => (
+          <GoLink
+            key={path}
+            href={path}
+            children={name}
+            style={{
+              display: 'block',
+              fontWeight: 'bold',
+              fontSize: 14,
+              textDecoration: 'none',
+              paddingLeft: 16,
+              paddingRight: 16,
+              paddingTop: 4,
+              paddingBottom: 4,
+              color: 'inherit',
+            }}
+          />
+        ))}
+        {/*
         <NavLinks
           {...props}
           filter={route => nav.includes(route.name)}
@@ -90,33 +106,29 @@ const PageLayout = props => props.location.pathname === '/'
           href='https://github.com/jxnblk/mdx-go'
           children='GitHub'
         />
+        */}
         <Box py={4} />
-      </Layout.Sidebar>
-      <Layout.Main>
-        {props.children}
-        <Pagination
-          {...props}
-          filter={route => nav.includes(route.name)}
-          order={nav}
-        />
-      </Layout.Main>
-    </Layout>
+      </Sidepane>
+      <Box width={1}>
+        <Container maxWidth='768px' py={5}>
+          {props.children}
+        </Container>
+      </Box>
+    </Flex>
   )
 
 export const Root = props =>
   <React.Fragment>
     <Head>
-      <title>mdx-go</title>
+      <title>MDX Go</title>
       <meta name='description' content='Lightning-fast MDX-based dev server' />
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:site' content='@jxnblk' />
-      <meta name='twitter:title' content='mdx-go' />
+      <meta name='twitter:title' content='MDX Go' />
       <meta name='twitter:description' content='Lightning-fast MDX-based dev server for progressive documentation' />
       <meta name='twitter:image' content='https://jxnblk.com/mdx-go/card.png' />
     </Head>
-    <StyleProvider
-      color='black'
-      theme={theme}>
+    <StyleProvider color='tomato'>
       <PageLayout {...props} />
     </StyleProvider>
   </React.Fragment>
@@ -182,15 +194,18 @@ export const ButtonOutline = props =>
     }}
   />
 
-export const Container = props =>
+export const Container = ({ maxWidth, ...props }) =>
   <Box
     {...props}
     mx='auto'
     px={4}
     css={{
-      maxWidth: '1024px'
+      maxWidth
     }}
   />
+Container.defaultProps = {
+  maxWidth: '1024px'
+}
 
 export const Col = props =>
   <Box

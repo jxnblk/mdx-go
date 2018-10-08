@@ -1,17 +1,14 @@
 {
   "name": "mdx-go",
-  "version": "2.0.0-25",
+  "version": "2.0.0-26",
   "description": "Lightning-fast MDX-based dev server",
   "bin": {
     "mdx-go": "./cli.js"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "lib/client/components.js",
+  "module": "lib/client/components.js",
   "sideEffects": false,
   "scripts": {
-    "prepare": "babel src -d dist",
-    "clean": "rm -rf dist",
-    "watch": "babel src -d dist --watch",
     "start": "./cli.js examples/dev",
     "build": "./cli.js build examples/dev -d temp",
     "help": "./cli.js",
@@ -42,6 +39,7 @@
     "@mdx-js/loader": "^0.15.4",
     "@mdx-js/mdx": "^0.15.4",
     "@mdx-js/tag": "^0.15.0",
+    "@reach/router": "^1.2.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.4",
     "chalk": "^2.4.1",
@@ -52,14 +50,14 @@
     "is-absolute-url": "^2.1.0",
     "lodash.get": "^4.4.2",
     "lodash.sortby": "^4.7.0",
-    "mdx-style": "^1.0.0-3",
+    "mdx-live": "^2.0.0-alpha.2",
+    "mdx-style": "^2.0.0-alpha.2",
     "meow": "^5.0.0",
     "pkg-conf": "^2.1.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dev-utils": "^5.0.2",
     "react-dom": "^16.5.2",
-    "react-router-dom": "^4.3.1",
     "read-pkg-up": "^4.0.0",
     "remark-autolink-headings": "^5.0.0",
     "remark-emoji": "^2.0.1",
@@ -79,7 +77,6 @@
     "webpackbar": "^2.6.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
     "ava": "^1.0.0-beta.8",
     "nyc": "^13.0.1",
     "supertest": "^3.3.0"

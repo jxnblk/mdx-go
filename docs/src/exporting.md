@@ -33,7 +33,7 @@ mdx-go build docs --static
 When exporting for use on a domain with a base path, such as gh-pages, use the `--basename` CLI flag to specify the path.
 
 ```sh
-mdx-go build docs --basename /mdx-go
+mdx-go build docs --basename /my-app
 ```
 
 ## Options

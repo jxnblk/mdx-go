@@ -1,8 +1,8 @@
 
 # StyleProvider
 
-The StyleProvider component is an extension of the [ComponentProvider](/ComponentProvider) component that includes default styles for MDX components
-with support for theming.
+The StyleProvider component is an extension of the [ComponentProvider](/ComponentProvider) component that includes default styles for MDX components with support for theming.
+The StyleProvider is enabled by default when a custom Root component is not configured.
 
 ```jsx
 // example Root component

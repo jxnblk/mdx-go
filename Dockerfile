@@ -8,7 +8,6 @@ COPY package-lock.json .
 RUN npm i
 
 COPY . .
-RUN npm run prepare
 
 RUN cd docs && npm i && npm run build
 
