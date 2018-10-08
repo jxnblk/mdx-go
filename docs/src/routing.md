@@ -30,15 +30,7 @@ export default props =>
 
 ## Customizing Routes
 
-Each page can customize its name, path, and other metadata using exports.
-
-To set a custom name for the route, export a `name` string.
-
-```mdx
-export const name = 'Getting Started'
-
-# Getting Started
-```
+Each page can customize its path and other metadata using exports.
 
 To set a custom path, without renaming the file, export a `path` string.
 
@@ -47,3 +39,16 @@ export const path = '/go'
 
 # Getting Started
 ```
+
+## Route Object
+
+Each file will generate a route object with the following keys. Additionally, the `index.mdx` route will include any additional named exports from the file.
+
+Key | Description
+---|---
+`key` | Key from wepback's `require.context`
+`extname` | The file extension of the route
+`name` | The file basename
+`dirname` | The directory of the file
+`path` | Route pathname used for routing
+`Component` | React component

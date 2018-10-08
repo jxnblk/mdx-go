@@ -33,13 +33,10 @@ Key | Description
 `key` | Key from wepback's `require.context`
 `extname` | The file extension of the route
 `name` | The file basename
-`exact` | Boolean for `index` routes
 `dirname` | The directory of the file
 `path` | Route pathname used for routing
 `Component` | React component
 
-Each route object will also include any exports from the file.
-This allows you to override the `name` or add additional metadata to a page.
 
 ## MDX Layouts
 
@@ -98,6 +95,8 @@ export const Root = props =>
 
 
 ## Theming
+
+MDX Go provides minimal styles by default. Use a custom Root component to disable any built-in styles.
 
 MDX Go contains almost no default styling, making it ideal for use with components that include their own styling.
 To add themes or custom styling, wrap your app with a [Root component](configuration/#root-component).
