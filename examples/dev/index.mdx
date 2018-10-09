@@ -7,7 +7,6 @@ import {
 </Head>
 
 
-export const files = require.context('..', true, /\.example\.mdx?$/, 'lazy')
 
 # Dev Example
 
@@ -26,4 +25,8 @@ export default () =>
   <div>
     <h1>Not Live</h1>
   </div>
+```
+
+```
+export const files = require.context('..', true, /\.example\.mdx?$/, 'lazy')
 ```
