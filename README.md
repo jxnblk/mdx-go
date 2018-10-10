@@ -1,5 +1,5 @@
 
-# mdx-go
+# tinkerbox
 
 ![](https://s3.amazonaws.com/jxnblk/mdx-go-24.gif)
 
@@ -13,7 +13,7 @@ https://mdx-go.now.sh
 [![MIT License][license]](LICENSE.md)
 
 ```sh
-npm i -g mdx-go
+npm i -g tinkerbox
 ```
 
 - :zero: Zero-config dev server
@@ -52,17 +52,17 @@ import MyComponent from '../src'
 Start the dev server on the `docs` folder:
 
 ```sh
-mdx-go docs
+tinkerbox docs
 ```
 
 ### npm run scripts
 
-Alternatively, mdx-go can be installed as a development dependency and used with run scripts in your `package.json`.
+Alternatively, tinkerbox can be installed as a development dependency and used with run scripts in your `package.json`.
 
 ```json
 "scripts": {
-  "dev": "mdx-go docs",
-  "docs": "mdx-go build docs"
+  "dev": "tinkerbox docs",
+  "docs": "tinkerbox build docs"
 }
 ```
 
@@ -72,11 +72,11 @@ npm run dev
 
 ## Motivation
 
-mdx-go is built with the idea of **[Progressive Documentation][]** in mind,
+tinkerbox is built with the idea of **[Progressive Documentation][]** in mind,
 intended to be used anywhere as a dev server, prototyping tool, or simple static site generator.
-By embracing the MDX file format, the docs you create with mdx-go can easily be used in other tools.
-Start your docs with mdx-go and migrate to tools like [Next.js][] and [Gatsby][] when needed.
-You can even keep mdx-go around to use as a dev tool outside of other React applications.
+By embracing the MDX file format, the docs you create with tinkerbox can easily be used in other tools.
+Start your docs with tinkerbox and migrate to tools like [Next.js][] and [Gatsby][] when needed.
+You can even keep tinkerbox around to use as a dev tool outside of other React applications.
 
 [Next.js]: https://github.com/zeit/next.js/
 [Gatsby]: https://github.com/gatsbyjs/gatsby
@@ -119,14 +119,14 @@ docs/
   api.mdx
 ```
 
-mdx-go will create routes for `/`, `/getting-started`, and `/api`.
+tinkerbox will create routes for `/`, `/getting-started`, and `/api`.
 
-mdx-go also supports using React components as routes for files with the `.js` extension.
+tinkerbox also supports using React components as routes for files with the `.js` extension.
 Be sure that the `.js` file exports a default component to render as a route.
 
 ## Layouts
 
-mdx-go includes a default layout that centers the document in the viewport,
+tinkerbox includes a default layout that centers the document in the viewport,
 but custom layout components can be added both globally and per-route.
 
 To render a custom layout for a single route, export a component as the `default` from the MDX file.
@@ -155,7 +155,7 @@ export { Root } from './Root'
 Head contents can be set per-route by using the `Head` component.
 
 ```mdx
-import { Head } from 'mdx-go'
+import { Head } from 'tinkerbox'
 
 <Head>
   <title>Page title</title>
@@ -173,7 +173,7 @@ To customize the HTML components rendered from MDX, use the `ComponentProvider` 
 ```js
 // example Root component
 import React from 'react'
-import { ComponentProvider } from 'mdx-go'
+import { ComponentProvider } from 'tinkerbox'
 
 const components = {
   h1: props => <h1 {...props} style={{ fontSize: 48 }} />,
@@ -202,7 +202,7 @@ export const files = require.context('../src', true, /\.example\.js$/, 'lazy')
 
 ## Theming
 
-By default mdx-go includes virtually no styling. To customize the styles, use components to
+By default tinkerbox includes virtually no styling. To customize the styles, use components to
 wrap MDX with a [Root component](#layouts) and use the [MDXProvider](#custom-mdx-components) to change the default styles.
 
 ## Exporting
@@ -210,7 +210,7 @@ wrap MDX with a [Root component](#layouts) and use the [MDXProvider](#custom-mdx
 To export as a static site with HTML and JS bundles, run:
 
 ```sh
-mdx-go build docs
+tinkerbox build docs
 ```
 
 This will export all routes as HTML in a `dist` folder.
@@ -218,11 +218,11 @@ See [CLI Options](#cli-options) for configuration options.
 
 ## CSS-in-JS
 
-mdx-go does not use any CSS-in-JS libraries internally, and most libraries will work when using the dev server.
+tinkerbox does not use any CSS-in-JS libraries internally, and most libraries will work when using the dev server.
 To extract static CSS when using the `build` command, ensure you have either `styled-components` or `emotion` installed locally in your `package.json`.
 For Emotion, be sure that `emotion-server` is also installed.
 
-When either of these libraries are detected in your `package.json` dependencies, mdx-go will extract static CSS during the build process.
+When either of these libraries are detected in your `package.json` dependencies, tinkerbox will extract static CSS during the build process.
 
 ## CLI Options
 
@@ -237,17 +237,17 @@ The following flags can be passed to the CLI.
   --webpack     Path to custom webpack config
 ```
 
-All CLI options can also be specified in a `mdx-go` field in your `package.json`.
+All CLI options can also be specified in a `tinkerbox` field in your `package.json`.
 
 ```json
-"mdx-go": {
+"tinkerbox": {
   "outDir": "site"
 }
 ```
 
 ## Custom webpack config
 
-mdx-go will automatically pick up a `webpack.config.js` if it exists in the current working directory.
+tinkerbox will automatically pick up a `webpack.config.js` if it exists in the current working directory.
 A custom path can be passed to the CLI using the `--webpack` flag.
 The provided webpack config will be merged with the built-in config using [webpack-merge][].
 

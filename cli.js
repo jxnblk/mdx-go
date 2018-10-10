@@ -5,7 +5,7 @@ const chalk = require('chalk')
 const open = require('react-dev-utils/openBrowser')
 const findUp = require('find-up')
 
-const name = 'mdx-go'
+const name = 'tinkerbox'
 const config = require('pkg-conf').sync(name)
 const { pkg } = require('read-pkg-up').sync()
 

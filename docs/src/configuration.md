@@ -59,7 +59,7 @@ Learn more in the [MDX docs](https://mdxjs.com/syntax#export-default).
 To customize the document `<head>` contents, use the `Head` component.
 
 ```mdx
-import { Head } from 'mdx-go'
+import { Head } from 'tinkerbox'
 
 <Head>
   <title>My Page Title</title>
@@ -79,7 +79,7 @@ Use the `ComponentProvider` in a Root component to add custom components for MDX
 // example Root component
 import React from 'react'
 import styled from 'react-emotion'
-import { ComponentProvider } from 'mdx-go'
+import { ComponentProvider } from 'tinkerbox'
 
 const components = {
   h1: styled('h1')({
@@ -128,10 +128,10 @@ The following flags can be passed to the CLI.
   --webpack     Path to custom webpack config
 ```
 
-All CLI options can also be specified in an `mdx-go` field in your `package.json`.
+All CLI options can also be specified in an `tinkerbox` field in your `package.json`.
 
 ```json
-"mdx-go": {
+"tinkerbox": {
   "outDir": "site"
 }
 ```

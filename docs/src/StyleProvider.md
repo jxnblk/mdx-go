@@ -7,7 +7,7 @@ The StyleProvider is enabled by default when a custom Root component is not conf
 ```jsx
 // example Root component
 import React from 'react'
-import { StyleProvider } from 'mdx-go'
+import { StyleProvider } from 'tinkerbox'
 
 export const Root = props =>
   <StyleProvider>

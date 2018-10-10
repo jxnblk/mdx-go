@@ -70,7 +70,7 @@ export default props =>
           <ButtonOutline href={github}>
             GitHub
           </ButtonOutline>
-          <Pre>npm i -g mdx-go</Pre>
+          <Pre>npm i -g tinkerbox</Pre>
         </Box>
         <Box
           px={3}

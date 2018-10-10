@@ -6,7 +6,7 @@ that can be used in any project.
 Install MDX Go globally with the following command:
 
 ```sh
-npm install -g mdx-go
+npm install -g tinkerbox
 ```
 
 Create a `docs` folder and `docs/index.mdx` file.
@@ -24,17 +24,17 @@ import MyComponent from '../src'
 Start the dev server on the `docs` folder:
 
 ```sh
-mdx-go docs
+tinkerbox docs
 ```
 
 ### npm run scripts
 
-Alternatively, mdx-go can be installed as a development dependency and used with run scripts in your `package.json`.
+Alternatively, tinkerbox can be installed as a development dependency and used with run scripts in your `package.json`.
 
 ```json
 "scripts": {
-  "dev": "mdx-go docs",
-  "docs": "mdx-go build docs"
+  "dev": "tinkerbox docs",
+  "docs": "tinkerbox build docs"
 }
 ```
 

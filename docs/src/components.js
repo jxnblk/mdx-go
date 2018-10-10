@@ -3,7 +3,7 @@ import {
   Head,
   Link as GoLink,
   StyleProvider,
-} from 'mdx-go'
+} from 'tinkerbox'
 import { Box, Flex } from 'rebass'
 import Sidepane from 'sidepane'
 import Logo from './logo'
