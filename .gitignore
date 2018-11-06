@@ -2,3 +2,4 @@ dist
 .nyc_output
 coverage
 temp
+node_modules/
