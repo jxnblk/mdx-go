@@ -56,7 +56,7 @@
     "pkg-conf": "^2.1.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
-    "react-dev-utils": "^5.0.3",
+    "react-dev-utils": "^6.1.1",
     "react-dom": "^16.6.3",
     "read-pkg-up": "^4.0.0",
     "remark-autolink-headings": "^5.0.0",
