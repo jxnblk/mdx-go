@@ -4,6 +4,7 @@ module.exports = {
     '@babel/react'
   ],
   plugins: [
+    '@babel/transform-runtime',
     '@babel/proposal-class-properties',
     '@babel/proposal-export-default-from',
     '@babel/proposal-export-namespace-from',
