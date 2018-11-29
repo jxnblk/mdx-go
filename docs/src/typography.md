@@ -1,7 +1,7 @@
 
 # Typography
 
-This is a demonstration page for MDX typographic styles provided by the [`StyleProvider`](/StyleProvider) component.
+This is a demonstration page for MDX typographic styles.
 
 # Hamburger 1
 ## Hamburger 2

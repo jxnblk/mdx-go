@@ -2,7 +2,6 @@ import React from 'react'
 import {
   Head,
   Link as GoLink,
-  StyleProvider,
 } from 'mdx-go'
 import { Box, Flex } from 'rebass'
 import Sidepane from 'sidepane'
@@ -41,7 +40,6 @@ const nav = [
   // 'Layout',
   // 'NavLinks',
   // 'Pagination',
-  // 'StyleProvider',
   // 'DocsLayout',
   // 'DevLayout',
   // Examples
@@ -128,9 +126,7 @@ export const Root = props =>
       <meta name='twitter:description' content='Lightning-fast MDX-based dev server for progressive documentation' />
       <meta name='twitter:image' content='https://jxnblk.com/mdx-go/card.png' />
     </Head>
-    <StyleProvider color='tomato'>
-      <PageLayout {...props} />
-    </StyleProvider>
+    <PageLayout {...props} />
   </React.Fragment>
 
 

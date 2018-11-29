@@ -101,7 +101,6 @@ MDX Go provides minimal styles by default. Use a custom Root component to disabl
 MDX Go contains almost no default styling, making it ideal for use with components that include their own styling.
 To add themes or custom styling, wrap your app with a [Root component](configuration/#root-component).
 
-To use optional, built-in styles, see the [StyleProvider](/StyleProvider) component.
 
 ## webpack
 

@@ -14,5 +14,4 @@ export const Root = props =>
   </ComponentProvider>
 ```
 
-For a version with built-in styles, see the [`StyleProvider`](/StyleProvider) component.
 
