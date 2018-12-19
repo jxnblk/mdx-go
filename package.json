@@ -1,16 +1,16 @@
 {
-  "name": "mdx-go",
-  "version": "2.0.0-31",
+  "name": "mdxs",
+  "version": "0.0.0-1",
   "description": "Lightning-fast MDX-based dev server",
   "bin": {
-    "mdx-go": "./cli.js"
+    "mdxs": "./cli.js"
   },
-  "main": "lib/client/components.js",
-  "module": "lib/client/components.js",
+  "main": "lib/client/index.js",
+  "module": "lib/client/index.js",
   "sideEffects": false,
   "scripts": {
-    "start": "./cli.js examples/dev",
-    "build": "./cli.js build examples/dev -d temp",
+    "start": "./cli.js examples/hello.mdx",
+    "build": "./cli.js build examples/hello.mdx -d temp",
     "help": "./cli.js",
     "test": "nyc ava"
   },
@@ -30,8 +30,6 @@
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-export-default-from": "^7.0.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
@@ -39,7 +37,6 @@
     "@mdx-js/loader": "^0.16.0",
     "@mdx-js/mdx": "^0.16.0",
     "@mdx-js/tag": "^0.16.0",
-    "@reach/router": "^1.2.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.4",
     "chalk": "^2.4.1",
@@ -50,8 +47,6 @@
     "is-absolute-url": "^2.1.0",
     "lodash.get": "^4.4.2",
     "lodash.sortby": "^4.7.0",
-    "mdx-live": "^2.0.0-alpha.2",
-    "mdx-style": "^2.0.0-alpha.2",
     "meow": "^5.0.0",
     "pkg-conf": "^2.1.0",
     "prop-types": "^15.6.2",

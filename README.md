@@ -1,5 +1,7 @@
 
-# mdx-go
+# mdxs
+
+**TODO: update docs**
 
 ![](https://s3.amazonaws.com/jxnblk/mdx-go-24.gif)
 

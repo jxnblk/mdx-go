@@ -34,11 +34,8 @@ const cli = meow(`
 
     -p --port       Port for dev server
     --no-open       Disable opening in default browser
-    --fullscreen    Disable default centered layout
-    --no-keyboard   Disable keyboard shortcuts
 
     -d --out-dir    Output directory for static export
-    --basename      Base path for routing
     --static        Export HTML without JS bundle
     --webpack       Path to custom webpack config
 
@@ -63,20 +60,10 @@ const cli = meow(`
       alias: 'o',
       default: true
     },
-    fullscreen: {
-      type: 'boolean'
-    },
-    keyboard: {
-      type: 'boolean',
-      default: true
-    },
     outDir: {
       type: 'string',
       alias: 'd',
       default: 'dist'
-    },
-    basename: {
-      type: 'string'
     },
     static: {
       type: 'boolean'
@@ -102,7 +89,6 @@ const opts = Object.assign({
   pkg,
   name,
   dirname: path.resolve(input || cmd),
-  basename: '',
   webpack: findUp.sync('webpack.config.js'),
 }, config, cli.flags)
 
