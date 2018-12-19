@@ -7,7 +7,6 @@ module.exports = {
     '@babel/proposal-class-properties',
     '@babel/proposal-export-default-from',
     '@babel/proposal-export-namespace-from',
-    '@babel/proposal-nullish-coalescing-operator',
     '@babel/syntax-dynamic-import',
   ]
 }

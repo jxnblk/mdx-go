@@ -88,7 +88,7 @@ if (!cmd && !input) {
 const opts = Object.assign({
   pkg,
   name,
-  dirname: path.resolve(input || cmd),
+  filename: path.resolve(input || cmd),
   webpack: findUp.sync('webpack.config.js'),
 }, config, cli.flags)
 

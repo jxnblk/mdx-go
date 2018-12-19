@@ -3,6 +3,12 @@
 
 **TODO: update docs**
 
+```
+mdxs
+mdxpack
+
+```
+
 ![](https://s3.amazonaws.com/jxnblk/mdx-go-24.gif)
 
 :zap: Lightning fast [MDX][]-based dev server for progressive documentation
@@ -21,10 +27,8 @@ npm i -g mdx-go
 - :zero: Zero-config dev server
 - :memo: Write in markdown
 - :atom_symbol: Import and use React components
-- :file_folder: File-system based routing
 - :triangular_ruler: Customizable layouts
 - :globe_with_meridians: Export as static HTML
-- :woman_singer: Support for [styled-components][] & [emotion][]
 - :unlock: Avoid lock-in and easily migrate to other MDX-based tools
 
 [badge]: https://flat.badgen.net/travis/jxnblk/mdx-go
