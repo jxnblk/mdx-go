@@ -10,7 +10,8 @@
   "module": "lib/client/components.js",
   "sideEffects": false,
   "scripts": {
-    "start": "./cli.js examples/dev",
+    "_start": "./cli.js examples/dev",
+    "start": "./cli.js docs/src",
     "build": "./cli.js build examples/dev -d temp",
     "help": "./cli.js",
     "test": "nyc ava"

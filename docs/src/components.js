@@ -3,17 +3,23 @@ import {
   Head,
   Link as GoLink,
   StyleProvider,
-} from 'tinkerbox'
+} from 'mdx-go'
 import { Box, Flex } from 'rebass'
+import { ThemeProvider } from 'styled-components'
 import Sidepane from 'sidepane'
 import Logo from './logo'
 
 const green = '#0d3'
 const darkgreen = '#0a6'
 const black = '#000619'
-const lightgray = '#f6f6ff'
+const gray = '#f6f6ff'
 const blue = '#07c'
 
+// new colors
+const purple = '#33e'
+const magenta = '#f0f'
+
+const primary = magenta
 
 const gradient = `
 linear-gradient(
@@ -48,15 +54,25 @@ const nav = [
   // 'Typography',
 ]
 
-// todo: update
+const colors = {
+  black,
+  blue,
+  green,
+  darkgreen,
+  gray,
+  magenta,
+  purple,
+  primary,
+  lightgray: gray,
+}
+
 const theme = {
-  colors: {
-    lightgray,
-    black,
-    blue,
-    green,
-    darkgreen,
-  },
+  colors,
+}
+
+// todo: update
+const docstheme = {
+  colors,
   code: {
     color: darkgreen
   },
@@ -120,7 +136,7 @@ const PageLayout = props => props.location.pathname === '/'
 export const Root = props =>
   <React.Fragment>
     <Head>
-      <title>MDX Go</title>
+      <title>Tinkerbox</title>
       <meta name='description' content='Lightning-fast MDX-based dev server' />
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:site' content='@jxnblk' />
@@ -128,8 +144,10 @@ export const Root = props =>
       <meta name='twitter:description' content='Lightning-fast MDX-based dev server for progressive documentation' />
       <meta name='twitter:image' content='https://jxnblk.com/mdx-go/card.png' />
     </Head>
-    <StyleProvider color='tomato'>
-      <PageLayout {...props} />
+    <StyleProvider>
+      <ThemeProvider theme={theme}>
+        <PageLayout {...props} />
+      </ThemeProvider>
     </StyleProvider>
   </React.Fragment>
 
@@ -138,7 +156,7 @@ export const Banner = props =>
   <Box
     {...props}
     color='white'
-    bg={black}
+    bg='black'
     css={{
       backgroundSize: 'cover',
       backgroundImage: gradient
@@ -172,8 +190,8 @@ export const Button = props =>
     px={4}
     py={3}
     fontSize={2}
-    color={black}
-    bg={green}
+    color='black'
+    bg='primary'
     {...props}
     css={{
       display: 'inline-block',
@@ -187,7 +205,7 @@ export const Button = props =>
 export const ButtonOutline = props =>
   <Button
     {...props}
-    color={green}
+    color='primary'
     bg='transparent'
     css={{
       boxShadow: 'inset 0 0 0 2px'
@@ -234,7 +252,7 @@ export const Pre = props =>
   <Box
     {...props}
     as='pre'
-    color={green}
+    color='primary'
     fontSize={2}
     css={{
       fontFamily: 'Menlo, monospace',
@@ -248,7 +266,7 @@ export const Divider = props =>
     my={5}
     width={128}
     ml={0}
-    bg={green}
+    bg='primary'
     css={{
       border: 0,
       height: '4px'

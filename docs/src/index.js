@@ -21,7 +21,7 @@ const github = 'https://github.com/jxnblk/mdx-go'
 const blog = 'https://jxnblk.com/writing/posts/progressive-documentation'
 
 const intro = <span>
-  MDX Go is built with the idea of <Link href={blog} color='#0a0'>Progressive Documentation</Link> in mind, intended to be used anywhere as a dev server, prototyping tool, or simple static site generator. By embracing the MDX file format, the docs you create with MDX Go can easily be used in other tools. Start your docs with MDX Go, and migrated to tools like Next.js and Gatsby when needed. You can even keep MDX Go around to use as a dev tool outside of other React applications.
+  Tinkerbox is built with the idea of <Link href={blog} color='#0a0'>Progressive Documentation</Link> in mind, intended to be used anywhere as a dev server, prototyping tool, or simple static site generator. By embracing the MDX file format, the docs you create with Tinkerbox can easily be used in other tools. Start your docs with Tinkerbox, and migrated to tools like Next.js and Gatsby when needed. You can even keep Tinkerbox around to use as a dev tool outside of other React applications.
 </span>
 
 export default props =>
@@ -59,8 +59,8 @@ export default props =>
         <Box
           px={3}
           width={[ 1, null, 1/3, 1/3 ]}>
-          <Logo size={96} />
-          <Title mb={2}>MDX Go</Title>
+          {false && <Logo size={96} />}
+          <Title mb={2}>Tinkerbox</Title>
           <Text mb={3}>
             Lightning-fast MDX-based dev server for progressive documentation
           </Text>
@@ -142,15 +142,17 @@ export default props =>
           <Link px={3} href={github}>GitHub</Link>
           <Link px={3} href='https://jxnblk.com'>Made by Jxnblk</Link>
         </Flex>
-        <Flex py={4}>
-          <Box mx='auto'>
-            <Link
-              title='Hidden Docs'
-              href='/getting-started'>
-              <Logo size={48} />
-            </Link>
-          </Box>
-        </Flex>
+        {/*
+          <Flex py={4}>
+            <Box mx='auto'>
+              <Link
+                title='Hidden Docs'
+                href='/getting-started'>
+                <Logo size={48} />
+              </Link>
+            </Box>
+          </Flex>
+        */}
       </Container>
     </Box>
   </Box>
