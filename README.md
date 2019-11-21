@@ -288,4 +288,4 @@ The provided webpack config will be merged with the built-in config using [webpa
 [styled-components]: https://github.com/styled-components/styled-components
 [emotion]: https://github.com/emotion-js/emotion
 [x0]: https://github.com/c8r/x0
-[Progressive Documentation]: https://jxnblk.com/writing/posts/progressive-documentation/
+[Progressive Documentation]: https://jxnblk.com/blog/progressive-documentation/
