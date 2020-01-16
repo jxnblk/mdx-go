@@ -6,7 +6,6 @@ const build = require('../lib/build')
 
 const output = path.resolve('test/helpers')
 const index = path.resolve('test/helpers/index.html')
-const bundle = path.resolve('test/helpers/main.js')
 
 const clean = () => {
   rimraf.sync(output)
