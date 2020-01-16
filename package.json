@@ -68,7 +68,7 @@
     "rimraf": "^2.6.2",
     "serve-static": "^1.13.2",
     "update-notifier": "^2.5.0",
-    "webpack": "^4.20.2",
+    "webpack": "^4.41.5",
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.2",
     "webpack-merge": "^4.1.4",
